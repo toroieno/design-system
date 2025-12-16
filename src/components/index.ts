@@ -26,8 +26,8 @@ export { AeRadio } from './AeRadio'
 export type { AeRadioProps } from './AeRadio'
 
 // Switch
-export { PkSwitch } from './PkSwitch'
-export type { PkSwitchProps } from './PkSwitch'
+export { AeSwitch } from './AeSwitch'
+export type { AeSwitchProps } from './AeSwitch'
 
 // Card
 export { PkCard } from './PkCard'

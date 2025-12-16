@@ -5,6 +5,13 @@
   line-height: 150%; /* 24px */
 }
 
+.ae-text-body-small {
+  font-size: var(--sds-typography-scale-02);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-regular);
+  line-height: 140%; /* 19.6px */
+}
+
 .ae-text-single-line-body-base {
   font-size: var(--sds-typography-scale-03);
   font-style: normal;

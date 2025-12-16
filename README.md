@@ -71,7 +71,7 @@ Contact us to obtain a license key:
 |--------------|-------------|
 | `AeCheckbox` | Checkbox with indeterminate state support |
 | `AeRadio`    | Radio button for single selection |
-| `PkSwitch`   | Toggle switch for boolean values |
+| `AeSwitch`   | Toggle switch for boolean values |
 
 ### Display Components
 | Component | Description |

@@ -17,7 +17,7 @@ import { PkTextarea } from './components/PkTextarea'
 import { PkSelect } from './components/PkSelect'
 import { AeCheckbox } from './components/AeCheckbox'
 import { AeRadio } from './components/AeRadio'
-import { PkSwitch } from './components/PkSwitch'
+import { AeSwitch } from './components/AeSwitch'
 import { PkCard } from './components/PkCard'
 import { PkBadge } from './components/PkBadge'
 import { PkAlert } from './components/PkAlert'
@@ -31,7 +31,7 @@ export {
   PkSelect,
   AeCheckbox,
   AeRadio,
-  PkSwitch,
+  AeSwitch,
   PkCard,
   PkBadge,
   PkAlert,
@@ -45,7 +45,7 @@ export type { PkTextareaProps } from './components/PkTextarea'
 export type { PkSelectProps, SelectOption } from './components/PkSelect'
 export type { AeCheckboxProps } from './components/AeCheckbox'
 export type { AeRadioProps } from './components/AeRadio'
-export type { PkSwitchProps } from './components/PkSwitch'
+export type { AeSwitchProps } from './components/AeSwitch'
 export type { PkCardProps } from './components/PkCard'
 export type { PkBadgeProps } from './components/PkBadge'
 export type { PkAlertProps } from './components/PkAlert'
@@ -71,7 +71,7 @@ const components = {
   PkSelect,
   AeCheckbox,
   AeRadio,
-  PkSwitch,
+  AeSwitch,
   PkCard,
   PkBadge,
   PkAlert,

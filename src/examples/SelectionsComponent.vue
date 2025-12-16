@@ -54,14 +54,12 @@ const switchValue3 = ref(true)
           <h3 class="demo-card-title">Switch</h3>
         </template>
         <div class="demo-stack">
-          <PkSwitch v-model="switchValue1" label="Notifications" />
-          <PkSwitch v-model="switchValue2" label="Dark mode" color="accent" />
-          <PkSwitch v-model="switchValue3" label="Auto-save" color="success" />
+          <AeSwitch v-model="switchValue1" label="Notifications" />
           <div class="demo-row demo-row--align-center">
             <span class="demo-label">Sizes:</span>
-            <PkSwitch size="sm" />
-            <PkSwitch size="md" />
-            <PkSwitch size="lg" />
+            <AeSwitch size="sm" />
+            <AeSwitch size="md" />
+            <AeSwitch size="lg" />
           </div>
         </div>
       </PkCard>
