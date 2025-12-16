@@ -11,6 +11,7 @@ import './styles/main.scss'
 
 // Import all components
 import { AeButton } from './components/AeButton'
+import { AeProgressBar } from './components/AeProgressBar'
 import { PkInput } from './components/PkInput'
 import { PkTextarea } from './components/PkTextarea'
 import { PkSelect } from './components/PkSelect'
@@ -24,6 +25,7 @@ import { PkAlert } from './components/PkAlert'
 // Export individual components
 export {
   AeButton,
+  AeProgressBar,
   PkInput,
   PkTextarea,
   PkSelect,
@@ -37,6 +39,7 @@ export {
 
 // Export types
 export type { AeButtonProps } from './components/AeButton'
+export type { AeProgressBarProps } from './components/AeProgressBar'
 export type { PkInputProps } from './components/PkInput'
 export type { PkTextareaProps } from './components/PkTextarea'
 export type { PkSelectProps, SelectOption } from './components/PkSelect'
@@ -62,6 +65,7 @@ export interface PackDesignSystemOptions {
 // Component list for global registration
 const components = {
   AeButton,
+  AeProgressBar,
   PkInput,
   PkTextarea,
   PkSelect,
@@ -81,8 +85,8 @@ const PackDesignSystem: Plugin = {
       console.error(
         '[PackDesignSystem] License key is required!\n\n' +
         'Usage:\n' +
-        '  import PackDesignSystem from "pack-design-system"\n' +
-        '  import "pack-design-system/style.css"\n\n' +
+        '  import PackDesignSystem from "design-system"\n' +
+        '  import "design-system/style.css"\n\n' +
         '  app.use(PackDesignSystem, {\n' +
         '    licenseKey: "pk_live_your_license_key"\n' +
         '  })\n\n' +
@@ -93,7 +97,7 @@ const PackDesignSystem: Plugin = {
 
     // Validate the license
     const isValid = setLicense(options.licenseKey)
-    
+
     if (!isValid) {
       throw new Error('[PackDesignSystem] Invalid license key')
     }
@@ -105,7 +109,7 @@ const PackDesignSystem: Plugin = {
 
     // Provide license status to components (optional)
     app.provide('packLicensed', true)
-    
+
     console.log('[PackDesignSystem] ✓ License validated successfully')
   },
 }

@@ -3,8 +3,11 @@
 
 // Store valid license keys (in production, validate against a server)
 const VALID_LICENSE_KEYS = new Set<string>([
-  // Add your valid license keys here
-  // Example: 'pk_live_abc123xyz789'
+  'pk_live_9kndFtycbKd7dD6JUY7Vspi9',
+  'pk_live_Ia0a1tslMxuzllpYFFBstj8B',
+  'pk_live_kYaNlRtv0OWM8V2JzHjMBbIM',
+  'pk_live_2P1zD633LU17eb5NsVgYIYXz',
+  'pk_live_ktG9sOO9NghaVuTwoTvxbvQd',
 ])
 
 // License state

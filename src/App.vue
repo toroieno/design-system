@@ -42,61 +42,10 @@
     
     <main class="demo-main">
       <!-- Buttons Section -->
-      <section class="demo-section">
-        <h2 class="demo-section__title">Buttons</h2>
-        <p class="demo-section__desc">Versatile buttons with multiple variants, colors, and sizes.</p>
-        
-        <div class="demo-grid demo-grid--buttons">
-          <!-- Variants -->
-          <PkCard variant="outlined">
-            <template #header>
-              <h3 class="demo-card-title">Variants</h3>
-            </template>
-            <div class="demo-row">
-              <AeButton variant="filled" @click="() => { console.log(1) }">Filled</AeButton>
-              <AeButton variant="outlined">Outlined</AeButton>
-              <AeButton variant="text">Text</AeButton>
-            </div>
-          </PkCard>
-          
-          <!-- Colors -->
-          <PkCard variant="outlined">
-            <template #header>
-              <h3 class="demo-card-title">Colors</h3>
-            </template>
-            <div class="demo-row">
-              <AeButton color="primary">Primary</AeButton>
-              <AeButton color="danger">danger</AeButton>
-              <AeButton color="accent">icon</AeButton>
-            </div>
-          </PkCard>
-          
-          <!-- Sizes -->
-          <PkCard variant="outlined">
-            <template #header>
-              <h3 class="demo-card-title">Sizes</h3>
-            </template>
-            <div class="demo-row demo-row--align-center">
-              <AeButton size="sm">Small</AeButton>
-              <AeButton size="md">Medium</AeButton>
-              <AeButton size="lg">Large</AeButton>
-            </div>
-          </PkCard>
-          
-          <!-- States -->
-          <PkCard variant="outlined">
-            <template #header>
-              <h3 class="demo-card-title">States</h3>
-            </template>
-            <div class="demo-row">
-              <AeButton>Default</AeButton>
-              <AeButton loading>Loading</AeButton>
-              <AeButton disabled>Disabled</AeButton>
-              <AeButton rounded>Rounded</AeButton>
-            </div>
-          </PkCard>
-        </div>
-      </section>
+      <ButtonsComponent />
+
+<!--      Progress section -->
+      <ProgressBarComponent />
       
       <!-- Form Inputs Section -->
       <section class="demo-section">
@@ -457,6 +406,8 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import ButtonsComponent from "@/examples/ButtonsComponent.vue";
+import ProgressBarComponent from "@/examples/ProgressBarComponent.vue";
 // Components are registered globally via app.use(PackDesignSystem)
 // No need to import individually when using license
 

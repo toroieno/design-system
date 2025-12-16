@@ -20,7 +20,7 @@ Create `.npmrc` in your project root:
 ### Step 2: Install the Package
 
 ```bash
-npm install @your-username/pack-design-system
+npm install @your-username/design-system
 ```
 
 ### Step 3: Configure with License Key
@@ -29,12 +29,12 @@ npm install @your-username/pack-design-system
 // main.ts
 import { createApp } from 'vue'
 import App from './App.vue'
-import PackDesignSystem from '@your-username/pack-design-system'
-import '@your-username/pack-design-system/style.css'
+import DesignSystem from '@your-username/design-system'
+import '@your-username/design-system/style.css'
 
 const app = createApp(App)
 
-app.use(PackDesignSystem, {
+app.use(DesignSystem, {
   licenseKey: 'pk_live_your_license_key_here'
 })
 
@@ -178,7 +178,7 @@ const VALID_LICENSE_KEYS = new Set<string>([
 ])
 ```
 
-## Publishing
+## Publishing private
 
 ### First-time Setup
 
@@ -199,6 +199,14 @@ npm run build:lib
 npm publish
 ```
 
+## Publishing public
+```bash
+npm logout
+#npm login --auth-type=legacy
+npm config set //registry.npmjs.org/:_authToken=npm_xxxxxxxxx
+npm publish --access public
+```
+
 ### CI/CD Auto-Publish
 
 The GitHub Actions workflow automatically publishes when you:
@@ -214,7 +222,7 @@ The GitHub Actions workflow automatically publishes when you:
 2. **User Setup:**
    - User creates GitHub PAT with `read:packages`
    - User creates `.npmrc` with token
-   - User runs `npm install @your-username/pack-design-system`
+   - User runs `npm install @your-username/design-system`
 
 ## License
 

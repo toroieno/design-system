@@ -33,6 +33,7 @@ export interface AeButtonProps {
   loading?: boolean
   block?: boolean
   rounded?: boolean
+  icon?: boolean
   type?: 'button' | 'submit' | 'reset'
 }
 
@@ -44,6 +45,7 @@ const props = withDefaults(defineProps<AeButtonProps>(), {
   loading: false,
   block: false,
   rounded: false,
+  icon: false,
   type: 'button',
 })
 
@@ -61,6 +63,7 @@ const buttonClasses = computed(() => [
     'ae-btn--loading': props.loading,
     'ae-btn--block': props.block,
     'ae-btn--rounded': props.rounded,
+    'ae-btn--icon': props.icon,
   },
 ])
 
@@ -124,7 +127,7 @@ const handleClick = (event: MouseEvent) => {
   
   // Rounded
   &--rounded {
-    border-radius: var(--ae-radius-full);
+    border-radius: var(--sds-size-radius-full);
   }
   
   // Disabled
@@ -213,17 +216,6 @@ const handleClick = (event: MouseEvent) => {
         transform: translateY(-1px);
       }
     }
-    
-    &.ae-btn--accent {
-      background: linear-gradient(135deg, var(--ae-accent-500), var(--ae-accent-600));
-      box-shadow: var(--ae-shadow-sm), var(--ae-shadow-accent);
-      
-      &:hover {
-        background: linear-gradient(135deg, var(--ae-accent-400), var(--ae-accent-500));
-        box-shadow: var(--ae-shadow-md), var(--ae-shadow-accent);
-        transform: translateY(-1px);
-      }
-    }
   }
   
   // ================================
@@ -244,59 +236,14 @@ const handleClick = (event: MouseEvent) => {
       }
     }
     
-    &.ae-btn--secondary {
-      border-color: var(--ae-secondary-500);
-      color: var(--ae-secondary-600);
+    &.ae-btn--danger {
+      border-color: var(--sds-color-border-danger-secondary);
+      color: var(--sds-color-text-danger-tertiary);
       
       &:hover {
-        background: var(--ae-secondary-50);
-        border-color: var(--ae-secondary-600);
-      }
-    }
-    
-    &.ae-btn--accent {
-      border-color: var(--ae-accent-500);
-      color: var(--ae-accent-600);
-      
-      &:hover {
-        background: var(--ae-accent-50);
-        border-color: var(--ae-accent-600);
-      }
-    }
-    
-    &.ae-btn--success {
-      border-color: var(--ae-success-500);
-      color: var(--ae-success-600);
-      
-      &:hover {
-        background: var(--ae-success-50);
-      }
-    }
-    
-    &.ae-btn--warning {
-      border-color: var(--ae-warning-500);
-      color: var(--ae-warning-700);
-      
-      &:hover {
-        background: var(--ae-warning-50);
-      }
-    }
-    
-    &.ae-btn--error {
-      border-color: var(--ae-error-500);
-      color: var(--ae-error-600);
-      
-      &:hover {
-        background: var(--ae-error-50);
-      }
-    }
-    
-    &.ae-btn--info {
-      border-color: var(--ae-info-500);
-      color: var(--ae-info-600);
-      
-      &:hover {
-        background: var(--ae-info-50);
+        background: var(--sds-color-background-danger-tertiary-hover);
+        border-color: var(--sds-color-border-danger-default);
+        color: var(--sds-color-text-danger-default);
       }
     }
   }
@@ -316,51 +263,53 @@ const handleClick = (event: MouseEvent) => {
       }
     }
     
-    &.ae-btn--secondary {
-      color: var(--ae-secondary-600);
+    &.ae-btn--danger {
+      color: var(--sds-color-text-danger-tertiary);
       
       &:hover {
         background: var(--ae-secondary-50);
+        color: var(--sds-color-text-danger-default);
       }
     }
-    
-    &.ae-btn--accent {
-      color: var(--ae-accent-600);
-      
+  }
+
+  // ================================
+  // VARIANT: Icon
+  // ================================
+  &--icon {
+    color: var(--sds-color-icon-primary-default);
+    //padding: var(--sds-size-space-12);
+    border-radius: var(--sds-size-radius-50);
+    border: var(--sds-size-stroke-border) solid;
+
+    &.ae-btn--filled {
+      background: var(--sds-color-background-button-hover);
+      border-color: var(--sds-color-border-default-primary);
+
       &:hover {
-        background: var(--ae-accent-50);
+        background: var(--sds-color-background-default-secondary-hover);
+        border-color: var(--sds-color-border-default-primary);
       }
     }
-    
-    &.ae-btn--success {
-      color: var(--ae-success-600);
-      
+
+    &.ae-btn--outlined {
+      background-color: var(--sds-color-background-surface-default);
+      border-color: var(--sds-color-border-default-secondary);
+
       &:hover {
-        background: var(--ae-success-50);
+        background-color: var(--sds-color-background-surface-default);
+        border-color: var(--sds-color-border-brand-green);
+        color: var(--sds-color-icon-primary-default);
       }
     }
-    
-    &.ae-btn--warning {
-      color: var(--ae-warning-700);
-      
+
+    &.ae-btn--text {
+      border: none;
+      background-color: transparent;
+      color: var(--sds-color-icon-primary-default);
+
       &:hover {
-        background: var(--ae-warning-50);
-      }
-    }
-    
-    &.ae-btn--error {
-      color: var(--ae-error-600);
-      
-      &:hover {
-        background: var(--ae-error-50);
-      }
-    }
-    
-    &.ae-btn--info {
-      color: var(--ae-info-600);
-      
-      &:hover {
-        background: var(--ae-info-50);
+        background-color: var(--sds-color-background-default-primary-hover);
       }
     }
   }

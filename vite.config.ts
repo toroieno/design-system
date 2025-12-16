@@ -26,8 +26,8 @@ export default defineConfig(({ mode }) => {
     build: isLib ? {
       lib: {
         entry: resolve(__dirname, 'src/index.ts'),
-        name: 'PackDesignSystem',
-        fileName: 'pack-design-system',
+        name: 'DesignSystem',
+        fileName: 'design-system',
         formats: ['es', 'umd'],
       },
       rollupOptions: {

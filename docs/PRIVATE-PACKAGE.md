@@ -10,7 +10,7 @@ This guide shows how to distribute your package privately with token-based authe
 
 ```json
 {
-  "name": "@your-github-username/pack-design-system",
+  "name": "@your-github-username/design-system",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   }
@@ -58,7 +58,7 @@ Users must create `.npmrc` in their project:
 Then install:
 
 ```bash
-npm install @your-github-username/pack-design-system
+npm install @your-github-username/design-system
 ```
 
 ---
@@ -69,7 +69,7 @@ npm install @your-github-username/pack-design-system
 
 ```json
 {
-  "name": "@your-npm-org/pack-design-system",
+  "name": "@your-npm-org/design-system",
   "private": false,
   "publishConfig": {
     "access": "restricted"
@@ -88,7 +88,7 @@ npm publish --access restricted
 
 ```bash
 # Add user to your org or grant read access
-npm access grant read-only @your-npm-org/pack-design-system username
+npm access grant read-only @your-npm-org/design-system username
 ```
 
 ### Step 4: Users Install
@@ -97,7 +97,7 @@ Users login to npm and install:
 
 ```bash
 npm login
-npm install @your-npm-org/pack-design-system
+npm install @your-npm-org/design-system
 ```
 
 ---
@@ -234,9 +234,9 @@ const PackDesignSystem: Plugin = {
 
 ```typescript
 // User's main.ts
-import PackDesignSystem from 'pack-design-system'
+import DesignSystem from 'design-system'
 
-app.use(PackDesignSystem, {
+app.use(DesignSystem, {
   licenseKey: 'pk_live_xxxxxxxxxxxx'
 })
 ```

@@ -41,5 +41,9 @@ export type { PkBadgeProps } from './PkBadge'
 export { PkAlert } from './PkAlert'
 export type { PkAlertProps } from './PkAlert'
 
+// ProgressBar
+export { AeProgressBar } from './AeProgressBar'
+export type { AeProgressBarProps } from './AeProgressBar'
+
 
 

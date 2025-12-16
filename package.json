@@ -1,6 +1,6 @@
 {
   "name": "@toroieno/design-system",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "type": "module",
   "description": "A modern Vue 3 component library",
   "author": "Trien <vedas.study@gmail.com>",
@@ -17,30 +17,29 @@
     "type": "git",
     "url": "https://github.com/toroieno/design-system.git"
   },
-  "homepage": "https://github.com/your-username/pack-design-system#readme",
+  "homepage": "https://github.com/toroieno/design-system#readme",
   "bugs": {
-    "url": "https://github.com/your-username/pack-design-system/issues"
+    "url": "https://github.com/toroieno/design-system/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "restricted"
+    "access": "public"
   },
   "files": [
     "dist",
     "README.md",
     "LICENSE"
   ],
-  "main": "./dist/pack-design-system.umd.cjs",
-  "module": "./dist/pack-design-system.js",
+  "main": "./dist/design-system.umd.cjs",
+  "module": "./dist/design-system.js",
   "types": "./dist/index.d.ts",
+  "style": "./dist/style.css",
   "exports": {
     ".": {
-      "import": "./dist/pack-design-system.js",
-      "require": "./dist/pack-design-system.umd.cjs",
+      "import": "./dist/design-system.js",
+      "require": "./dist/design-system.umd.cjs",
       "types": "./dist/index.d.ts"
     },
-    "./style.css": "./dist/style.css",
-    "./dist/style.css": "./dist/style.css"
+    "./style.css": "./dist/style.css"
   },
   "sideEffects": [
     "**/*.css",
