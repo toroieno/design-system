@@ -4,3 +4,17 @@
   font-weight: var(--sds-typography-weight-regular);
   line-height: 120%; /* 19.2px */
 }
+
+.ae-text-single-line-body-small-strong {
+  font-size: var(--sds-typography-scale-02);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-regular);
+  line-height: 120%; /* 16.8px */
+}
+
+.ae-text-note {
+  font-size: var(--sds-typography-scale-01);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-regular);
+  line-height: 140%; /* 16.8px */
+}

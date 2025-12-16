@@ -12,7 +12,7 @@ import './styles/main.scss'
 // Import all components
 import { AeButton } from './components/AeButton'
 import { AeProgressBar } from './components/AeProgressBar'
-import { PkInput } from './components/PkInput'
+import { AeInput } from './components/AeInput'
 import { PkTextarea } from './components/PkTextarea'
 import { PkSelect } from './components/PkSelect'
 import { PkCheckbox } from './components/PkCheckbox'
@@ -26,7 +26,7 @@ import { PkAlert } from './components/PkAlert'
 export {
   AeButton,
   AeProgressBar,
-  PkInput,
+  AeInput,
   PkTextarea,
   PkSelect,
   PkCheckbox,
@@ -40,7 +40,7 @@ export {
 // Export types
 export type { AeButtonProps } from './components/AeButton'
 export type { AeProgressBarProps } from './components/AeProgressBar'
-export type { PkInputProps } from './components/PkInput'
+export type { AeInputProps } from './components/AeInput'
 export type { PkTextareaProps } from './components/PkTextarea'
 export type { PkSelectProps, SelectOption } from './components/PkSelect'
 export type { PkCheckboxProps } from './components/PkCheckbox'
@@ -66,7 +66,7 @@ export interface PackDesignSystemOptions {
 const components = {
   AeButton,
   AeProgressBar,
-  PkInput,
+  AeInput,
   PkTextarea,
   PkSelect,
   PkCheckbox,

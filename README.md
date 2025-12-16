@@ -62,7 +62,7 @@ Contact us to obtain a license key:
 | Component | Description |
 |-----------|-------------|
 | `PkButton` | Versatile button with filled, outlined, text, and tonal variants |
-| `PkInput` | Text input with outlined, filled, and underlined variants |
+| `AeInput` | Text input with outlined, filled, and underlined variants |
 | `PkTextarea` | Multi-line text input with character count |
 | `PkSelect` | Dropdown select with search and custom options |
 
@@ -96,7 +96,7 @@ Contact us to obtain a license key:
 
 ```vue
 <template>
-  <PkInput 
+  <AeInput 
     v-model="email"
     label="Email"
     type="email"

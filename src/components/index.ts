@@ -6,8 +6,8 @@ export { AeButton } from './AeButton'
 export type { AeButtonProps } from './AeButton'
 
 // Input
-export { PkInput } from './PkInput'
-export type { PkInputProps } from './PkInput'
+export { AeInput } from './AeInput'
+export type { AeInputProps } from './AeInput'
 
 // Textarea
 export { PkTextarea } from './PkTextarea'
