@@ -1,0 +1,69 @@
+// ============================================
+// PACK DESIGN SYSTEM - Main Styles Entry
+// ============================================
+
+@import 'variables';
+@import 'reset';
+@import 'fonts';
+
+// ============================================
+// UTILITY CLASSES
+// ============================================
+
+// Text utilities
+.pk-text-xs { font-size: var(--pk-text-xs); }
+.pk-text-sm { font-size: var(--pk-text-sm); }
+.pk-text-base { font-size: var(--pk-text-base); }
+.pk-text-lg { font-size: var(--pk-text-lg); }
+.pk-text-xl { font-size: var(--pk-text-xl); }
+.pk-text-2xl { font-size: var(--pk-text-2xl); }
+.pk-text-3xl { font-size: var(--pk-text-3xl); }
+
+.pk-font-normal { font-weight: var(--pk-font-normal); }
+.pk-font-medium { font-weight: var(--pk-font-medium); }
+.pk-font-semibold { font-weight: var(--pk-font-semibold); }
+.pk-font-bold { font-weight: var(--pk-font-bold); }
+
+// Spacing utilities
+.pk-mt-2 { margin-top: var(--pk-space-2); }
+.pk-mt-4 { margin-top: var(--pk-space-4); }
+.pk-mt-6 { margin-top: var(--pk-space-6); }
+.pk-mt-8 { margin-top: var(--pk-space-8); }
+
+.pk-mb-2 { margin-bottom: var(--pk-space-2); }
+.pk-mb-4 { margin-bottom: var(--pk-space-4); }
+.pk-mb-6 { margin-bottom: var(--pk-space-6); }
+.pk-mb-8 { margin-bottom: var(--pk-space-8); }
+
+.pk-p-2 { padding: var(--pk-space-2); }
+.pk-p-4 { padding: var(--pk-space-4); }
+.pk-p-6 { padding: var(--pk-space-6); }
+.pk-p-8 { padding: var(--pk-space-8); }
+
+// Flex utilities
+.pk-flex { display: flex; }
+.pk-flex-col { flex-direction: column; }
+.pk-flex-wrap { flex-wrap: wrap; }
+.pk-items-center { align-items: center; }
+.pk-justify-center { justify-content: center; }
+.pk-justify-between { justify-content: space-between; }
+.pk-gap-2 { gap: var(--pk-space-2); }
+.pk-gap-4 { gap: var(--pk-space-4); }
+.pk-gap-6 { gap: var(--pk-space-6); }
+
+// Grid utilities
+.pk-grid { display: grid; }
+.pk-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.pk-grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.pk-grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+// Container
+.pk-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: var(--pk-space-6);
+}
+
+
+

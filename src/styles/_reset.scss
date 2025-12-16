@@ -1,0 +1,104 @@
+// ============================================
+// MODERN CSS RESET
+// ============================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--sds-typography-family);
+  color: var(--pk-neutral-900);
+  background-color: var(--pk-neutral-0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  font-weight: var(--pk-font-semibold);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+// Focus visible for accessibility
+:focus-visible {
+  outline: 2px solid var(--pk-primary-500);
+  outline-offset: 2px;
+}
+
+// Remove default focus for mouse users
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+// Selection
+::selection {
+  background-color: var(--pk-primary-200);
+  color: var(--pk-primary-900);
+}
+
+// Scrollbar styling
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pk-neutral-100);
+  border-radius: var(--pk-radius-full);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pk-neutral-300);
+  border-radius: var(--pk-radius-full);
+  
+  &:hover {
+    background: var(--pk-neutral-400);
+  }
+}
+
+
+

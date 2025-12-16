@@ -1,0 +1,70 @@
+{
+  "name": "@toroieno/design-system",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "A modern Vue 3 component library",
+  "author": "Trien <vedas.study@gmail.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "vue",
+    "vue3",
+    "components",
+    "ui",
+    "design-system",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toroieno/design-system.git"
+  },
+  "homepage": "https://github.com/your-username/pack-design-system#readme",
+  "bugs": {
+    "url": "https://github.com/your-username/pack-design-system/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/pack-design-system.umd.cjs",
+  "module": "./dist/pack-design-system.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/pack-design-system.js",
+      "require": "./dist/pack-design-system.umd.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/style.css",
+    "./dist/style.css": "./dist/style.css"
+  },
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:lib": "vue-tsc --declaration --emitDeclarationOnly --outDir dist && vite build --mode lib",
+    "preview": "vite preview",
+    "type-check": "vue-tsc --noEmit",
+    "prepublishOnly": "npm run build:lib"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "sass": "^1.77.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.9.1",
+    "vue": "^3.4.21",
+    "vue-tsc": "^2.0.6"
+  }
+}

@@ -1,0 +1,53 @@
+# Source files (use dist/ instead)
+src/App.vue
+src/main.ts
+
+# Config files
+*.map
+.git
+.gitignore
+.vscode
+.idea
+.cursor
+
+# Dependencies
+node_modules
+
+# TypeScript config
+tsconfig.json
+tsconfig.node.json
+
+# Build config
+vite.config.ts
+
+# Test files
+__tests__
+*.test.ts
+*.spec.ts
+*.test.vue
+coverage
+.nyc_output
+
+# Demo/documentation files
+docs
+examples
+public
+
+# CI/CD
+.github
+.gitlab-ci.yml
+.travis.yml
+
+# Editor files
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Lock files (peer dependency)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+
+
