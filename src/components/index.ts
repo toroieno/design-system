@@ -22,8 +22,8 @@ export { AeCheckbox } from './AeCheckbox'
 export type { AeCheckboxProps } from './AeCheckbox'
 
 // Radio
-export { PkRadio } from './PkRadio'
-export type { PkRadioProps } from './PkRadio'
+export { AeRadio } from './AeRadio'
+export type { AeRadioProps } from './AeRadio'
 
 // Switch
 export { PkSwitch } from './PkSwitch'

@@ -41,10 +41,10 @@ const switchValue3 = ref(true)
           <h3 class="demo-card-title">Radio</h3>
         </template>
         <div class="demo-stack">
-          <PkRadio v-model="radioValue" value="option1" name="demo" label="Option 1" />
-          <PkRadio v-model="radioValue" value="option2" name="demo" label="Option 2" color="secondary" />
-          <PkRadio v-model="radioValue" value="option3" name="demo" label="Option 3" color="accent" />
-          <PkRadio value="disabled" name="demo2" label="Disabled" disabled />
+          <AeRadio v-model="radioValue" value="option1" name="demo" label="Option 1" />
+          <AeRadio v-model="radioValue" value="option2" name="demo" label="Option 1" size="sm"/>
+          <AeRadio v-model="radioValue" value="option3" name="demo" label="Option 1" size="lg"/>
+          <AeRadio value="disabled" name="demo2" label="Disabled" disabled />
         </div>
       </PkCard>
 

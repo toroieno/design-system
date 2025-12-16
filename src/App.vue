@@ -42,13 +42,13 @@
     
     <main class="demo-main">
       <!-- Buttons Section -->
-      <ButtonsComponent />
+<!--      <ButtonsComponent />-->
 
 <!--      Progress section -->
-      <ProgressBarComponent />
+<!--      <ProgressBarComponent />-->
       
       <!-- Form Inputs Section -->
-      <InputComponent />
+<!--      <InputComponent />-->
       
       <!-- Selection Controls -->
       <SelectionsComponent />

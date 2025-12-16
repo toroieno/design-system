@@ -67,11 +67,11 @@ Contact us to obtain a license key:
 | `PkSelect` | Dropdown select with search and custom options |
 
 ### Selection Controls
-| Component | Description |
-|-----------|-------------|
+| Component    | Description |
+|--------------|-------------|
 | `AeCheckbox` | Checkbox with indeterminate state support |
-| `PkRadio` | Radio button for single selection |
-| `PkSwitch` | Toggle switch for boolean values |
+| `AeRadio`    | Radio button for single selection |
+| `PkSwitch`   | Toggle switch for boolean values |
 
 ### Display Components
 | Component | Description |
