@@ -18,8 +18,8 @@ export { PkSelect } from './PkSelect'
 export type { PkSelectProps, SelectOption } from './PkSelect'
 
 // Checkbox
-export { PkCheckbox } from './PkCheckbox'
-export type { PkCheckboxProps } from './PkCheckbox'
+export { AeCheckbox } from './AeCheckbox'
+export type { AeCheckboxProps } from './AeCheckbox'
 
 // Radio
 export { PkRadio } from './PkRadio'

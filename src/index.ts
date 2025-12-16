@@ -15,7 +15,7 @@ import { AeProgressBar } from './components/AeProgressBar'
 import { AeInput } from './components/AeInput'
 import { PkTextarea } from './components/PkTextarea'
 import { PkSelect } from './components/PkSelect'
-import { PkCheckbox } from './components/PkCheckbox'
+import { AeCheckbox } from './components/AeCheckbox'
 import { PkRadio } from './components/PkRadio'
 import { PkSwitch } from './components/PkSwitch'
 import { PkCard } from './components/PkCard'
@@ -29,7 +29,7 @@ export {
   AeInput,
   PkTextarea,
   PkSelect,
-  PkCheckbox,
+  AeCheckbox,
   PkRadio,
   PkSwitch,
   PkCard,
@@ -43,7 +43,7 @@ export type { AeProgressBarProps } from './components/AeProgressBar'
 export type { AeInputProps } from './components/AeInput'
 export type { PkTextareaProps } from './components/PkTextarea'
 export type { PkSelectProps, SelectOption } from './components/PkSelect'
-export type { PkCheckboxProps } from './components/PkCheckbox'
+export type { AeCheckboxProps } from './components/AeCheckbox'
 export type { PkRadioProps } from './components/PkRadio'
 export type { PkSwitchProps } from './components/PkSwitch'
 export type { PkCardProps } from './components/PkCard'
@@ -69,7 +69,7 @@ const components = {
   AeInput,
   PkTextarea,
   PkSelect,
-  PkCheckbox,
+  AeCheckbox,
   PkRadio,
   PkSwitch,
   PkCard,

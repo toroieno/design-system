@@ -1,3 +1,10 @@
+.ae-text-body-base {
+  font-size: var(--sds-typography-scale-03);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-light);
+  line-height: 150%; /* 24px */
+}
+
 .ae-text-single-line-body-base {
   font-size: var(--sds-typography-scale-03);
   font-style: normal;

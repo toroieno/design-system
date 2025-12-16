@@ -69,7 +69,7 @@ Contact us to obtain a license key:
 ### Selection Controls
 | Component | Description |
 |-----------|-------------|
-| `PkCheckbox` | Checkbox with indeterminate state support |
+| `AeCheckbox` | Checkbox with indeterminate state support |
 | `PkRadio` | Radio button for single selection |
 | `PkSwitch` | Toggle switch for boolean values |
 

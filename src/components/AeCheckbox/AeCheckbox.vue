@@ -2,21 +2,21 @@
   <label :class="checkboxClasses">
     <input
       type="checkbox"
-      class="pk-checkbox__input"
+      class="ae-checkbox__input"
       :checked="isChecked"
       :disabled="disabled"
       :indeterminate="indeterminate"
       @change="handleChange"
     />
-    <span class="pk-checkbox__box">
-      <svg v-if="isChecked && !indeterminate" class="pk-checkbox__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-        <path d="M5 12l5 5L20 7" />
+    <span class="ae-checkbox__box">
+      <svg v-if="isChecked && !indeterminate" class="ae-checkbox__check" xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+        <path d="M11.4667 0.800003L4.13334 8.13334L0.800003 4.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <svg v-if="indeterminate" class="pk-checkbox__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+      <svg v-if="indeterminate" class="ae-checkbox__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
         <path d="M5 12h14" />
       </svg>
     </span>
-    <span v-if="label || $slots.default" class="pk-checkbox__label">
+    <span v-if="label || $slots.default" class="ae-checkbox__label ae-text-body-base">
       <slot>{{ label }}</slot>
     </span>
   </label>
@@ -25,17 +25,17 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-export interface PkCheckboxProps {
+export interface AeCheckboxProps {
   modelValue?: boolean | any[]
   value?: any
   label?: string
   disabled?: boolean
   indeterminate?: boolean
-  color?: 'primary' | 'secondary' | 'accent' | 'success' | 'warning' | 'error'
+  color?: 'primary'
   size?: 'sm' | 'md' | 'lg'
 }
 
-const props = withDefaults(defineProps<PkCheckboxProps>(), {
+const props = withDefaults(defineProps<AeCheckboxProps>(), {
   modelValue: false,
   disabled: false,
   indeterminate: false,
@@ -56,13 +56,13 @@ const isChecked = computed(() => {
 })
 
 const checkboxClasses = computed(() => [
-  'pk-checkbox',
-  `pk-checkbox--${props.size}`,
-  `pk-checkbox--${props.color}`,
+  'ae-checkbox',
+  `ae-checkbox--${props.size}`,
+  `ae-checkbox--${props.color}`,
   {
-    'pk-checkbox--checked': isChecked.value,
-    'pk-checkbox--disabled': props.disabled,
-    'pk-checkbox--indeterminate': props.indeterminate,
+    'ae-checkbox--checked': isChecked.value,
+    'ae-checkbox--disabled': props.disabled,
+    'ae-checkbox--indeterminate': props.indeterminate,
   },
 ])
 
@@ -90,10 +90,10 @@ const handleChange = (event: Event) => {
 </script>
 
 <style lang="scss" scoped>
-.pk-checkbox {
+.ae-checkbox {
   display: inline-flex;
   align-items: center;
-  gap: var(--pk-space-2);
+  gap: var(--sds-size-space-8);
   cursor: pointer;
   user-select: none;
   
@@ -110,103 +110,89 @@ const handleChange = (event: Event) => {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: var(--pk-border-width-2) solid var(--pk-neutral-400);
-    border-radius: var(--pk-radius-sm);
-    background: var(--pk-neutral-0);
-    transition: all var(--pk-duration-150) var(--pk-ease-out);
+    border-radius: var(--sds-size-radius-50);
+    border: var(--sds-size-stroke-border) solid var(--sds-color-border-default-teriary);
+    background: var(--sds-color-background-opacity-200);
+    transition: all var(--ae-duration-150) var(--ae-ease-out);
   }
   
   &__check {
-    color: white;
+    color: var(--sds-color-icon-brand-default);
     opacity: 0;
     transform: scale(0.5);
-    transition: all var(--pk-duration-150) var(--pk-ease-bounce);
+    transition: all var(--ae-duration-150) var(--ae-ease-bounce);
   }
   
   &__label {
-    font-size: var(--pk-text-base);
-    color: var(--pk-neutral-800);
+    color: var(--sds-color-text-default-primary);
   }
   
   // Sizes
   &--sm {
-    .pk-checkbox__box {
+    .ae-checkbox__box {
       width: 1rem;
       height: 1rem;
     }
     
-    .pk-checkbox__check {
+    .ae-checkbox__check {
       width: 0.625rem;
       height: 0.625rem;
-    }
-    
-    .pk-checkbox__label {
-      font-size: var(--pk-text-sm);
     }
   }
   
   &--md {
-    .pk-checkbox__box {
+    .ae-checkbox__box {
       width: 1.25rem;
       height: 1.25rem;
     }
     
-    .pk-checkbox__check {
+    .ae-checkbox__check {
       width: 0.875rem;
       height: 0.875rem;
     }
   }
   
   &--lg {
-    .pk-checkbox__box {
+    .ae-checkbox__box {
       width: 1.5rem;
       height: 1.5rem;
     }
     
-    .pk-checkbox__check {
+    .ae-checkbox__check {
       width: 1rem;
       height: 1rem;
-    }
-    
-    .pk-checkbox__label {
-      font-size: var(--pk-text-lg);
     }
   }
   
   // Hover
   &:hover:not(&--disabled) {
-    .pk-checkbox__box {
-      border-color: var(--pk-neutral-500);
+    .ae-checkbox__box {
+      border-color: var(--sds-color-border-default-teriary);
     }
   }
   
   // Colors when checked
   @mixin checkbox-color($color-500, $color-600) {
-    &.pk-checkbox--checked,
-    &.pk-checkbox--indeterminate {
-      .pk-checkbox__box {
+    &.ae-checkbox--checked,
+    &.ae-checkbox--indeterminate {
+      .ae-checkbox__box {
         background: $color-500;
         border-color: $color-500;
       }
       
-      .pk-checkbox__check {
+      .ae-checkbox__check {
         opacity: 1;
         transform: scale(1);
       }
       
-      &:hover:not(.pk-checkbox--disabled) .pk-checkbox__box {
+      &:hover:not(.ae-checkbox--disabled) .ae-checkbox__box {
         background: $color-600;
         border-color: $color-600;
       }
     }
   }
   
-  &--primary { @include checkbox-color(var(--pk-primary-500), var(--pk-primary-600)); }
-  &--secondary { @include checkbox-color(var(--pk-secondary-500), var(--pk-secondary-600)); }
-  &--accent { @include checkbox-color(var(--pk-accent-500), var(--pk-accent-600)); }
-  &--success { @include checkbox-color(var(--pk-success-500), var(--pk-success-600)); }
-  &--warning { @include checkbox-color(var(--pk-warning-500), var(--pk-warning-600)); }
-  &--error { @include checkbox-color(var(--pk-error-500), var(--pk-error-600)); }
+  &--primary { @include checkbox-color(var(--sds-color-background-brand-default), 'transparent'); }
   
   // Disabled
   &--disabled {
@@ -215,8 +201,8 @@ const handleChange = (event: Event) => {
   }
   
   // Focus
-  &:focus-within .pk-checkbox__box {
-    box-shadow: 0 0 0 3px var(--pk-primary-100);
+  &:focus-within .ae-checkbox__box {
+    box-shadow: 0 0 0 3px var(--ae-primary-100);
   }
 }
 </style>
