@@ -49,5 +49,9 @@ export type { AeProgressBarProps } from './AeProgressBar'
 export { AeTabs } from './AeTabs'
 export type { AeTabsProps, TabItem } from './AeTabs'
 
+// Avatar
+export { AeAvatar } from './AeAvatar'
+export type { AeAvatarProps } from './AeAvatar'
+
 
 
