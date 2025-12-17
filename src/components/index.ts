@@ -45,5 +45,9 @@ export type { PkAlertProps } from './PkAlert'
 export { AeProgressBar } from './AeProgressBar'
 export type { AeProgressBarProps } from './AeProgressBar'
 
+// Tabs
+export { AeTabs } from './AeTabs'
+export type { AeTabsProps, TabItem } from './AeTabs'
+
 
 

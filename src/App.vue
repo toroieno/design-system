@@ -48,10 +48,13 @@
 <!--      <ProgressBarComponent />-->
       
       <!-- Form Inputs Section -->
-      <InputComponent />
+<!--      <InputComponent />-->
       
       <!-- Selection Controls -->
 <!--      <SelectionsComponent />-->
+
+<!--      Tab section-->
+      <TabsComponent />
       
       <!-- Cards Section -->
       <section class="demo-section">
@@ -259,6 +262,7 @@ import ButtonsComponent from "@/examples/ButtonsComponent.vue";
 import ProgressBarComponent from "@/examples/ProgressBarComponent.vue";
 import InputComponent from "@/examples/InputComponent.vue";
 import SelectionsComponent from "@/examples/SelectionsComponent.vue";
+import TabsComponent from "@/examples/TabsComponent.vue";
 // Components are registered globally via app.use(PackDesignSystem)
 // No need to import individually when using license
 
