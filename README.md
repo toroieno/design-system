@@ -64,7 +64,7 @@ Contact us to obtain a license key:
 | `PkButton`   | Versatile button with filled, outlined, text, and tonal variants |
 | `AeInput`    | Text input with outlined, filled, and underlined variants |
 | `AeTextarea` | Multi-line text input with character count |
-| `PkSelect`   | Dropdown select with search and custom options |
+| `AeSelect`   | Dropdown select with search and custom options |
 
 ### Selection Controls
 | Component    | Description |

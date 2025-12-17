@@ -122,7 +122,7 @@ defineExpose({
   }
   
   &__required {
-    color: var(--ae-error-500);
+    color: var(--sds-color-border-danger-default);
     margin-left: 2px;
   }
   

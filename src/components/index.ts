@@ -14,8 +14,8 @@ export { AeTextarea } from './AeTextarea'
 export type { AeTextareaProps } from './AeTextarea'
 
 // Select
-export { PkSelect } from './PkSelect'
-export type { PkSelectProps, SelectOption } from './PkSelect'
+export { AeSelect } from './AeSelect'
+export type { AeSelectProps, SelectOption } from './AeSelect'
 
 // Checkbox
 export { AeCheckbox } from './AeCheckbox'

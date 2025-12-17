@@ -14,7 +14,7 @@ import { AeButton } from './components/AeButton'
 import { AeProgressBar } from './components/AeProgressBar'
 import { AeInput } from './components/AeInput'
 import { AeTextarea } from './components/AeTextarea'
-import { PkSelect } from './components/PkSelect'
+import { AeSelect } from './components/AeSelect'
 import { AeCheckbox } from './components/AeCheckbox'
 import { AeRadio } from './components/AeRadio'
 import { AeSwitch } from './components/AeSwitch'
@@ -28,7 +28,7 @@ export {
   AeProgressBar,
   AeInput,
   AeTextarea,
-  PkSelect,
+  AeSelect,
   AeCheckbox,
   AeRadio,
   AeSwitch,
@@ -42,7 +42,7 @@ export type { AeButtonProps } from './components/AeButton'
 export type { AeProgressBarProps } from './components/AeProgressBar'
 export type { AeInputProps } from './components/AeInput'
 export type { AeTextareaProps } from './components/AeTextarea'
-export type { PkSelectProps, SelectOption } from './components/PkSelect'
+export type { AeSelectProps, SelectOption } from './components/AeSelect'
 export type { AeCheckboxProps } from './components/AeCheckbox'
 export type { AeRadioProps } from './components/AeRadio'
 export type { AeSwitchProps } from './components/AeSwitch'
@@ -68,7 +68,7 @@ const components = {
   AeProgressBar,
   AeInput,
   AeTextarea,
-  PkSelect,
+  AeSelect,
   AeCheckbox,
   AeRadio,
   AeSwitch,

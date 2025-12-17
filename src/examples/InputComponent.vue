@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import {AeInput, AeTextarea} from "@/components";
+import {AeInput, AeSelect, AeTextarea} from "@/components";
 
 // Form values
 const inputValue = ref('')
 const emailValue = ref('')
 const textareaValue = ref('')
 const selectValue = ref<string | null>(null)
+const selectValues = ref<string[]>([])
 
 // Validation
 const emailError = computed(() => {
@@ -104,18 +105,36 @@ const countryOptions = [
           <h3 class="demo-card-title">Select</h3>
         </template>
         <div class="demo-stack">
-          <PkSelect
+          <AeSelect
             v-model="selectValue"
             label="Country"
             :options="countryOptions"
             placeholder="Select a country"
             clearable
           />
-          <PkSelect
+          <AeSelect
             label="Variant: Filled"
             :options="['Option 1', 'Option 2', 'Option 3']"
             variant="filled"
             placeholder="Choose..."
+            error-message="123"
+          />
+          <AeSelect
+            size="sm"
+            label="Variant: Filled"
+            :options="[]"
+            variant="underlined"
+            placeholder="Choose..."
+          />
+          <AeSelect
+            v-model="selectValues"
+            size="lg"
+            label="Variant: Filled"
+            :options="['Option 1', 'Option 2', 'Option 3', 'Option 5', 'Option 7', 'Option 8']"
+            variant="filled"
+            placeholder="Choose..."
+            multiple
+            clearable
           />
         </div>
       </PkCard>
