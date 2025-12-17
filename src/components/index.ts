@@ -10,8 +10,8 @@ export { AeInput } from './AeInput'
 export type { AeInputProps } from './AeInput'
 
 // Textarea
-export { PkTextarea } from './PkTextarea'
-export type { PkTextareaProps } from './PkTextarea'
+export { AeTextarea } from './AeTextarea'
+export type { AeTextareaProps } from './AeTextarea'
 
 // Select
 export { PkSelect } from './PkSelect'

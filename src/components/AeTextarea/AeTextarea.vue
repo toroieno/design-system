@@ -1,16 +1,16 @@
 <template>
   <div :class="wrapperClasses">
-    <label v-if="label" :for="textareaId" class="pk-textarea__label">
+    <label v-if="label" :for="textareaId" class="ae-textarea__label ae-text-single-line-body-small-strong">
       {{ label }}
-      <span v-if="required" class="pk-textarea__required">*</span>
+      <span v-if="required" class="ae-textarea__required">*</span>
     </label>
     
-    <div class="pk-textarea__container">
+    <div class="ae-textarea__container">
       <textarea
         :id="textareaId"
         ref="textareaRef"
         v-model="inputValue"
-        class="pk-textarea__field"
+        class="ae-textarea__field"
         :placeholder="placeholder"
         :disabled="disabled"
         :readonly="readonly"
@@ -23,12 +23,12 @@
       />
     </div>
     
-    <div class="pk-textarea__footer">
-      <span v-if="errorMessage" class="pk-textarea__error">{{ errorMessage }}</span>
-      <span v-else-if="hint" class="pk-textarea__hint">{{ hint }}</span>
+    <div class="ae-textarea__footer">
+      <span v-if="errorMessage" class="ae-textarea__error ae-text-note">{{ errorMessage }}</span>
+      <span v-else-if="hint" class="ae-textarea__hint ae-text-note">{{ hint }}</span>
       <span v-else />
       
-      <span v-if="showCount && maxLength" class="pk-textarea__count">
+      <span v-if="showCount && maxLength" class="ae-textarea__count ae-text-note">
         {{ inputValue?.toString().length || 0 }} / {{ maxLength }}
       </span>
     </div>
@@ -38,7 +38,7 @@
 <script setup lang="ts">
 import { computed, ref, useId } from 'vue'
 
-export interface PkTextareaProps {
+export interface AeTextareaProps {
   modelValue?: string
   label?: string
   placeholder?: string
@@ -51,10 +51,10 @@ export interface PkTextareaProps {
   maxLength?: number
   showCount?: boolean
   variant?: 'outlined' | 'filled'
-  color?: 'primary' | 'secondary' | 'accent'
+  color?: 'primary'
 }
 
-const props = withDefaults(defineProps<PkTextareaProps>(), {
+const props = withDefaults(defineProps<AeTextareaProps>(), {
   modelValue: '',
   rows: 4,
   variant: 'outlined',
@@ -83,14 +83,14 @@ const inputValue = computed({
 const hasError = computed(() => !!props.errorMessage)
 
 const wrapperClasses = computed(() => [
-  'pk-textarea',
-  `pk-textarea--${props.variant}`,
-  `pk-textarea--${props.color}`,
+  'ae-textarea',
+  `ae-textarea--${props.variant}`,
+  `ae-textarea--${props.color}`,
   {
-    'pk-textarea--focused': isFocused.value,
-    'pk-textarea--error': hasError.value,
-    'pk-textarea--disabled': props.disabled,
-    'pk-textarea--readonly': props.readonly,
+    'ae-textarea--focused': isFocused.value,
+    'ae-textarea--error': hasError.value,
+    'ae-textarea--disabled': props.disabled,
+    'ae-textarea--readonly': props.readonly,
   },
 ])
 
@@ -110,22 +110,19 @@ defineExpose({
 </script>
 
 <style lang="scss" scoped>
-.pk-textarea {
+.ae-textarea {
   display: flex;
   flex-direction: column;
-  gap: var(--pk-space-1);
+  gap: var(--sds-size-space-8);
   width: 100%;
   
   // Label
   &__label {
-    font-size: var(--pk-text-sm);
-    font-weight: var(--pk-font-medium);
-    color: var(--pk-neutral-700);
-    margin-bottom: var(--pk-space-1);
+    color: var(--sds-color-text-default-primary);
   }
   
   &__required {
-    color: var(--pk-error-500);
+    color: var(--ae-error-500);
     margin-left: 2px;
   }
   
@@ -134,7 +131,7 @@ defineExpose({
     position: relative;
     display: flex;
     width: 100%;
-    transition: all var(--pk-duration-200) var(--pk-ease-out);
+    transition: all var(--ae-duration-200) var(--ae-ease-out);
   }
   
   // Field
@@ -142,18 +139,16 @@ defineExpose({
     flex: 1;
     width: 100%;
     min-height: 5rem;
-    padding: var(--pk-space-3) var(--pk-space-4);
+    padding: var(--sds-size-space-12);
     border: none;
     outline: none;
     background: transparent;
-    font-family: var(--pk-font-family);
-    font-size: var(--pk-text-base);
-    color: var(--pk-neutral-900);
-    line-height: var(--pk-leading-relaxed);
+    color: var(--sds-color-text-default-primary);
+    line-height: var(--ae-leading-relaxed);
     resize: vertical;
     
     &::placeholder {
-      color: var(--pk-neutral-400);
+      color: var(--sds-color-text-tertiary-default);
     }
   }
   
@@ -163,52 +158,38 @@ defineExpose({
     justify-content: space-between;
     align-items: center;
     min-height: 1.25rem;
-    font-size: var(--pk-text-xs);
+    font-size: var(--ae-text-xs);
   }
   
   &__hint {
-    color: var(--pk-neutral-500);
+    color: var(--ae-neutral-500);
   }
   
   &__error {
-    color: var(--pk-error-500);
+    color: var(--sds-color-text-danger-default);
   }
   
   &__count {
-    color: var(--pk-neutral-500);
+    color: var(--sds-color-text-tertiary-default);
   }
   
   // ================================
   // VARIANT: Outlined
   // ================================
   &--outlined {
-    .pk-textarea__container {
-      border: var(--pk-border-width-2) solid var(--pk-neutral-300);
-      border-radius: var(--pk-radius-lg);
-      background: var(--pk-neutral-0);
+    .ae-textarea__container {
+      border-radius: var(--sds-size-radius-50);
+      border: var(--sds-size-stroke-border) solid var(--sds-color-border-default-primary);
+      background: var(--sds-color-background-surface-tertiary);
     }
     
-    &.pk-textarea--focused .pk-textarea__container {
-      border-color: var(--pk-primary-500);
-      box-shadow: 0 0 0 3px var(--pk-primary-100);
+    &.ae-textarea--focused .ae-textarea__container {
+      border-color: var(--sds-color-text-tertiary-default);
+      background: var(--sds-color-background-surface-default);
     }
     
-    &.pk-textarea--error .pk-textarea__container {
-      border-color: var(--pk-error-500);
-      
-      &:focus-within {
-        box-shadow: 0 0 0 3px var(--pk-error-100);
-      }
-    }
-    
-    &.pk-textarea--secondary.pk-textarea--focused .pk-textarea__container {
-      border-color: var(--pk-secondary-500);
-      box-shadow: 0 0 0 3px var(--pk-secondary-100);
-    }
-    
-    &.pk-textarea--accent.pk-textarea--focused .pk-textarea__container {
-      border-color: var(--pk-accent-500);
-      box-shadow: 0 0 0 3px var(--pk-accent-100);
+    &.ae-textarea--error .ae-textarea__container {
+      border-color: var(--sds-color-border-danger-default);
     }
   }
   
@@ -216,20 +197,18 @@ defineExpose({
   // VARIANT: Filled
   // ================================
   &--filled {
-    .pk-textarea__container {
-      border: none;
-      border-radius: var(--pk-radius-lg) var(--pk-radius-lg) 0 0;
-      background: var(--pk-neutral-100);
-      border-bottom: 2px solid var(--pk-neutral-400);
+    .ae-textarea__container {
+      border-radius: var(--sds-size-radius-50) var(--sds-size-radius-50) 0 0;
+      background: var(--sds-color-background-disabled-default);
+      border: var(--sds-size-stroke-border) solid transparent;
     }
     
-    &.pk-textarea--focused .pk-textarea__container {
-      background: var(--pk-neutral-50);
-      border-bottom-color: var(--pk-primary-500);
+    &.ae-textarea--focused .ae-textarea__container {
+      background: var(--sds-color-background-disabled-default);
     }
     
-    &.pk-textarea--error .pk-textarea__container {
-      border-bottom-color: var(--pk-error-500);
+    &.ae-textarea--error .ae-textarea__container {
+      border-color: var(--sds-color-border-danger-default);
     }
   }
   
@@ -240,17 +219,17 @@ defineExpose({
     opacity: 0.5;
     pointer-events: none;
     
-    .pk-textarea__container {
-      background: var(--pk-neutral-100);
+    .ae-textarea__container {
+      background: var(--ae-neutral-100);
     }
   }
   
   &--readonly {
-    .pk-textarea__container {
-      background: var(--pk-neutral-50);
+    .ae-textarea__container {
+      background: var(--ae-neutral-50);
     }
     
-    .pk-textarea__field {
+    .ae-textarea__field {
       cursor: default;
     }
   }

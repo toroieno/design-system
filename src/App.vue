@@ -48,10 +48,10 @@
 <!--      <ProgressBarComponent />-->
       
       <!-- Form Inputs Section -->
-<!--      <InputComponent />-->
+      <InputComponent />
       
       <!-- Selection Controls -->
-      <SelectionsComponent />
+<!--      <SelectionsComponent />-->
       
       <!-- Cards Section -->
       <section class="demo-section">

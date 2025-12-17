@@ -59,12 +59,12 @@ Contact us to obtain a license key:
 ## Components
 
 ### Form Controls
-| Component | Description |
-|-----------|-------------|
-| `PkButton` | Versatile button with filled, outlined, text, and tonal variants |
-| `AeInput` | Text input with outlined, filled, and underlined variants |
-| `PkTextarea` | Multi-line text input with character count |
-| `PkSelect` | Dropdown select with search and custom options |
+| Component    | Description |
+|--------------|-------------|
+| `PkButton`   | Versatile button with filled, outlined, text, and tonal variants |
+| `AeInput`    | Text input with outlined, filled, and underlined variants |
+| `AeTextarea` | Multi-line text input with character count |
+| `PkSelect`   | Dropdown select with search and custom options |
 
 ### Selection Controls
 | Component    | Description |

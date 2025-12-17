@@ -13,7 +13,7 @@ import './styles/main.scss'
 import { AeButton } from './components/AeButton'
 import { AeProgressBar } from './components/AeProgressBar'
 import { AeInput } from './components/AeInput'
-import { PkTextarea } from './components/PkTextarea'
+import { AeTextarea } from './components/AeTextarea'
 import { PkSelect } from './components/PkSelect'
 import { AeCheckbox } from './components/AeCheckbox'
 import { AeRadio } from './components/AeRadio'
@@ -27,7 +27,7 @@ export {
   AeButton,
   AeProgressBar,
   AeInput,
-  PkTextarea,
+  AeTextarea,
   PkSelect,
   AeCheckbox,
   AeRadio,
@@ -41,7 +41,7 @@ export {
 export type { AeButtonProps } from './components/AeButton'
 export type { AeProgressBarProps } from './components/AeProgressBar'
 export type { AeInputProps } from './components/AeInput'
-export type { PkTextareaProps } from './components/PkTextarea'
+export type { AeTextareaProps } from './components/AeTextarea'
 export type { PkSelectProps, SelectOption } from './components/PkSelect'
 export type { AeCheckboxProps } from './components/AeCheckbox'
 export type { AeRadioProps } from './components/AeRadio'
@@ -67,7 +67,7 @@ const components = {
   AeButton,
   AeProgressBar,
   AeInput,
-  PkTextarea,
+  AeTextarea,
   PkSelect,
   AeCheckbox,
   AeRadio,

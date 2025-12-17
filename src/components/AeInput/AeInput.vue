@@ -199,11 +199,11 @@ defineExpose({
   }
   
   &__prepend {
-    margin-right: var(--ae-space-2);
+    margin-inline-start: var(--sds-size-space-12);
   }
   
   &__append {
-    margin-left: var(--ae-space-2);
+    margin-inline-end: var(--sds-size-space-12);
   }
   
   // Clear button

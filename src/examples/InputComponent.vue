@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { AeInput } from "@/components";
+import {AeInput, AeTextarea} from "@/components";
 
 // Form values
 const inputValue = ref('')
@@ -40,6 +40,18 @@ const countryOptions = [
           <h3 class="demo-card-title">Text Input</h3>
         </template>
         <div class="demo-stack">
+          <AeInput>
+            <template #append>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M14 14L11.1 11.1M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </template>
+            <template #prepend>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M14 14L11.1 11.1M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </template>
+          </AeInput>
           <AeInput
             v-model="inputValue"
             label="Username"
@@ -69,19 +81,20 @@ const countryOptions = [
           <h3 class="demo-card-title">Textarea</h3>
         </template>
         <div class="demo-stack">
-<!--          <PkTextarea-->
-<!--            v-model="textareaValue"-->
-<!--            label="Description"-->
-<!--            placeholder="Write something..."-->
-<!--            :max-length="200"-->
-<!--            show-count-->
-<!--          />-->
-<!--          <PkTextarea-->
-<!--            label="With Error"-->
-<!--            placeholder="This field has an error"-->
-<!--            error-message="This field is required"-->
-<!--            variant="filled"-->
-<!--          />-->
+          <AeTextarea
+            v-model="textareaValue"
+            label="Description"
+            placeholder="Write something..."
+            :max-length="200"
+            show-count
+          />
+          <AeTextarea
+            v-model="textareaValue"
+            label="With Error"
+            placeholder="This field has an error"
+            :error-message="!textareaValue ? 'This field is required' : ''"
+            variant="filled"
+          />
         </div>
       </PkCard>
 
