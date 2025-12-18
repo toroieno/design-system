@@ -57,5 +57,9 @@ export type { AeAvatarProps } from './AeAvatar'
 export { AeDialog } from './AeDialog'
 export type { AeDialogProps } from './AeDialog'
 
+// Tooltip
+export { AeTooltip } from './AeTooltip'
+export type { AeTooltipProps } from './AeTooltip'
+
 
 

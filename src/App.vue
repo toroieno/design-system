@@ -60,7 +60,10 @@
 <!--      <AvatarComponent />-->
 
 <!--      dialog section-->
-      <DialogComponent />
+<!--      <DialogComponent />-->
+
+<!--      tooltip section-->
+      <TooltipComponent />
 
       <!-- Cards Section -->
       <section class="demo-section">
@@ -271,6 +274,7 @@ import SelectionsComponent from "@/examples/SelectionsComponent.vue";
 import TabsComponent from "@/examples/TabsComponent.vue";
 import AvatarComponent from "@/examples/AvatarComponent.vue";
 import DialogComponent from "@/examples/DialogComponent.vue";
+import TooltipComponent from "@/examples/TooltipComponent.vue";
 // Components are registered globally via app.use(PackDesignSystem)
 // No need to import individually when using license
 
