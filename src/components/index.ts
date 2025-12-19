@@ -77,5 +77,9 @@ export type { AeBreadcrumbProps, BreadcrumbItem } from './AeBreadcrumb'
 export { AeDatepicker } from './AeDatepicker'
 export type { AeDatepickerProps } from './AeDatepicker'
 
+// Toast
+export { AeToast, AeToastProvider, useToast, toast } from './AeToast'
+export type { AeToastProps, Toast, ToastVariant, ToastPosition, ToastOptions } from './AeToast'
+
 
 

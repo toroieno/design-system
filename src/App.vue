@@ -75,8 +75,10 @@
 <!--      <BreadcrumbComponent />-->
 
 <!--      datepicker section-->
-      <DatepickerComponent />
+<!--      <DatepickerComponent />-->
 
+<!--      toast section-->
+      <ToastComponent />
 
       <!-- Cards Section -->
       <section class="demo-section">
@@ -292,6 +294,7 @@ import PaginationComponent from "@/examples/PaginationComponent.vue";
 import TableComponent from "@/examples/TableComponent.vue";
 import BreadcrumbComponent from "@/examples/BreadcrumbComponent.vue";
 import DatepickerComponent from "@/examples/DatepickerComponent.vue";
+import ToastComponent from "@/examples/ToastComponent.vue";
 // Components are registered globally via app.use(PackDesignSystem)
 // No need to import individually when using license
 
