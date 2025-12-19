@@ -47,6 +47,4 @@ coverage
 
 # TypeScript cache
 *.tsbuildinfo
-
-
-
+.cursorignore

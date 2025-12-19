@@ -63,7 +63,14 @@
 <!--      <DialogComponent />-->
 
 <!--      tooltip section-->
-      <TooltipComponent />
+<!--      <TooltipComponent />-->
+
+<!--      pagination section-->
+<!--      <PaginationComponent />-->
+
+<!--      table section -->
+      <TableComponent />
+
 
       <!-- Cards Section -->
       <section class="demo-section">
@@ -275,6 +282,8 @@ import TabsComponent from "@/examples/TabsComponent.vue";
 import AvatarComponent from "@/examples/AvatarComponent.vue";
 import DialogComponent from "@/examples/DialogComponent.vue";
 import TooltipComponent from "@/examples/TooltipComponent.vue";
+import PaginationComponent from "@/examples/PaginationComponent.vue";
+import TableComponent from "@/examples/TableComponent.vue";
 // Components are registered globally via app.use(PackDesignSystem)
 // No need to import individually when using license
 
@@ -287,7 +296,7 @@ const isDark = ref(true)
 // Demo App Styles
 .demo-app {
   min-height: 100vh;
-  background: var(--pk-neutral-50);
+  background: var(--sds-color-background-surface-default);
   transition: background var(--pk-duration-300) var(--pk-ease-out);
 }
 

@@ -61,5 +61,13 @@ export type { AeDialogProps } from './AeDialog'
 export { AeTooltip } from './AeTooltip'
 export type { AeTooltipProps } from './AeTooltip'
 
+// Pagination
+export { AePagination } from './AePagination'
+export type { AePaginationProps } from './AePagination'
+
+// Table
+export { AeTable } from './AeTable'
+export type { AeTableProps, TableColumn } from './AeTable'
+
 
 
