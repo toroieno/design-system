@@ -81,5 +81,9 @@ export type { AeDatepickerProps } from './AeDatepicker'
 export { AeToast, AeToastProvider, useToast, toast } from './AeToast'
 export type { AeToastProps, Toast, ToastVariant, ToastPosition, ToastOptions } from './AeToast'
 
+// Sidebar
+export { AeSidebar } from './AeSidebar'
+export type { AeSidebarProps, SidebarItem } from './AeSidebar'
+
 
 
