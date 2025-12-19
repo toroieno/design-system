@@ -69,8 +69,10 @@
 <!--      <PaginationComponent />-->
 
 <!--      table section -->
-      <TableComponent />
+<!--      <TableComponent />-->
 
+<!--      breadcrumb section-->
+      <BreadcrumbComponent />
 
       <!-- Cards Section -->
       <section class="demo-section">
@@ -284,6 +286,7 @@ import DialogComponent from "@/examples/DialogComponent.vue";
 import TooltipComponent from "@/examples/TooltipComponent.vue";
 import PaginationComponent from "@/examples/PaginationComponent.vue";
 import TableComponent from "@/examples/TableComponent.vue";
+import BreadcrumbComponent from "@/examples/BreadcrumbComponent.vue";
 // Components are registered globally via app.use(PackDesignSystem)
 // No need to import individually when using license
 

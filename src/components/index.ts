@@ -69,5 +69,9 @@ export type { AePaginationProps } from './AePagination'
 export { AeTable } from './AeTable'
 export type { AeTableProps, TableColumn } from './AeTable'
 
+// Breadcrumb
+export { AeBreadcrumb } from './AeBreadcrumb'
+export type { AeBreadcrumbProps, BreadcrumbItem } from './AeBreadcrumb'
+
 
 
