@@ -80,8 +80,11 @@
 <!--      toast section-->
 <!--      <ToastComponent />-->
 
-<!--      sidebar component-->
-      <SidebarComponent />
+<!--      sidebar section-->
+<!--      <SidebarComponent />-->
+
+<!--      field section-->
+      <FieldComponent />
 
       <!-- Cards Section -->
       <section class="demo-section">
@@ -299,6 +302,7 @@ import BreadcrumbComponent from "@/examples/BreadcrumbComponent.vue";
 import DatepickerComponent from "@/examples/DatepickerComponent.vue";
 import ToastComponent from "@/examples/ToastComponent.vue";
 import SidebarComponent from "@/examples/SidebarComponent.vue";
+import FieldComponent from "@/examples/FieldComponent.vue";
 // Components are registered globally via app.use(PackDesignSystem)
 // No need to import individually when using license
 
