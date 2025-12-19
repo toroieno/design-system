@@ -73,5 +73,9 @@ export type { AeTableProps, TableColumn } from './AeTable'
 export { AeBreadcrumb } from './AeBreadcrumb'
 export type { AeBreadcrumbProps, BreadcrumbItem } from './AeBreadcrumb'
 
+// Datepicker
+export { AeDatepicker } from './AeDatepicker'
+export type { AeDatepickerProps } from './AeDatepicker'
+
 
 

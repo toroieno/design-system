@@ -72,7 +72,11 @@
 <!--      <TableComponent />-->
 
 <!--      breadcrumb section-->
-      <BreadcrumbComponent />
+<!--      <BreadcrumbComponent />-->
+
+<!--      datepicker section-->
+      <DatepickerComponent />
+
 
       <!-- Cards Section -->
       <section class="demo-section">
@@ -287,6 +291,7 @@ import TooltipComponent from "@/examples/TooltipComponent.vue";
 import PaginationComponent from "@/examples/PaginationComponent.vue";
 import TableComponent from "@/examples/TableComponent.vue";
 import BreadcrumbComponent from "@/examples/BreadcrumbComponent.vue";
+import DatepickerComponent from "@/examples/DatepickerComponent.vue";
 // Components are registered globally via app.use(PackDesignSystem)
 // No need to import individually when using license
 
