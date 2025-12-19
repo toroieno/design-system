@@ -1,6 +1,6 @@
 <template>
   <div :class="wrapperClasses">
-    <label v-if="label" :for="inputId" class="ae-input__label ae-text-single-line-body-small-strong">
+    <label v-if="label" :for="inputId" class="ae-input__label ae-typo-single-line-body-small-strong">
       {{ label }}
       <span v-if="required" class="ae-input__required">*</span>
     </label>
@@ -37,7 +37,7 @@
       </span>
     </div>
 
-    <div v-if="hint || errorMessage" class="ae-input__messages ae-text-note">
+    <div v-if="hint || errorMessage" class="ae-input__messages ae-typo-note">
       <span v-if="errorMessage" class="ae-input__error">{{ errorMessage }}</span>
       <span v-else-if="hint" class="ae-input__hint">{{ hint }}</span>
     </div>

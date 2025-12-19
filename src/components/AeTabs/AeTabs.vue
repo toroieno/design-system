@@ -6,7 +6,7 @@
         :key="tab.value"
         :class="[
           'ae-tabs__tab',
-          'ae-text-body-base',
+          'ae-typo-body-base',
           {
             'ae-tabs__tab--active': modelValue === tab.value,
             'ae-tabs__tab--disabled': tab.disabled
@@ -24,7 +24,7 @@
           <component :is="tab.icon" />
         </span>
         <span class="ae-tabs__label">{{ tab.label }}</span>
-        <span v-if="tab.badge" class="ae-tabs__badge ae-text-note">{{ tab.badge }}</span>
+        <span v-if="tab.badge" class="ae-tabs__badge ae-typo-note">{{ tab.badge }}</span>
       </button>
       <div
         class="ae-tabs__indicator"

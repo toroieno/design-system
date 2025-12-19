@@ -174,15 +174,15 @@ const toggleMobile = () => {
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                   </svg>
                 </div>
-                <span class="custom-header__title ae-text-single-line-body-base-strong">Workspace</span>
+                <span class="custom-header__title ae-typo-single-line-body-base-strong">Workspace</span>
               </div>
             </template>
             <template #footer>
               <div class="custom-footer">
                 <AeAvatar initials="JD" size="sm" />
                 <div class="custom-footer__info">
-                  <span class="ae-text-single-line-body-small-strong">John Doe</span>
-                  <span class="ae-text-note">Admin</span>
+                  <span class="ae-typo-single-line-body-small-strong">John Doe</span>
+                  <span class="ae-typo-note">Admin</span>
                 </div>
               </div>
             </template>
@@ -311,7 +311,7 @@ const toggleMobile = () => {
   color: var(--sds-color-text-default-primary);
 }
 
-.custom-footer__info .ae-text-note {
+.custom-footer__info .ae-typo-note {
   color: var(--sds-color-text-default-tertiary);
 }
 </style>

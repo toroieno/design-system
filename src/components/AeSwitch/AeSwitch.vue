@@ -17,7 +17,7 @@
         </svg>
       </span>
     </span>
-    <span v-if="label || $slots.default" class="ae-switch__label ae-text-body-small">
+    <span v-if="label || $slots.default" class="ae-switch__label ae-typo-body-small">
       <slot>{{ label }}</slot>
     </span>
   </label>

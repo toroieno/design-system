@@ -19,7 +19,7 @@
           :style="isPositioned ? tooltipStyles : initialStyles"
           role="tooltip"
         >
-          <div class="ae-tooltip__content ae-text-note">
+          <div class="ae-tooltip__content ae-typo-note">
             <slot name="content">{{ content }}</slot>
           </div>
           <div v-if="arrow" class="ae-tooltip__arrow" :style="arrowStyles" />

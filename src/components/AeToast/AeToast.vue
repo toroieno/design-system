@@ -39,10 +39,10 @@
 
         <!-- Content -->
         <div class="ae-toast__content">
-          <p v-if="toast.title" class="ae-toast__title ae-text-single-line-body-small-strong">
+          <p v-if="toast.title" class="ae-toast__title ae-typo-single-line-body-small-strong">
             {{ toast.title }}
           </p>
-          <p v-if="toast.message" class="ae-toast__message ae-text-body-small">
+          <p v-if="toast.message" class="ae-toast__message ae-typo-body-small">
             {{ toast.message }}
           </p>
         </div>

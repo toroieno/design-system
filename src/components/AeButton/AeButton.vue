@@ -54,7 +54,7 @@ const emit = defineEmits<{
 }>()
 
 const buttonClasses = computed(() => [
-  'ae-btn ae-text-single-line-body-base',
+  'ae-btn ae-typo-single-line-body-base',
   `ae-btn--${props.variant}`,
   `ae-btn--${props.color}`,
   `ae-btn--${props.size}`,

@@ -9,7 +9,7 @@
       <slot name="header">
         <div class="ae-sidebar__logo">
           <img v-if="logo" :src="logo" :alt="logoAlt" class="ae-sidebar__logo-img" />
-          <span v-if="title && !isCollapsed" class="ae-sidebar__title ae-text-single-line-body-base-strong">
+          <span v-if="title && !isCollapsed" class="ae-sidebar__title ae-typo-single-line-body-base-strong">
             {{ title }}
           </span>
         </div>
@@ -60,7 +60,7 @@
               </span>
               <span 
                 v-if="item.badge && !isCollapsed" 
-                class="ae-sidebar__badge ae-text-note"
+                class="ae-sidebar__badge ae-typo-note"
               >
                 {{ item.badge }}
               </span>
@@ -96,7 +96,7 @@
                     <span class="ae-sidebar__sublabel ae-text-single-line-body-small">
                       {{ child.label }}
                     </span>
-                    <span v-if="child.badge" class="ae-sidebar__badge ae-text-note">
+                    <span v-if="child.badge" class="ae-sidebar__badge ae-typo-note">
                       {{ child.badge }}
                     </span>
                   </component>

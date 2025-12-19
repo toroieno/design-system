@@ -1,6 +1,6 @@
 <template>
   <div :class="wrapperClasses" ref="selectRef">
-    <label v-if="label" :for="selectId" class="ae-select__label ae-text-single-line-body-small-strong">
+    <label v-if="label" :for="selectId" class="ae-select__label ae-typo-single-line-body-small-strong">
       {{ label }}
       <span v-if="required" class="ae-select__required">*</span>
     </label>
@@ -19,9 +19,9 @@
         <slot name="prepend"/>
       </span>
       
-      <div :class="['ae-select__value ae-text-body-base', { 'ae-select__placeholder': !hasSelection }]">
+      <div :class="['ae-select__value ae-typo-body-base', { 'ae-select__placeholder': !hasSelection }]">
         <div class="ae-select__value-items" v-if="props.multiple && hasSelection">
-          <div v-for="(item, index) in selectedOption" :key="index" class="ae-select__value-item ae-text-single-line-body-small-strong">
+          <div v-for="(item, index) in selectedOption" :key="index" class="ae-select__value-item ae-typo-single-line-body-small-strong">
             <span>{{item.label}}</span>
             <svg v-if="clearable" @click="handleClear(item.label)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M12 4L4 12M4 4L12 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
@@ -73,14 +73,14 @@
                         style="pointer-events: none"/>
           </div>
 
-          <div v-if="normalizedOptions.length === 0" class="ae-select__empty ae-text-single-line-body-small-strong">
+          <div v-if="normalizedOptions.length === 0" class="ae-select__empty ae-typo-single-line-body-small-strong">
             {{ emptyText }}
           </div>
         </div>
       </Transition>
     </Teleport>
 
-    <div v-if="hint || errorMessage" class="ae-select__messages ae-text-note">
+    <div v-if="hint || errorMessage" class="ae-select__messages ae-typo-note">
       <span v-if="errorMessage" class="ae-select__error">{{ errorMessage }}</span>
       <span v-else-if="hint" class="ae-select__hint">{{ hint }}</span>
     </div>

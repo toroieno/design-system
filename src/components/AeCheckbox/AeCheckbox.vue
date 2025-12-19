@@ -16,7 +16,7 @@
         <path d="M5 12h14" />
       </svg>
     </span>
-    <span v-if="label || $slots.default" class="ae-checkbox__label ae-text-body-base">
+    <span v-if="label || $slots.default" class="ae-checkbox__label ae-typo-body-base">
       <slot>{{ label }}</slot>
     </span>
   </label>

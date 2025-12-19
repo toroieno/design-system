@@ -1,34 +1,161 @@
-.ae-text-body-base {
+.ae-typo-title-hero {
+  font-size: var(--sds-typography-scale-11);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-regular);
+  line-height: 140%; /* 100.8px */
+  letter-spacing: -0.72px;
+}
+
+.ae-typo-title-page {
+  font-size: var(--sds-typography-scale-08);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-semibold);
+  line-height: 130%; /* 62.4px */
+}
+
+.ae-typo-title-page-light {
+  font-size: var(--sds-typography-scale-08);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-light);
+  line-height: 150%; /* 72px */
+}
+
+.ae-typo-subtitle {
+  font-size: var(--sds-typography-scale-06);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-regular);
+  line-height: 150%; /* 48px */
+  letter-spacing: -0.32px;
+}
+
+.ae-typo-subtitle-strong {
+  font-size: var(--sds-typography-scale-06);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-semibold);
+  line-height: 140%; /* 44.8px */
+}
+
+.ae-typo-heading {
+  font-size: var(--sds-typography-scale-05);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-light);
+  line-height: 150%; /* 36px */
+}
+
+.ae-typo-heading-strong {
+  font-size: var(--sds-typography-scale-05);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-semibold);
+  line-height: 140%; /* 33.6px */
+}
+
+.ae-typo-subheading {
+  font-size: var(--sds-typography-scale-04);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-light);
+  line-height: 150%; /* 30px */
+}
+
+.ae-typo-subheading-strong {
+  font-size: var(--sds-typography-scale-04);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-medium);
+  line-height: 150%; /* 30px */
+}
+
+.ae-typo-body-base {
   font-size: var(--sds-typography-scale-03);
   font-style: normal;
   font-weight: var(--sds-typography-weight-light);
   line-height: 150%; /* 24px */
 }
 
-.ae-text-body-small {
+.ae-typo-body-small {
   font-size: var(--sds-typography-scale-02);
   font-style: normal;
   font-weight: var(--sds-typography-weight-regular);
   line-height: 140%; /* 19.6px */
 }
 
-.ae-text-single-line-body-base {
+.ae-typo-body-emphasis {
+  font-size: var(--sds-typography-scale-03);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.ae-typo-body-emphasis-small {
+  font-size: var(--sds-typography-scale-02);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+}
+
+.ae-typo-body-emphasis-small-strong {
+  font-size: var(--sds-typography-scale-02);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 150%; /* 21px */
+}
+
+.ae-typo-body-link {
+  font-size: var(--sds-typography-scale-03);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-regular);
+  line-height: 140%; /* 22.4px */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.ae-typo-body-link-small {
+  font-size: var(--sds-typography-scale-02);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-regular);
+  line-height: 140%; /* 19.6px */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.ae-typo-body-strong {
+  font-size: var(--sds-typography-scale-03);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-semibold);
+  line-height: 140%; /* 22.4px */
+}
+
+.ae-typo-body-strong-small {
+  font-size: var(--sds-typography-scale-02);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-medium);
+  line-height: 140%; /* 19.6px */
+}
+
+.ae-typo-note {
+  font-size: var(--sds-typography-scale-01);
+  font-style: normal;
+  font-weight: var(--sds-typography-weight-regular);
+  line-height: 140%; /* 16.8px */
+}
+
+
+.ae-typo-single-line-body-base {
   font-size: var(--sds-typography-scale-03);
   font-style: normal;
   font-weight: var(--sds-typography-weight-regular);
   line-height: 120%; /* 19.2px */
 }
 
-.ae-text-single-line-body-small-strong {
+.ae-typo-single-line-body-small-strong {
   font-size: var(--sds-typography-scale-02);
   font-style: normal;
   font-weight: var(--sds-typography-weight-regular);
   line-height: 120%; /* 16.8px */
-}
-
-.ae-text-note {
-  font-size: var(--sds-typography-scale-01);
-  font-style: normal;
-  font-weight: var(--sds-typography-weight-regular);
-  line-height: 140%; /* 16.8px */
 }

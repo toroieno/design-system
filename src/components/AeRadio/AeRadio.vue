@@ -12,7 +12,7 @@
     <span class="ae-radio__circle">
       <span class="ae-radio__dot" />
     </span>
-    <span v-if="label || $slots.default" class="ae-radio__label ae-text-single-line-body-small-strong">
+    <span v-if="label || $slots.default" class="ae-radio__label ae-typo-single-line-body-small-strong">
       <slot>{{ label }}</slot>
     </span>
   </label>

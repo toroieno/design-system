@@ -2,9 +2,9 @@
 // PACK DESIGN SYSTEM - Main Styles Entry
 // ============================================
 
-@import 'variables';
-@import 'reset';
-@import 'fonts';
+@use './variables';
+@use './reset';
+@use './fonts';
 
 // ============================================
 // UTILITY CLASSES

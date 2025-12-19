@@ -7,7 +7,7 @@
     >
       <input
         type="text"
-        class="ae-datepicker__input ae-text-body-base"
+        class="ae-datepicker__input ae-typo-body-base"
         :value="displayValue"
         :placeholder="placeholder"
         :disabled="disabled"
@@ -60,7 +60,7 @@
             <div class="ae-datepicker__title">
               <button
                 type="button"
-                class="ae-datepicker__month-btn ae-text-single-line-body-base-strong"
+                class="ae-datepicker__month-btn ae-typo-single-line-body-base-strong"
                 @click="showMonthPicker = !showMonthPicker"
               >
                 {{ monthNames[currentMonth] }} {{ currentYear }}
@@ -134,7 +134,7 @@
               <span 
                 v-for="day in weekdayNames" 
                 :key="day" 
-                class="ae-datepicker__weekday ae-text-note"
+                class="ae-datepicker__weekday ae-typo-note"
               >
                 {{ day }}
               </span>
@@ -165,7 +165,7 @@
           <div class="ae-datepicker__footer">
             <button
               type="button"
-              class="ae-datepicker__today-btn ae-text-body-small"
+              class="ae-datepicker__today-btn ae-typo-body-small"
               @click="goToToday"
             >
               Today

@@ -1,6 +1,6 @@
 <template>
   <div :class="wrapperClasses">
-    <label v-if="label" :for="textareaId" class="ae-textarea__label ae-text-single-line-body-small-strong">
+    <label v-if="label" :for="textareaId" class="ae-textarea__label ae-typo-single-line-body-small-strong">
       {{ label }}
       <span v-if="required" class="ae-textarea__required">*</span>
     </label>
@@ -24,11 +24,11 @@
     </div>
     
     <div class="ae-textarea__footer">
-      <span v-if="errorMessage" class="ae-textarea__error ae-text-note">{{ errorMessage }}</span>
-      <span v-else-if="hint" class="ae-textarea__hint ae-text-note">{{ hint }}</span>
+      <span v-if="errorMessage" class="ae-textarea__error ae-typo-note">{{ errorMessage }}</span>
+      <span v-else-if="hint" class="ae-textarea__hint ae-typo-note">{{ hint }}</span>
       <span v-else />
       
-      <span v-if="showCount && maxLength" class="ae-textarea__count ae-text-note">
+      <span v-if="showCount && maxLength" class="ae-textarea__count ae-typo-note">
         {{ inputValue?.toString().length || 0 }} / {{ maxLength }}
       </span>
     </div>

@@ -15,7 +15,7 @@
           <!-- Header -->
           <div v-if="!hideHeader" class="ae-dialog__header">
             <slot name="header">
-              <h2 :id="titleId" class="ae-dialog__title ae-text-single-line-body-base-strong">
+              <h2 :id="titleId" class="ae-dialog__title ae-typo-single-line-body-base-strong">
                 {{ title }}
               </h2>
             </slot>

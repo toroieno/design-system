@@ -8,7 +8,7 @@
         class="ae-avatar__image"
         @error="handleImageError"
       />
-      <span v-else-if="initials" class="ae-avatar__initials ae-text-single-line-body-base">
+      <span v-else-if="initials" class="ae-avatar__initials ae-typo-single-line-body-base">
         {{ computedInitials }}
       </span>
       <span v-else class="ae-avatar__fallback">
@@ -23,7 +23,7 @@
 
     <span v-if="status" :class="['ae-avatar__status', `ae-avatar__status--${status}`]" />
 
-    <span v-if="badge || $slots.badge" class="ae-avatar__badge ae-text-note">
+    <span v-if="badge || $slots.badge" class="ae-avatar__badge ae-typo-note">
       <slot name="badge">{{ badge }}</slot>
     </span>
   </div>

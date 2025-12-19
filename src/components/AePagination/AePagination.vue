@@ -35,7 +35,7 @@
           v-else
           :class="[
             'ae-pagination__page',
-            'ae-text-single-line-body-small-strong',
+            'ae-typo-single-line-body-small-strong',
             { 'ae-pagination__page--active': page === modelValue }
           ]"
           :disabled="disabled"

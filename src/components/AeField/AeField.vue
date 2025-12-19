@@ -9,17 +9,17 @@
         :class="labelClass"
       >
         <slot name="label">
-          <span class="ae-text-single-line-body-small-strong">{{ label }}</span>
+          <span class="ae-typo-single-line-body-small-strong">{{ label }}</span>
         </slot>
         <span v-if="required" class="ae-field__required" aria-hidden="true">*</span>
       </label>
-      <span v-if="showOptional && !required" class="ae-field__optional ae-text-note">
+      <span v-if="showOptional && !required" class="ae-field__optional ae-typo-note">
         {{ optionalText }}
       </span>
     </div>
 
     <!-- Description (before input) -->
-    <p v-if="description && descriptionPosition === 'top'" class="ae-field__description ae-text-body-small">
+    <p v-if="description && descriptionPosition === 'top'" class="ae-field__description ae-typo-body-small">
       {{ description }}
     </p>
 
@@ -29,14 +29,14 @@
     </div>
 
     <!-- Description (after input) -->
-    <p v-if="description && descriptionPosition === 'bottom'" class="ae-field__description ae-text-body-small">
+    <p v-if="description && descriptionPosition === 'bottom'" class="ae-field__description ae-typo-body-small">
       {{ description }}
     </p>
 
     <!-- Messages -->
     <div v-if="showMessages" class="ae-field__messages">
       <!-- Error Message -->
-      <div v-if="error" class="ae-field__error ae-text-note" role="alert">
+      <div v-if="error" class="ae-field__error ae-typo-note" role="alert">
         <span v-if="showErrorIcon" class="ae-field__message-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10" />
@@ -48,7 +48,7 @@
       </div>
 
       <!-- Success Message -->
-      <div v-else-if="success" class="ae-field__success ae-text-note">
+      <div v-else-if="success" class="ae-field__success ae-typo-note">
         <span v-if="showSuccessIcon" class="ae-field__message-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
@@ -59,12 +59,12 @@
       </div>
 
       <!-- Hint Message -->
-      <div v-else-if="hint" class="ae-field__hint ae-text-note">
+      <div v-else-if="hint" class="ae-field__hint ae-typo-note">
         <span>{{ hint }}</span>
       </div>
 
       <!-- Counter -->
-      <div v-if="showCounter" class="ae-field__counter ae-text-note">
+      <div v-if="showCounter" class="ae-field__counter ae-typo-note">
         <span>{{ currentLength }} / {{ maxLength }}</span>
       </div>
     </div>

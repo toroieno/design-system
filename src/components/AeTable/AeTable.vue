@@ -22,7 +22,7 @@
             :class="[
               'ae-table__cell',
               'ae-table__cell--header',
-              'ae-text-single-line-body-small-strong',
+              'ae-typo-single-line-body-small-strong',
               {
                 'ae-table__cell--sortable': column.sortable,
                 'ae-table__cell--sorted': sortKey === column.key
@@ -74,7 +74,7 @@
             <td
               v-for="column in columns"
               :key="column.key"
-              class="ae-table__cell ae-text-body-base"
+              class="ae-table__cell ae-typo-body-base"
               :style="{ textAlign: column.align }"
             >
               <slot :name="`cell-${column.key}`" :row="row" :value="row[column.key]" :index="rowIndex">
@@ -92,7 +92,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
                 </svg>
-                <span class="ae-text-single-line-body-small-strong">{{ emptyText }}</span>
+                <span class="ae-typo-single-line-body-small-strong">{{ emptyText }}</span>
               </div>
             </slot>
           </td>
@@ -105,7 +105,7 @@
       <slot name="footer">
         <!-- Per Page Selector -->
         <div class="ae-table__footer-left">
-          <span class="ae-table__footer-label ae-text-body-small">Rows per page:</span>
+          <span class="ae-table__footer-label ae-typo-body-small">Rows per page:</span>
           <select 
             class="ae-table__per-page" 
             :value="perPage"
@@ -120,7 +120,7 @@
         <!-- Info & Pagination -->
         <div class="ae-table__footer-right">
           <!-- Range Info -->
-          <span class="ae-table__footer-info ae-text-body-small">
+          <span class="ae-table__footer-info ae-typo-body-small">
             {{ rangeStart }}-{{ rangeEnd }} of {{ total }}
           </span>
 
