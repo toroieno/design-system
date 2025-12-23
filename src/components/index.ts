@@ -93,5 +93,9 @@ export type { AeFieldProps } from './AeField'
 export { AeDropdown } from './AeDropdown'
 export type { AeDropdownProps, DropdownItem } from './AeDropdown'
 
+// Drawer
+export { AeDrawer } from './AeDrawer'
+export type { AeDrawerProps } from './AeDrawer'
+
 
 
