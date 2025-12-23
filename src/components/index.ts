@@ -97,5 +97,9 @@ export type { AeDropdownProps, DropdownItem } from './AeDropdown'
 export { AeDrawer } from './AeDrawer'
 export type { AeDrawerProps } from './AeDrawer'
 
+// Badge (new)
+export { AeBadge } from './AeBadge'
+export type { AeBadgeProps } from './AeBadge'
+
 
 
