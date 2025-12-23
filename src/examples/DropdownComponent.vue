@@ -100,7 +100,7 @@ const handleSelect = (item: DropdownItem) => {
 
     <div class="demo-grid demo-grid--dropdown">
       <!-- Basic Dropdown -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Basic Dropdown</h3>
         </template>
@@ -112,10 +112,10 @@ const handleSelect = (item: DropdownItem) => {
           />
           <p v-if="selectedItem" class="demo-info">Selected: {{ selectedItem }}</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- With Shortcuts -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">With Shortcuts</h3>
         </template>
@@ -125,10 +125,10 @@ const handleSelect = (item: DropdownItem) => {
             trigger-text="File"
           />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Grouped Items -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Grouped Items</h3>
         </template>
@@ -139,10 +139,10 @@ const handleSelect = (item: DropdownItem) => {
             :width="200"
           />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Disabled Items -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Disabled Items</h3>
         </template>
@@ -152,10 +152,10 @@ const handleSelect = (item: DropdownItem) => {
             trigger-text="Actions"
           />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Placements -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Placements</h3>
         </template>
@@ -171,10 +171,10 @@ const handleSelect = (item: DropdownItem) => {
             placement="bottom-end"
           />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Custom Trigger -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Custom Trigger</h3>
         </template>
@@ -198,10 +198,10 @@ const handleSelect = (item: DropdownItem) => {
             </template>
           </AeDropdown>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Hover Trigger -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Hover Trigger</h3>
         </template>
@@ -213,10 +213,10 @@ const handleSelect = (item: DropdownItem) => {
           />
           <p class="demo-info">Menu opens on hover instead of click</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Disabled Dropdown -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Disabled</h3>
         </template>
@@ -227,10 +227,10 @@ const handleSelect = (item: DropdownItem) => {
             disabled
           />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Custom Width -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Custom Width</h3>
         </template>
@@ -246,10 +246,10 @@ const handleSelect = (item: DropdownItem) => {
             :min-width="120"
           />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- With onClick Handler -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Item onClick</h3>
         </template>
@@ -265,7 +265,7 @@ const handleSelect = (item: DropdownItem) => {
           />
           <p class="demo-info">Each item can have its own onClick handler</p>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

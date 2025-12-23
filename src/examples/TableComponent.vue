@@ -86,23 +86,23 @@ const paginatedUsers = computed(() => {
 
     <div class="">
       <!-- Basic Table -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Basic</h3>
         </template>
         <AeTable :columns="columns" :data="users" />
-      </PkCard>
+      </AeCard>
 
       <!-- Striped & Bordered -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Striped & Bordered</h3>
         </template>
         <AeTable :columns="columns" :data="users" striped bordered />
-      </PkCard>
+      </AeCard>
 
       <!-- Selectable -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Selectable</h3>
         </template>
@@ -121,10 +121,10 @@ const paginatedUsers = computed(() => {
             </template>
           </p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Sortable -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Sortable</h3>
         </template>
@@ -133,10 +133,10 @@ const paginatedUsers = computed(() => {
           :data="sortedData" 
           @sort="handleSort"
         />
-      </PkCard>
+      </AeCard>
 
       <!-- Custom Cells -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Custom Cells</h3>
         </template>
@@ -150,10 +150,10 @@ const paginatedUsers = computed(() => {
             <span class="role-tag">{{ value }}</span>
           </template>
         </AeTable>
-      </PkCard>
+      </AeCard>
 
       <!-- Row Click -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Row Clickable</h3>
         </template>
@@ -173,10 +173,10 @@ const paginatedUsers = computed(() => {
             </template>
           </p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Sizes -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Sizes</h3>
         </template>
@@ -194,10 +194,10 @@ const paginatedUsers = computed(() => {
             <AeTable :columns="columns" :data="users.slice(0, 2)" size="lg" />
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Loading State -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Loading</h3>
         </template>
@@ -205,18 +205,18 @@ const paginatedUsers = computed(() => {
           <AeButton size="sm" @click="simulateLoading">Load Data</AeButton>
           <AeTable :columns="columns" :data="users" :loading="isLoading" />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Empty State -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Empty State</h3>
         </template>
         <AeTable :columns="columns" :data="[]" empty-text="No users found" />
-      </PkCard>
+      </AeCard>
 
       <!-- Custom Empty Slot -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Custom Empty</h3>
         </template>
@@ -231,10 +231,10 @@ const paginatedUsers = computed(() => {
             </div>
           </template>
         </AeTable>
-      </PkCard>
+      </AeCard>
 
       <!-- With Footer Pagination -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">With Footer (Pagination)</h3>
         </template>
@@ -252,7 +252,7 @@ const paginatedUsers = computed(() => {
             Page {{ currentPage }}, showing {{ perPage }} per page, total {{ allUsers.length }} items
           </p>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

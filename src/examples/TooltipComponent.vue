@@ -9,7 +9,7 @@ import { AeTooltip, AeButton } from "@/components"
 
     <div class="demo-grid demo-grid--forms">
       <!-- Basic Tooltip -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Basic</h3>
         </template>
@@ -18,10 +18,10 @@ import { AeTooltip, AeButton } from "@/components"
             <AeButton>Hover me</AeButton>
           </AeTooltip>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Positions -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Positions</h3>
         </template>
@@ -39,10 +39,10 @@ import { AeTooltip, AeButton } from "@/components"
             <AeButton variant="outlined" size="sm">Right</AeButton>
           </AeTooltip>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Triggers -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Triggers</h3>
         </template>
@@ -57,10 +57,10 @@ import { AeTooltip, AeButton } from "@/components"
             <AeButton variant="outlined" size="sm">Focus</AeButton>
           </AeTooltip>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- With Delay -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">With Delay</h3>
         </template>
@@ -75,10 +75,10 @@ import { AeTooltip, AeButton } from "@/components"
             <AeButton variant="outlined" size="sm">Hide delay</AeButton>
           </AeTooltip>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- No Arrow -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Without Arrow</h3>
         </template>
@@ -90,10 +90,10 @@ import { AeTooltip, AeButton } from "@/components"
             <AeButton variant="outlined" size="sm">With Arrow</AeButton>
           </AeTooltip>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Custom Content -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Custom Content</h3>
         </template>
@@ -120,10 +120,10 @@ import { AeTooltip, AeButton } from "@/components"
             </template>
           </AeTooltip>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Long Content -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Long Content</h3>
         </template>
@@ -141,10 +141,10 @@ import { AeTooltip, AeButton } from "@/components"
             <AeButton variant="outlined" size="sm">Custom Width</AeButton>
           </AeTooltip>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- On Other Elements -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">On Various Elements</h3>
         </template>
@@ -164,7 +164,7 @@ import { AeTooltip, AeButton } from "@/components"
             <AeButton variant="outlined" size="sm">Disabled Tooltip</AeButton>
           </AeTooltip>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

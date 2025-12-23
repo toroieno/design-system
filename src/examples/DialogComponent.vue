@@ -31,7 +31,7 @@ const handleFormSubmit = () => {
 
     <div class="demo-grid demo-grid--forms">
       <!-- Basic Dialog -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Basic</h3>
         </template>
@@ -48,10 +48,10 @@ const handleFormSubmit = () => {
             </template>
           </AeDialog>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Sizes -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Sizes</h3>
         </template>
@@ -92,10 +92,10 @@ const handleFormSubmit = () => {
             </template>
           </AeDialog>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- No Header -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">No Header</h3>
         </template>
@@ -113,10 +113,10 @@ const handleFormSubmit = () => {
             </div>
           </AeDialog>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Persistent -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Persistent</h3>
         </template>
@@ -138,10 +138,10 @@ const handleFormSubmit = () => {
             </template>
           </AeDialog>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Form Dialog -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Form Dialog</h3>
         </template>
@@ -171,7 +171,7 @@ const handleFormSubmit = () => {
             </template>
           </AeDialog>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

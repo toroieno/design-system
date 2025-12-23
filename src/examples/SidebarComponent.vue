@@ -95,7 +95,7 @@ const toggleMobile = () => {
 
     <div class="demo-grid demo-grid--sidebar">
       <!-- Basic Sidebar -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Basic Sidebar</h3>
         </template>
@@ -111,10 +111,10 @@ const toggleMobile = () => {
             <p>Active: <strong>{{ activeKey }}</strong></p>
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Collapsible Sidebar -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Collapsible</h3>
         </template>
@@ -133,10 +133,10 @@ const toggleMobile = () => {
             </AeButton>
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Nested Menu -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Nested Menu</h3>
         </template>
@@ -153,10 +153,10 @@ const toggleMobile = () => {
             <p class="demo-info">Click items with arrows to expand</p>
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- With Header & Footer Slots -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Custom Header & Footer</h3>
         </template>
@@ -191,10 +191,10 @@ const toggleMobile = () => {
             <p>Custom slots for header and footer</p>
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Mobile Overlay -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Mobile Overlay</h3>
         </template>
@@ -213,10 +213,10 @@ const toggleMobile = () => {
             @item-click="handleItemClick"
           />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Custom Width -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Custom Width</h3>
         </template>
@@ -234,7 +234,7 @@ const toggleMobile = () => {
             <p>Collapsed: 48px</p>
           </div>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

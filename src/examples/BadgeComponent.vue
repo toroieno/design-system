@@ -21,7 +21,7 @@ const resetTags = () => {
 
     <div class="demo-grid">
       <!-- Colors -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Colors</h3>
         </template>
@@ -34,10 +34,10 @@ const resetTags = () => {
           <AeBadge color="info">Info</AeBadge>
           <AeBadge color="neutral">Neutral</AeBadge>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Variants: Filled -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Filled Variant</h3>
         </template>
@@ -47,10 +47,10 @@ const resetTags = () => {
           <AeBadge variant="filled" color="warning">Warning</AeBadge>
           <AeBadge variant="filled" color="danger">Danger</AeBadge>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Variants: Outlined -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Outlined Variant</h3>
         </template>
@@ -60,10 +60,10 @@ const resetTags = () => {
           <AeBadge variant="outlined" color="warning">Warning</AeBadge>
           <AeBadge variant="outlined" color="danger">Danger</AeBadge>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Variants: Soft -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Soft Variant</h3>
         </template>
@@ -73,10 +73,10 @@ const resetTags = () => {
           <AeBadge variant="soft" color="warning">Warning</AeBadge>
           <AeBadge variant="soft" color="danger">Danger</AeBadge>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Sizes -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Sizes</h3>
         </template>
@@ -85,10 +85,10 @@ const resetTags = () => {
           <AeBadge size="md">Medium</AeBadge>
           <AeBadge size="lg">Large</AeBadge>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Rounded (Pill) -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Rounded (Pill)</h3>
         </template>
@@ -99,10 +99,10 @@ const resetTags = () => {
           <AeBadge rounded color="danger">Expired</AeBadge>
           <AeBadge rounded variant="soft" color="info">Beta</AeBadge>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Dot Indicators -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Dot Indicators</h3>
         </template>
@@ -131,10 +131,10 @@ const resetTags = () => {
             </div>
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- With Icon -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">With Icon</h3>
         </template>
@@ -176,10 +176,10 @@ const resetTags = () => {
             Info
           </AeBadge>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Removable Tags -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Removable Tags</h3>
         </template>
@@ -202,10 +202,10 @@ const resetTags = () => {
           </div>
           <p v-if="tags.length === 0" class="demo-info">All tags removed. Click "Reset Tags" to restore.</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Counts & Notifications -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Counts & Notifications</h3>
         </template>
@@ -229,10 +229,10 @@ const resetTags = () => {
             <AeBadge color="warning" variant="soft" rounded size="sm">3</AeBadge>
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Use Cases -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Use Cases</h3>
         </template>
@@ -269,10 +269,10 @@ const resetTags = () => {
             <AeBadge variant="soft" color="warning">Beta</AeBadge>
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- All Combinations -->
-      <PkCard variant="outlined" class="full-width">
+      <AeCard variant="outlined" class="full-width">
         <template #header>
           <h3 class="demo-card-title">All Variant + Color Combinations</h3>
         </template>
@@ -308,7 +308,7 @@ const resetTags = () => {
             <AeBadge variant="soft" color="neutral">Neutral</AeBadge>
           </div>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

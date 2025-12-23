@@ -30,8 +30,8 @@ export { AeSwitch } from './AeSwitch'
 export type { AeSwitchProps } from './AeSwitch'
 
 // Card
-export { PkCard } from './PkCard'
-export type { PkCardProps } from './PkCard'
+export { AeCard } from './AeCard'
+export type { AeCardProps } from './AeCard'
 
 // Badge
 export { PkBadge } from './PkBadge'

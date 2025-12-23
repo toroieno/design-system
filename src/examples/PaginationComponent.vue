@@ -26,7 +26,7 @@ const handlePageChange = (page: number) => {
 
     <div class="demo-grid demo-grid--forms">
       <!-- Basic Pagination -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Basic</h3>
         </template>
@@ -34,10 +34,10 @@ const handlePageChange = (page: number) => {
           <AePagination v-model="basicPage" :total-pages="10" />
           <p class="demo-info">Current page: {{ basicPage }}</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Without First/Last Buttons -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Without First/Last</h3>
         </template>
@@ -49,10 +49,10 @@ const handlePageChange = (page: number) => {
           />
           <p class="demo-info">Current page: {{ noFirstLastPage }}</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- More Siblings -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">More Siblings</h3>
         </template>
@@ -64,10 +64,10 @@ const handlePageChange = (page: number) => {
           />
           <p class="demo-info">Shows 2 pages on each side of current page</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Sizes -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Sizes</h3>
         </template>
@@ -85,10 +85,10 @@ const handlePageChange = (page: number) => {
             <AePagination v-model="largePage" :total-pages="5" size="lg" />
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Disabled State -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Disabled</h3>
         </template>
@@ -100,10 +100,10 @@ const handlePageChange = (page: number) => {
           />
           <p class="demo-info">All controls are disabled</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Change Event -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Change Event</h3>
         </template>
@@ -122,10 +122,10 @@ const handlePageChange = (page: number) => {
             </template>
           </p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Few Pages -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Few Pages</h3>
         </template>
@@ -139,10 +139,10 @@ const handlePageChange = (page: number) => {
             <AePagination :model-value="1" :total-pages="1" />
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Many Pages -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Many Pages</h3>
         </template>
@@ -150,7 +150,7 @@ const handlePageChange = (page: number) => {
           <AePagination :model-value="50" :total-pages="100" />
           <p class="demo-info">Ellipsis appears when there are many pages</p>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

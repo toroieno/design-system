@@ -10,7 +10,7 @@ import {AeAvatarGroup} from "@/components/AeAvatar";
 
     <div class="demo-grid demo-grid--forms">
       <!-- Basic Avatars -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Basic</h3>
         </template>
@@ -21,10 +21,10 @@ import {AeAvatarGroup} from "@/components/AeAvatar";
           <AeAvatar initials="AB" />
           <AeAvatar />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Sizes -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Sizes</h3>
         </template>
@@ -42,10 +42,10 @@ import {AeAvatarGroup} from "@/components/AeAvatar";
             <span class="demo-label">lg</span>
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Shapes -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Shapes</h3>
         </template>
@@ -63,10 +63,10 @@ import {AeAvatarGroup} from "@/components/AeAvatar";
             <span class="demo-label">square</span>
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Status Indicators -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Status</h3>
         </template>
@@ -88,10 +88,10 @@ import {AeAvatarGroup} from "@/components/AeAvatar";
             <span class="demo-label">away</span>
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- With Badges -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Badges</h3>
         </template>
@@ -100,10 +100,10 @@ import {AeAvatarGroup} from "@/components/AeAvatar";
           <AeAvatar initials="JD" badge="99+" size="lg" />
           <AeAvatar src="https://i.pravatar.cc/150?img=11" badge="5"/>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Initials from Name -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Initials</h3>
         </template>
@@ -121,10 +121,10 @@ import {AeAvatarGroup} from "@/components/AeAvatar";
             <span class="demo-label">Bob Smith Jr</span>
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Avatar Group -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Avatar Group</h3>
         </template>
@@ -142,7 +142,7 @@ import {AeAvatarGroup} from "@/components/AeAvatar";
             <AeAvatar src="https://i.pravatar.cc/150?img=18" size="lg" status="away" />
           </div>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

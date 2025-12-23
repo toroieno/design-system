@@ -52,7 +52,7 @@ const handleChange = (date: Date | null) => {
 
     <div class="demo-grid demo-grid--forms">
       <!-- Basic Datepicker -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Basic</h3>
         </template>
@@ -62,10 +62,10 @@ const handleChange = (date: Date | null) => {
             Selected: {{ basicDate ? basicDate.toLocaleDateString() : 'None' }}
           </p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Preset Date -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Preset Date</h3>
         </template>
@@ -73,10 +73,10 @@ const handleChange = (date: Date | null) => {
           <AeDatepicker v-model="presetDate" />
           <p class="demo-info">Initialized with today's date</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Date Formats -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Date Formats</h3>
         </template>
@@ -94,10 +94,10 @@ const handleChange = (date: Date | null) => {
             <AeDatepicker v-model="isoDate" format="YYYY-MM-DD" />
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Min/Max Date -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Min/Max Date</h3>
         </template>
@@ -111,10 +111,10 @@ const handleChange = (date: Date | null) => {
             Range: {{ minDate.toLocaleDateString() }} - {{ maxDate.toLocaleDateString() }}
           </p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Disabled Dates -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Disabled Dates</h3>
         </template>
@@ -125,10 +125,10 @@ const handleChange = (date: Date | null) => {
           />
           <p class="demo-info">Some specific dates are disabled</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Sizes -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Sizes</h3>
         </template>
@@ -146,10 +146,10 @@ const handleChange = (date: Date | null) => {
             <AeDatepicker v-model="largeDate" size="lg" />
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- First Day of Week -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Week Starts on Sunday</h3>
         </template>
@@ -160,10 +160,10 @@ const handleChange = (date: Date | null) => {
           />
           <p class="demo-info">Calendar starts on Sunday instead of Monday</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Not Clearable -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Not Clearable</h3>
         </template>
@@ -174,10 +174,10 @@ const handleChange = (date: Date | null) => {
           />
           <p class="demo-info">Clear button is hidden</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Disabled -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Disabled</h3>
         </template>
@@ -188,10 +188,10 @@ const handleChange = (date: Date | null) => {
           />
           <p class="demo-info">Datepicker is disabled</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Change Event -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Change Event</h3>
         </template>
@@ -209,7 +209,7 @@ const handleChange = (date: Date | null) => {
             </template>
           </p>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

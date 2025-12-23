@@ -36,27 +36,27 @@ const handleItemClick = (item: BreadcrumbItem, index: number) => {
 
     <div class="demo-grid demo-grid--forms">
       <!-- Basic Breadcrumb -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Basic</h3>
         </template>
         <div class="demo-stack">
           <AeBreadcrumb :items="basicItems" />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Short Breadcrumb -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Short Path</h3>
         </template>
         <div class="demo-stack">
           <AeBreadcrumb :items="shortItems" />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Separators -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Separators</h3>
         </template>
@@ -78,10 +78,10 @@ const handleItemClick = (item: BreadcrumbItem, index: number) => {
             <AeBreadcrumb :items="shortItems" separator="•" />
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Sizes -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Sizes</h3>
         </template>
@@ -99,10 +99,10 @@ const handleItemClick = (item: BreadcrumbItem, index: number) => {
             <AeBreadcrumb :items="shortItems" size="lg" />
           </div>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- With Icons -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">With Icons</h3>
         </template>
@@ -116,10 +116,10 @@ const handleItemClick = (item: BreadcrumbItem, index: number) => {
             </template>
           </AeBreadcrumb>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Disabled Item -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Disabled Item</h3>
         </template>
@@ -127,10 +127,10 @@ const handleItemClick = (item: BreadcrumbItem, index: number) => {
           <AeBreadcrumb :items="disabledItems" />
           <p class="demo-info">"Archived" item is disabled and not clickable</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Click Event -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Click Event</h3>
         </template>
@@ -141,10 +141,10 @@ const handleItemClick = (item: BreadcrumbItem, index: number) => {
           />
           <p class="demo-info">Click any item (except the last) to trigger the event (check console)</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Custom Separator Slot -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Custom Separator Slot</h3>
         </template>
@@ -157,10 +157,10 @@ const handleItemClick = (item: BreadcrumbItem, index: number) => {
             </template>
           </AeBreadcrumb>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Long Path -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Long Path</h3>
         </template>
@@ -176,7 +176,7 @@ const handleItemClick = (item: BreadcrumbItem, index: number) => {
             ]" 
           />
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

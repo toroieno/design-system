@@ -68,7 +68,7 @@ const showCustom = () => {
 
     <div class="demo-grid demo-grid--forms">
       <!-- Variants -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Variants</h3>
         </template>
@@ -78,10 +78,10 @@ const showCustom = () => {
           <AeButton size="sm" color="warning" @click="showWarning">Warning</AeButton>
           <AeButton size="sm" variant="outlined" @click="showInfo">Info</AeButton>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Title Only -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Title Only</h3>
         </template>
@@ -89,10 +89,10 @@ const showCustom = () => {
           <AeButton size="sm" @click="showTitleOnly">Show Toast</AeButton>
           <p class="demo-info">Toast with only a title, no message</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Duration -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Duration</h3>
         </template>
@@ -100,10 +100,10 @@ const showCustom = () => {
           <AeButton size="sm" variant="outlined" @click="showLongDuration">10s Duration</AeButton>
           <AeButton size="sm" variant="outlined" @click="showNoDismiss">No Auto-Dismiss</AeButton>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Not Closable -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Not Closable</h3>
         </template>
@@ -111,10 +111,10 @@ const showCustom = () => {
           <AeButton size="sm" variant="outlined" @click="showNotClosable">Show Toast</AeButton>
           <p class="demo-info">Toast without close button (auto-dismisses after 3s)</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Multiple Toasts -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Multiple Toasts</h3>
         </template>
@@ -122,10 +122,10 @@ const showCustom = () => {
           <AeButton size="sm" variant="outlined" @click="showMultiple">Show 3 Toasts</AeButton>
           <AeButton size="sm" variant="ghost" @click="clearAll">Clear All</AeButton>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Custom Toast -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Custom Toast</h3>
         </template>
@@ -133,10 +133,10 @@ const showCustom = () => {
           <AeButton size="sm" variant="outlined" @click="showCustom">addToast()</AeButton>
           <p class="demo-info">Using addToast() for full control</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Usage Code -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Usage</h3>
         </template>
@@ -152,7 +152,7 @@ const { success, error, warning, info } = useToast()
 success('Title', 'Message')
 error('Title', 'Message', { duration: 10000 })</pre>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

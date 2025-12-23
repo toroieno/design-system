@@ -87,74 +87,74 @@
 <!--      <FieldComponent />-->
 
 <!--      font section-->
-<!--      <FontComponent />-->
+      <FontComponent />
 
 <!--      dropdown section-->
 <!--      <DropdownComponent />-->
 
 <!--      drawer -->
-<!--      <DrawerComponent />-->
+      <DrawerComponent />
 
 <!--      badge -->
       <BadgeComponent />
 
       <!-- Cards Section -->
-<!--      <section class="demo-section">-->
-<!--        <h2 class="demo-section__title">Cards</h2>-->
-<!--        <p class="demo-section__desc">Content containers with various elevation and style options.</p>-->
-<!--        -->
-<!--        <div class="demo-grid demo-grid&#45;&#45;cards">-->
-<!--          <PkCard variant="elevated" title="Elevated Card" subtitle="With shadow elevation">-->
-<!--            <p>This card has a subtle shadow that creates depth and visual hierarchy.</p>-->
-<!--            <template #actions>-->
-<!--              <AeButton variant="text" size="sm">Cancel</AeButton>-->
-<!--              <AeButton size="sm">Confirm</AeButton>-->
-<!--            </template>-->
-<!--          </PkCard>-->
-<!--          -->
-<!--          <PkCard variant="outlined" title="Outlined Card" subtitle="With border">-->
-<!--            <p>A clean card with a simple border, perfect for lists and grids.</p>-->
-<!--            <template #actions>-->
-<!--              <AeButton variant="text" size="sm">Learn More</AeButton>-->
-<!--            </template>-->
-<!--          </PkCard>-->
-<!--          -->
-<!--          <PkCard variant="tonal" color="primary" title="Tonal Card" subtitle="Colored background">-->
-<!--            <p>Uses a subtle tinted background to convey information or status.</p>-->
-<!--          </PkCard>-->
-<!--          -->
-<!--          <PkCard variant="elevated" hover>-->
-<!--            <template #media>-->
-<!--              <div class="demo-card-media">-->
-<!--                <svg viewBox="0 0 400 200" fill="none">-->
-<!--                  <rect width="400" height="200" fill="url(#card-gradient)"/>-->
-<!--                  <circle cx="80" cy="50" r="30" fill="rgba(255,255,255,0.2)"/>-->
-<!--                  <circle cx="350" cy="150" r="50" fill="rgba(255,255,255,0.1)"/>-->
-<!--                  <defs>-->
-<!--                    <linearGradient id="card-gradient" x1="0" y1="0" x2="400" y2="200">-->
-<!--                      <stop stop-color="var(&#45;&#45;pk-primary-400)"/>-->
-<!--                      <stop offset="0.5" stop-color="var(&#45;&#45;pk-accent-500)"/>-->
-<!--                      <stop offset="1" stop-color="var(&#45;&#45;pk-secondary-400)"/>-->
-<!--                    </linearGradient>-->
-<!--                  </defs>-->
-<!--                </svg>-->
-<!--              </div>-->
-<!--            </template>-->
-<!--            <template #header>-->
-<!--              <h3 class="demo-card-title">Media Card</h3>-->
-<!--              <p class="demo-card-subtitle">With image/media slot</p>-->
-<!--            </template>-->
-<!--            <p>Cards can include media content like images, videos, or custom graphics.</p>-->
-<!--          </PkCard>-->
-<!--        </div>-->
-<!--      </section>-->
-<!--      -->
+      <section class="demo-section">
+        <h2 class="demo-section__title">Cards</h2>
+        <p class="demo-section__desc">Content containers with various elevation and style options.</p>
+
+        <div class="demo-grid demo-grid--cards">
+          <AeCard variant="elevated" title="Elevated Card" subtitle="With shadow elevation">
+            <p>This card has a subtle shadow that creates depth and visual hierarchy.</p>
+            <template #actions>
+              <AeButton variant="text" size="sm">Cancel</AeButton>
+              <AeButton size="sm">Confirm</AeButton>
+            </template>
+          </AeCard>
+
+          <AeCard variant="outlined" title="Outlined Card" subtitle="With border">
+            <p>A clean card with a simple border, perfect for lists and grids.</p>
+            <template #actions>
+              <AeButton variant="text" size="sm">Learn More</AeButton>
+            </template>
+          </AeCard>
+
+          <AeCard variant="tonal" color="primary" title="Tonal Card" subtitle="Colored background">
+            <p>Uses a subtle tinted background to convey information or status.</p>
+          </AeCard>
+
+          <AeCard variant="elevated" hover>
+            <template #media>
+              <div class="demo-card-media">
+                <svg viewBox="0 0 400 200" fill="none">
+                  <rect width="400" height="200" fill="url(#card-gradient)"/>
+                  <circle cx="80" cy="50" r="30" fill="rgba(255,255,255,0.2)"/>
+                  <circle cx="350" cy="150" r="50" fill="rgba(255,255,255,0.1)"/>
+                  <defs>
+                    <linearGradient id="card-gradient" x1="0" y1="0" x2="400" y2="200">
+                      <stop stop-color="var(--pk-primary-400)"/>
+                      <stop offset="0.5" stop-color="var(--pk-accent-500)"/>
+                      <stop offset="1" stop-color="var(--pk-secondary-400)"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </template>
+            <template #header>
+              <h3 class="demo-card-title">Media Card</h3>
+              <p class="demo-card-subtitle">With image/media slot</p>
+            </template>
+            <p>Cards can include media content like images, videos, or custom graphics.</p>
+          </AeCard>
+        </div>
+      </section>
+
       <!-- Badges Section -->
 <!--      <section class="demo-section">-->
 <!--        <h2 class="demo-section__title">Badges</h2>-->
 <!--        <p class="demo-section__desc">Small status indicators and labels.</p>-->
 <!--        -->
-<!--        <PkCard variant="outlined">-->
+<!--        <AeCard variant="outlined">-->
 <!--          <div class="demo-stack">-->
 <!--            <div class="demo-row">-->
 <!--              <span class="demo-label">Filled:</span>-->
@@ -207,7 +207,7 @@
 <!--              </span>-->
 <!--            </div>-->
 <!--          </div>-->
-<!--        </PkCard>-->
+<!--        </AeCard>-->
 <!--      </section>-->
 <!--      -->
       <!-- Alerts Section -->
@@ -462,7 +462,7 @@ const isDark = ref(true)
 .demo-card-title {
   font-size: var(--pk-text-lg);
   font-weight: var(--pk-font-semibold);
-  color: var(--pk-neutral-800);
+  color: var(--sds-color-text-default-primary);
 }
 
 .demo-card-subtitle {
@@ -557,7 +557,7 @@ const isDark = ref(true)
   }
   
   .demo-card-title {
-    color: var(--pk-neutral-100);
+    color: var(--sds-color-text-default-primary);
   }
   
   .demo-label {

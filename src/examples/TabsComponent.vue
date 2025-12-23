@@ -49,7 +49,7 @@ const navTabs = [
 
     <div class="">
       <!-- Underline Variant -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Underline (Default)</h3>
         </template>
@@ -68,10 +68,10 @@ const navTabs = [
             </div>
           </AeTabs>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Enclosed Variant -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Enclosed</h3>
         </template>
@@ -89,10 +89,10 @@ const navTabs = [
             </div>
           </AeTabs>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- With Badges -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">With Badges</h3>
         </template>
@@ -107,10 +107,10 @@ const navTabs = [
             </div>
           </AeTabs>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Full Width -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Full Width</h3>
         </template>
@@ -121,10 +121,10 @@ const navTabs = [
             full-width
           />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Sizes -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Sizes</h3>
         </template>
@@ -154,7 +154,7 @@ const navTabs = [
             />
           </div>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

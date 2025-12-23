@@ -76,7 +76,7 @@ Contact us to obtain a license key:
 ### Display Components
 | Component | Description |
 |-----------|-------------|
-| `PkCard` | Content container with multiple variants |
+| `AeCard` | Content container with multiple variants |
 | `PkBadge` | Status indicators and labels |
 | `PkAlert` | Contextual feedback messages |
 
@@ -109,13 +109,13 @@ Contact us to obtain a license key:
 
 ```vue
 <template>
-  <PkCard title="Welcome" variant="elevated">
+  <AeCard title="Welcome" variant="elevated">
     <p>Card content here</p>
     <template #actions>
       <PkButton variant="text">Cancel</PkButton>
       <PkButton>Confirm</PkButton>
     </template>
-  </PkCard>
+  </AeCard>
 </template>
 ```
 

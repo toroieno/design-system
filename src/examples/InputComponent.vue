@@ -36,7 +36,7 @@ const countryOptions = [
 
     <div class="demo-grid demo-grid--forms">
       <!-- Inputs -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Text Input</h3>
         </template>
@@ -74,10 +74,10 @@ const countryOptions = [
             variant="filled"
           />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Textarea -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Textarea</h3>
         </template>
@@ -97,10 +97,10 @@ const countryOptions = [
             variant="filled"
           />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Select -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Select</h3>
         </template>
@@ -137,10 +137,10 @@ const countryOptions = [
             clearable
           />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Input Variants -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Input Variants</h3>
         </template>
@@ -161,7 +161,7 @@ const countryOptions = [
             variant="underlined"
           />
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

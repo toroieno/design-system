@@ -9,7 +9,7 @@ import {AeButton} from "@/components";
 
     <div class="demo-grid">
       <!-- Variants -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Variants</h3>
         </template>
@@ -34,10 +34,10 @@ import {AeButton} from "@/components";
             </svg>
           </AeButton>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Colors -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Colors</h3>
         </template>
@@ -46,10 +46,10 @@ import {AeButton} from "@/components";
           <AeButton color="danger">danger</AeButton>
           <AeButton variant="outlined" color="danger">danger</AeButton>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Sizes -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Sizes</h3>
         </template>
@@ -58,10 +58,10 @@ import {AeButton} from "@/components";
           <AeButton size="md">Medium</AeButton>
           <AeButton size="lg">Large</AeButton>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- States -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">States</h3>
         </template>
@@ -71,7 +71,7 @@ import {AeButton} from "@/components";
           <AeButton disabled>Disabled</AeButton>
           <AeButton rounded>Rounded</AeButton>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

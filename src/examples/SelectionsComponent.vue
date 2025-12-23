@@ -22,7 +22,7 @@ const switchValue3 = ref(true)
 
     <div class="demo-grid">
       <!-- Checkbox -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Checkbox</h3>
         </template>
@@ -33,10 +33,10 @@ const switchValue3 = ref(true)
           <AeCheckbox label="Disabled" disabled />
           <AeCheckbox label="Indeterminate" indeterminate />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Radio -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Radio</h3>
         </template>
@@ -46,10 +46,10 @@ const switchValue3 = ref(true)
           <AeRadio v-model="radioValue" value="option3" name="demo" label="Option 1" size="lg"/>
           <AeRadio value="disabled" name="demo2" label="Disabled" disabled />
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Switch -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Switch</h3>
         </template>
@@ -62,7 +62,7 @@ const switchValue3 = ref(true)
             <AeSwitch size="lg" />
           </div>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>

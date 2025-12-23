@@ -18,7 +18,7 @@ import { AeSelect } from './components/AeSelect'
 import { AeCheckbox } from './components/AeCheckbox'
 import { AeRadio } from './components/AeRadio'
 import { AeSwitch } from './components/AeSwitch'
-import { PkCard } from './components/PkCard'
+import { AeCard } from './components/AeCard'
 import { PkBadge } from './components/PkBadge'
 import { PkAlert } from './components/PkAlert'
 
@@ -32,7 +32,7 @@ export {
   AeCheckbox,
   AeRadio,
   AeSwitch,
-  PkCard,
+  AeCard,
   PkBadge,
   PkAlert,
 }
@@ -46,7 +46,7 @@ export type { AeSelectProps, SelectOption } from './components/AeSelect'
 export type { AeCheckboxProps } from './components/AeCheckbox'
 export type { AeRadioProps } from './components/AeRadio'
 export type { AeSwitchProps } from './components/AeSwitch'
-export type { PkCardProps } from './components/PkCard'
+export type { AeCardProps } from './components/AeCard'
 export type { PkBadgeProps } from './components/PkBadge'
 export type { PkAlertProps } from './components/PkAlert'
 
@@ -72,7 +72,7 @@ const components = {
   AeCheckbox,
   AeRadio,
   AeSwitch,
-  PkCard,
+  AeCard,
   PkBadge,
   PkAlert,
 }

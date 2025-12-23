@@ -41,7 +41,7 @@ const handleFormSubmit = () => {
 
     <div class="demo-grid demo-grid--drawer">
       <!-- Basic Drawer (Right) -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Basic (Right)</h3>
         </template>
@@ -49,40 +49,40 @@ const handleFormSubmit = () => {
           <AeButton @click="basicDrawer = true">Open Drawer</AeButton>
           <p class="demo-info">Default drawer slides in from the right</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Left Drawer -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Left Placement</h3>
         </template>
         <div class="demo-stack">
           <AeButton @click="leftDrawer = true">Open Left</AeButton>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Top Drawer -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Top Placement</h3>
         </template>
         <div class="demo-stack">
           <AeButton @click="topDrawer = true">Open Top</AeButton>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Bottom Drawer -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Bottom Placement</h3>
         </template>
         <div class="demo-stack">
           <AeButton @click="bottomDrawer = true">Open Bottom</AeButton>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Sizes -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Sizes</h3>
         </template>
@@ -93,10 +93,10 @@ const handleFormSubmit = () => {
           <AeButton size="sm" variant="outlined" @click="openSizeDrawer('xl')">XL</AeButton>
           <AeButton size="sm" variant="outlined" @click="openSizeDrawer('full')">Full</AeButton>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Form Drawer -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">With Form</h3>
         </template>
@@ -104,10 +104,10 @@ const handleFormSubmit = () => {
           <AeButton @click="formDrawer = true">Contact Form</AeButton>
           <p class="demo-info">Drawer with form and footer actions</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Persistent Drawer -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Persistent</h3>
         </template>
@@ -115,20 +115,20 @@ const handleFormSubmit = () => {
           <AeButton @click="persistentDrawer = true">Open Persistent</AeButton>
           <p class="demo-info">Can't close by clicking overlay or pressing Escape</p>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Custom Header -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Custom Header</h3>
         </template>
         <div class="demo-stack">
           <AeButton @click="customDrawer = true">Custom Header</AeButton>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- No Header -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">No Header</h3>
         </template>
@@ -136,7 +136,7 @@ const handleFormSubmit = () => {
           <AeButton @click="noHeaderDrawer = true">No Header</AeButton>
           <p class="demo-info">Content only, no header section</p>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
 
     <!-- Basic Drawer -->

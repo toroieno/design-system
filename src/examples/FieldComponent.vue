@@ -29,7 +29,7 @@ const countryOptions = [
 
     <div class="demo-grid demo-grid--forms">
       <!-- Basic Field -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Basic Field</h3>
         </template>
@@ -38,10 +38,10 @@ const countryOptions = [
             <AeInput v-model="email" placeholder="Enter your email" />
           </AeField>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Required Field -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Required Field</h3>
         </template>
@@ -50,10 +50,10 @@ const countryOptions = [
             <AeInput v-model="password" type="password" placeholder="Enter password" />
           </AeField>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Optional Field -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Optional Field</h3>
         </template>
@@ -62,10 +62,10 @@ const countryOptions = [
             <AeInput placeholder="(555) 123-4567" />
           </AeField>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Error State -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Error State</h3>
         </template>
@@ -78,10 +78,10 @@ const countryOptions = [
             <AeInput v-model="username" />
           </AeField>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Success State -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Success State</h3>
         </template>
@@ -94,10 +94,10 @@ const countryOptions = [
             <AeInput model-value="available@email.com" />
           </AeField>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- With Description -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">With Description</h3>
         </template>
@@ -111,10 +111,10 @@ const countryOptions = [
             <AeInput type="password" model-value="sk_live_abc123xyz" />
           </AeField>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Character Counter -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Character Counter</h3>
         </template>
@@ -132,10 +132,10 @@ const countryOptions = [
             />
           </AeField>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- With Select -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">With Select</h3>
         </template>
@@ -148,10 +148,10 @@ const countryOptions = [
             />
           </AeField>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- With Checkbox -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">With Checkbox</h3>
         </template>
@@ -162,10 +162,10 @@ const countryOptions = [
             <AeCheckbox v-model="agreed" label="I agree to the Terms and Conditions" />
           </AeField>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Sizes -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Sizes</h3>
         </template>
@@ -182,10 +182,10 @@ const countryOptions = [
             <AeInput placeholder="Large input" size="lg" />
           </AeField>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Disabled State -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Disabled State</h3>
         </template>
@@ -194,10 +194,10 @@ const countryOptions = [
             <AeInput model-value="Cannot edit" disabled />
           </AeField>
         </div>
-      </PkCard>
+      </AeCard>
 
       <!-- Custom Label Slot -->
-      <PkCard variant="outlined">
+      <AeCard variant="outlined">
         <template #header>
           <h3 class="demo-card-title">Custom Label</h3>
         </template>
@@ -215,7 +215,7 @@ const countryOptions = [
             <AeInput type="password" placeholder="Enter secure password" />
           </AeField>
         </div>
-      </PkCard>
+      </AeCard>
     </div>
   </section>
 </template>
