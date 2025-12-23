@@ -89,5 +89,9 @@ export type { AeSidebarProps, SidebarItem } from './AeSidebar'
 export { AeField } from './AeField'
 export type { AeFieldProps } from './AeField'
 
+// Dropdown
+export { AeDropdown } from './AeDropdown'
+export type { AeDropdownProps, DropdownItem } from './AeDropdown'
+
 
 

@@ -87,199 +87,203 @@
 <!--      <FieldComponent />-->
 
 <!--      font section-->
-      <FontComponent />
+<!--      <FontComponent />-->
+
+<!--      dropdown section-->
+      <DropdownComponent />
 
       <!-- Cards Section -->
-      <section class="demo-section">
-        <h2 class="demo-section__title">Cards</h2>
-        <p class="demo-section__desc">Content containers with various elevation and style options.</p>
-        
-        <div class="demo-grid demo-grid--cards">
-          <PkCard variant="elevated" title="Elevated Card" subtitle="With shadow elevation">
-            <p>This card has a subtle shadow that creates depth and visual hierarchy.</p>
-            <template #actions>
-              <AeButton variant="text" size="sm">Cancel</AeButton>
-              <AeButton size="sm">Confirm</AeButton>
-            </template>
-          </PkCard>
-          
-          <PkCard variant="outlined" title="Outlined Card" subtitle="With border">
-            <p>A clean card with a simple border, perfect for lists and grids.</p>
-            <template #actions>
-              <AeButton variant="text" size="sm">Learn More</AeButton>
-            </template>
-          </PkCard>
-          
-          <PkCard variant="tonal" color="primary" title="Tonal Card" subtitle="Colored background">
-            <p>Uses a subtle tinted background to convey information or status.</p>
-          </PkCard>
-          
-          <PkCard variant="elevated" hover>
-            <template #media>
-              <div class="demo-card-media">
-                <svg viewBox="0 0 400 200" fill="none">
-                  <rect width="400" height="200" fill="url(#card-gradient)"/>
-                  <circle cx="80" cy="50" r="30" fill="rgba(255,255,255,0.2)"/>
-                  <circle cx="350" cy="150" r="50" fill="rgba(255,255,255,0.1)"/>
-                  <defs>
-                    <linearGradient id="card-gradient" x1="0" y1="0" x2="400" y2="200">
-                      <stop stop-color="var(--pk-primary-400)"/>
-                      <stop offset="0.5" stop-color="var(--pk-accent-500)"/>
-                      <stop offset="1" stop-color="var(--pk-secondary-400)"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
-            </template>
-            <template #header>
-              <h3 class="demo-card-title">Media Card</h3>
-              <p class="demo-card-subtitle">With image/media slot</p>
-            </template>
-            <p>Cards can include media content like images, videos, or custom graphics.</p>
-          </PkCard>
-        </div>
-      </section>
-      
+<!--      <section class="demo-section">-->
+<!--        <h2 class="demo-section__title">Cards</h2>-->
+<!--        <p class="demo-section__desc">Content containers with various elevation and style options.</p>-->
+<!--        -->
+<!--        <div class="demo-grid demo-grid&#45;&#45;cards">-->
+<!--          <PkCard variant="elevated" title="Elevated Card" subtitle="With shadow elevation">-->
+<!--            <p>This card has a subtle shadow that creates depth and visual hierarchy.</p>-->
+<!--            <template #actions>-->
+<!--              <AeButton variant="text" size="sm">Cancel</AeButton>-->
+<!--              <AeButton size="sm">Confirm</AeButton>-->
+<!--            </template>-->
+<!--          </PkCard>-->
+<!--          -->
+<!--          <PkCard variant="outlined" title="Outlined Card" subtitle="With border">-->
+<!--            <p>A clean card with a simple border, perfect for lists and grids.</p>-->
+<!--            <template #actions>-->
+<!--              <AeButton variant="text" size="sm">Learn More</AeButton>-->
+<!--            </template>-->
+<!--          </PkCard>-->
+<!--          -->
+<!--          <PkCard variant="tonal" color="primary" title="Tonal Card" subtitle="Colored background">-->
+<!--            <p>Uses a subtle tinted background to convey information or status.</p>-->
+<!--          </PkCard>-->
+<!--          -->
+<!--          <PkCard variant="elevated" hover>-->
+<!--            <template #media>-->
+<!--              <div class="demo-card-media">-->
+<!--                <svg viewBox="0 0 400 200" fill="none">-->
+<!--                  <rect width="400" height="200" fill="url(#card-gradient)"/>-->
+<!--                  <circle cx="80" cy="50" r="30" fill="rgba(255,255,255,0.2)"/>-->
+<!--                  <circle cx="350" cy="150" r="50" fill="rgba(255,255,255,0.1)"/>-->
+<!--                  <defs>-->
+<!--                    <linearGradient id="card-gradient" x1="0" y1="0" x2="400" y2="200">-->
+<!--                      <stop stop-color="var(&#45;&#45;pk-primary-400)"/>-->
+<!--                      <stop offset="0.5" stop-color="var(&#45;&#45;pk-accent-500)"/>-->
+<!--                      <stop offset="1" stop-color="var(&#45;&#45;pk-secondary-400)"/>-->
+<!--                    </linearGradient>-->
+<!--                  </defs>-->
+<!--                </svg>-->
+<!--              </div>-->
+<!--            </template>-->
+<!--            <template #header>-->
+<!--              <h3 class="demo-card-title">Media Card</h3>-->
+<!--              <p class="demo-card-subtitle">With image/media slot</p>-->
+<!--            </template>-->
+<!--            <p>Cards can include media content like images, videos, or custom graphics.</p>-->
+<!--          </PkCard>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--      -->
       <!-- Badges Section -->
-      <section class="demo-section">
-        <h2 class="demo-section__title">Badges</h2>
-        <p class="demo-section__desc">Small status indicators and labels.</p>
-        
-        <PkCard variant="outlined">
-          <div class="demo-stack">
-            <div class="demo-row">
-              <span class="demo-label">Filled:</span>
-              <PkBadge color="primary">Primary</PkBadge>
-              <PkBadge color="secondary">Secondary</PkBadge>
-              <PkBadge color="accent">Accent</PkBadge>
-              <PkBadge color="success">Success</PkBadge>
-              <PkBadge color="warning">Warning</PkBadge>
-              <PkBadge color="error">Error</PkBadge>
-              <PkBadge color="info">Info</PkBadge>
-            </div>
-            
-            <div class="demo-row">
-              <span class="demo-label">Tonal:</span>
-              <PkBadge variant="tonal" color="primary">Primary</PkBadge>
-              <PkBadge variant="tonal" color="secondary">Secondary</PkBadge>
-              <PkBadge variant="tonal" color="accent">Accent</PkBadge>
-              <PkBadge variant="tonal" color="success">Success</PkBadge>
-              <PkBadge variant="tonal" color="error">Error</PkBadge>
-            </div>
-            
-            <div class="demo-row">
-              <span class="demo-label">Outlined:</span>
-              <PkBadge variant="outlined" color="primary">Primary</PkBadge>
-              <PkBadge variant="outlined" color="secondary">Secondary</PkBadge>
-              <PkBadge variant="outlined" color="accent">Accent</PkBadge>
-            </div>
-            
-            <div class="demo-row demo-row--align-center">
-              <span class="demo-label">Sizes:</span>
-              <PkBadge size="sm">Small</PkBadge>
-              <PkBadge size="md">Medium</PkBadge>
-              <PkBadge size="lg">Large</PkBadge>
-              <PkBadge rounded>Rounded</PkBadge>
-            </div>
-            
-            <div class="demo-row demo-row--align-center">
-              <span class="demo-label">Status Dots:</span>
-              <span class="demo-status">
-                <PkBadge dot color="success" />
-                Online
-              </span>
-              <span class="demo-status">
-                <PkBadge dot color="warning" />
-                Away
-              </span>
-              <span class="demo-status">
-                <PkBadge dot color="error" />
-                Offline
-              </span>
-            </div>
-          </div>
-        </PkCard>
-      </section>
-      
+<!--      <section class="demo-section">-->
+<!--        <h2 class="demo-section__title">Badges</h2>-->
+<!--        <p class="demo-section__desc">Small status indicators and labels.</p>-->
+<!--        -->
+<!--        <PkCard variant="outlined">-->
+<!--          <div class="demo-stack">-->
+<!--            <div class="demo-row">-->
+<!--              <span class="demo-label">Filled:</span>-->
+<!--              <PkBadge color="primary">Primary</PkBadge>-->
+<!--              <PkBadge color="secondary">Secondary</PkBadge>-->
+<!--              <PkBadge color="accent">Accent</PkBadge>-->
+<!--              <PkBadge color="success">Success</PkBadge>-->
+<!--              <PkBadge color="warning">Warning</PkBadge>-->
+<!--              <PkBadge color="error">Error</PkBadge>-->
+<!--              <PkBadge color="info">Info</PkBadge>-->
+<!--            </div>-->
+<!--            -->
+<!--            <div class="demo-row">-->
+<!--              <span class="demo-label">Tonal:</span>-->
+<!--              <PkBadge variant="tonal" color="primary">Primary</PkBadge>-->
+<!--              <PkBadge variant="tonal" color="secondary">Secondary</PkBadge>-->
+<!--              <PkBadge variant="tonal" color="accent">Accent</PkBadge>-->
+<!--              <PkBadge variant="tonal" color="success">Success</PkBadge>-->
+<!--              <PkBadge variant="tonal" color="error">Error</PkBadge>-->
+<!--            </div>-->
+<!--            -->
+<!--            <div class="demo-row">-->
+<!--              <span class="demo-label">Outlined:</span>-->
+<!--              <PkBadge variant="outlined" color="primary">Primary</PkBadge>-->
+<!--              <PkBadge variant="outlined" color="secondary">Secondary</PkBadge>-->
+<!--              <PkBadge variant="outlined" color="accent">Accent</PkBadge>-->
+<!--            </div>-->
+<!--            -->
+<!--            <div class="demo-row demo-row&#45;&#45;align-center">-->
+<!--              <span class="demo-label">Sizes:</span>-->
+<!--              <PkBadge size="sm">Small</PkBadge>-->
+<!--              <PkBadge size="md">Medium</PkBadge>-->
+<!--              <PkBadge size="lg">Large</PkBadge>-->
+<!--              <PkBadge rounded>Rounded</PkBadge>-->
+<!--            </div>-->
+<!--            -->
+<!--            <div class="demo-row demo-row&#45;&#45;align-center">-->
+<!--              <span class="demo-label">Status Dots:</span>-->
+<!--              <span class="demo-status">-->
+<!--                <PkBadge dot color="success" />-->
+<!--                Online-->
+<!--              </span>-->
+<!--              <span class="demo-status">-->
+<!--                <PkBadge dot color="warning" />-->
+<!--                Away-->
+<!--              </span>-->
+<!--              <span class="demo-status">-->
+<!--                <PkBadge dot color="error" />-->
+<!--                Offline-->
+<!--              </span>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </PkCard>-->
+<!--      </section>-->
+<!--      -->
       <!-- Alerts Section -->
-      <section class="demo-section">
-        <h2 class="demo-section__title">Alerts</h2>
-        <p class="demo-section__desc">Contextual feedback messages for user actions.</p>
-        
-        <div class="demo-stack demo-stack--lg">
-          <PkAlert type="info" title="Information" variant="tonal">
-            This is an informational message. It provides helpful context to the user.
-          </PkAlert>
-          
-          <PkAlert type="success" title="Success!" variant="tonal" closable>
-            Your changes have been saved successfully.
-          </PkAlert>
-          
-          <PkAlert type="warning" title="Warning" variant="tonal">
-            Please review your input before proceeding.
-          </PkAlert>
-          
-          <PkAlert type="error" title="Error" variant="tonal" closable>
-            Something went wrong. Please try again later.
-          </PkAlert>
-          
-          <div class="demo-row demo-row--stretch">
-            <PkAlert type="info" variant="filled">Filled info alert</PkAlert>
-            <PkAlert type="success" variant="outlined">Outlined success</PkAlert>
-          </div>
-        </div>
-      </section>
-      
+<!--      <section class="demo-section">-->
+<!--        <h2 class="demo-section__title">Alerts</h2>-->
+<!--        <p class="demo-section__desc">Contextual feedback messages for user actions.</p>-->
+<!--        -->
+<!--        <div class="demo-stack demo-stack&#45;&#45;lg">-->
+<!--          <PkAlert type="info" title="Information" variant="tonal">-->
+<!--            This is an informational message. It provides helpful context to the user.-->
+<!--          </PkAlert>-->
+<!--          -->
+<!--          <PkAlert type="success" title="Success!" variant="tonal" closable>-->
+<!--            Your changes have been saved successfully.-->
+<!--          </PkAlert>-->
+<!--          -->
+<!--          <PkAlert type="warning" title="Warning" variant="tonal">-->
+<!--            Please review your input before proceeding.-->
+<!--          </PkAlert>-->
+<!--          -->
+<!--          <PkAlert type="error" title="Error" variant="tonal" closable>-->
+<!--            Something went wrong. Please try again later.-->
+<!--          </PkAlert>-->
+<!--          -->
+<!--          <div class="demo-row demo-row&#45;&#45;stretch">-->
+<!--            <PkAlert type="info" variant="filled">Filled info alert</PkAlert>-->
+<!--            <PkAlert type="success" variant="outlined">Outlined success</PkAlert>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--      -->
       <!-- Color Palette -->
-      <section class="demo-section">
-        <h2 class="demo-section__title">Color Palette</h2>
-        <p class="demo-section__desc">Customizable CSS variables for theming.</p>
-        
-        <div class="demo-colors">
-          <div class="demo-color-group">
-            <h4>Primary</h4>
-            <div class="demo-color-swatches">
-              <div class="demo-swatch" style="background: var(--pk-primary-100)"><span>100</span></div>
-              <div class="demo-swatch" style="background: var(--pk-primary-300)"><span>300</span></div>
-              <div class="demo-swatch" style="background: var(--pk-primary-500); color: white"><span>500</span></div>
-              <div class="demo-swatch" style="background: var(--pk-primary-700); color: white"><span>700</span></div>
-              <div class="demo-swatch" style="background: var(--pk-primary-900); color: white"><span>900</span></div>
-            </div>
-          </div>
-          
-          <div class="demo-color-group">
-            <h4>Secondary</h4>
-            <div class="demo-color-swatches">
-              <div class="demo-swatch" style="background: var(--pk-secondary-100)"><span>100</span></div>
-              <div class="demo-swatch" style="background: var(--pk-secondary-300)"><span>300</span></div>
-              <div class="demo-swatch" style="background: var(--pk-secondary-500); color: white"><span>500</span></div>
-              <div class="demo-swatch" style="background: var(--pk-secondary-700); color: white"><span>700</span></div>
-              <div class="demo-swatch" style="background: var(--pk-secondary-900); color: white"><span>900</span></div>
-            </div>
-          </div>
-          
-          <div class="demo-color-group">
-            <h4>Accent</h4>
-            <div class="demo-color-swatches">
-              <div class="demo-swatch" style="background: var(--pk-accent-100)"><span>100</span></div>
-              <div class="demo-swatch" style="background: var(--pk-accent-300)"><span>300</span></div>
-              <div class="demo-swatch" style="background: var(--pk-accent-500); color: white"><span>500</span></div>
-              <div class="demo-swatch" style="background: var(--pk-accent-700); color: white"><span>700</span></div>
-              <div class="demo-swatch" style="background: var(--pk-accent-900); color: white"><span>900</span></div>
-            </div>
-          </div>
-          
-          <div class="demo-color-group">
-            <h4>Semantic</h4>
-            <div class="demo-color-swatches">
-              <div class="demo-swatch" style="background: var(--pk-success-500); color: white"><span>Success</span></div>
-              <div class="demo-swatch" style="background: var(--pk-warning-500)"><span>Warning</span></div>
-              <div class="demo-swatch" style="background: var(--pk-error-500); color: white"><span>Error</span></div>
-              <div class="demo-swatch" style="background: var(--pk-info-500); color: white"><span>Info</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
+<!--      <section class="demo-section">-->
+<!--        <h2 class="demo-section__title">Color Palette</h2>-->
+<!--        <p class="demo-section__desc">Customizable CSS variables for theming.</p>-->
+<!--        -->
+<!--        <div class="demo-colors">-->
+<!--          <div class="demo-color-group">-->
+<!--            <h4>Primary</h4>-->
+<!--            <div class="demo-color-swatches">-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-primary-100)"><span>100</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-primary-300)"><span>300</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-primary-500); color: white"><span>500</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-primary-700); color: white"><span>700</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-primary-900); color: white"><span>900</span></div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          -->
+<!--          <div class="demo-color-group">-->
+<!--            <h4>Secondary</h4>-->
+<!--            <div class="demo-color-swatches">-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-secondary-100)"><span>100</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-secondary-300)"><span>300</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-secondary-500); color: white"><span>500</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-secondary-700); color: white"><span>700</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-secondary-900); color: white"><span>900</span></div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          -->
+<!--          <div class="demo-color-group">-->
+<!--            <h4>Accent</h4>-->
+<!--            <div class="demo-color-swatches">-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-accent-100)"><span>100</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-accent-300)"><span>300</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-accent-500); color: white"><span>500</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-accent-700); color: white"><span>700</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-accent-900); color: white"><span>900</span></div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          -->
+<!--          <div class="demo-color-group">-->
+<!--            <h4>Semantic</h4>-->
+<!--            <div class="demo-color-swatches">-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-success-500); color: white"><span>Success</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-warning-500)"><span>Warning</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-error-500); color: white"><span>Error</span></div>-->
+<!--              <div class="demo-swatch" style="background: var(&#45;&#45;pk-info-500); color: white"><span>Info</span></div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--      -->
     </main>
     
     <!-- Footer -->
@@ -307,6 +311,7 @@ import ToastComponent from "@/examples/ToastComponent.vue";
 import SidebarComponent from "@/examples/SidebarComponent.vue";
 import FieldComponent from "@/examples/FieldComponent.vue";
 import FontComponent from "@/examples/FontComponent.vue";
+import DropdownComponent from "@/examples/DropdownComponent.vue";
 // Components are registered globally via app.use(PackDesignSystem)
 // No need to import individually when using license
 
