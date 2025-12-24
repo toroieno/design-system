@@ -99,7 +99,10 @@
 <!--      <BadgeComponent />-->
 
 <!--      navigation -->
-      <NavComponent />
+<!--      <NavComponent />-->
+
+<!--      empty -->
+      <EmptyComponent />
 
       <!-- Cards Section -->
       <section class="demo-section">
@@ -324,6 +327,7 @@ import DropdownComponent from "@/examples/DropdownComponent.vue";
 import DrawerComponent from "@/examples/DrawerComponent.vue";
 import BadgeComponent from "@/examples/BadgeComponent.vue";
 import NavComponent from "@/examples/NavComponent.vue";
+import EmptyComponent from "@/examples/EmptyComponent.vue";
 // Components are registered globally via app.use(PackDesignSystem)
 // No need to import individually when using license
 
