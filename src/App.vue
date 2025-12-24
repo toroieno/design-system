@@ -87,16 +87,19 @@
 <!--      <FieldComponent />-->
 
 <!--      font section-->
-      <FontComponent />
+<!--      <FontComponent />-->
 
 <!--      dropdown section-->
 <!--      <DropdownComponent />-->
 
 <!--      drawer -->
-      <DrawerComponent />
+<!--      <DrawerComponent />-->
 
 <!--      badge -->
-      <BadgeComponent />
+<!--      <BadgeComponent />-->
+
+<!--      navigation -->
+      <NavComponent />
 
       <!-- Cards Section -->
       <section class="demo-section">
@@ -320,6 +323,7 @@ import FontComponent from "@/examples/FontComponent.vue";
 import DropdownComponent from "@/examples/DropdownComponent.vue";
 import DrawerComponent from "@/examples/DrawerComponent.vue";
 import BadgeComponent from "@/examples/BadgeComponent.vue";
+import NavComponent from "@/examples/NavComponent.vue";
 // Components are registered globally via app.use(PackDesignSystem)
 // No need to import individually when using license
 

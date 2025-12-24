@@ -101,5 +101,9 @@ export type { AeDrawerProps } from './AeDrawer'
 export { AeBadge } from './AeBadge'
 export type { AeBadgeProps } from './AeBadge'
 
+// Navigation
+export { AeNav } from './AeNav'
+export type { AeNavProps, NavItem } from './AeNav'
+
 
 

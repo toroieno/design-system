@@ -1,0 +1,45 @@
+/* custom scroll */
+.ae-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 6px;
+}
+
+.ae-scrollbar::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+.ae-scrollbar::-webkit-scrollbar-corner {
+  background: #bababa;
+}
+
+.ae-scrollbar::-webkit-scrollbar-track {
+  background-color: #ececec;
+  border: 5px solid transparent;
+  border-radius: 0;
+  background-clip: content-box;
+}
+
+.ae-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.ae-scrollbar::-webkit-scrollbar-track:active {
+  background: transparent;
+}
+
+.ae-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--sds-color-background-opacity-300);
+}
+
+.ae-scrollbar::-webkit-scrollbar-thumb:active {
+  background: var(--sds-color-background-opacity-300);
+}
+
+.ae-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--sds-color-background-opacity-300);
+  border-radius: 0;
+  margin: 3px;
+}
