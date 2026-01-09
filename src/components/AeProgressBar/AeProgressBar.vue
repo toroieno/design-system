@@ -9,12 +9,12 @@
         :aria-valuemin="0"
         :aria-valuemax="max"
       >
-        <span v-if="showLabel && !indeterminate" class="ae-progress__label">
+        <span v-if="showLabel && !indeterminate && labelPosition === 'inside'" class="ae-progress__label ae-typo-note">
           {{ labelText }}
         </span>
       </div>
     </div>
-    <span v-if="showLabel && labelPosition === 'outside'" class="ae-progress__label-outside">
+    <span v-if="showLabel && labelPosition === 'outside'" class="ae-progress__label-outside ae-typo-note">
       {{ labelText }}
     </span>
   </div>
@@ -57,7 +57,7 @@ const props = withDefaults(defineProps<AeProgressBarProps>(), {
   animated: false,
   indeterminate: false,
   showLabel: false,
-  labelPosition: 'inside',
+  labelPosition: 'outside',
   rounded: false,
 })
 
@@ -107,7 +107,6 @@ const labelText = computed(() => {
     flex: 1;
     overflow: hidden;
     background: var(--sds-color-border-default-primary);
-    border: var(--sds-size-stroke-border) solid var(--sds-color-border-default-primary);
   }
 
   &__bar {
@@ -120,19 +119,12 @@ const labelText = computed(() => {
   }
 
   &__label {
-    font-size: var(--pk-text-xs);
-    font-weight: var(--pk-font-medium);
-    color: var(--sds-color-text-brand-primary);
+    color: var(--sds-color-text-primary-default);
     white-space: nowrap;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   }
 
   &__label-outside {
-    font-size: var(--pk-text-sm);
-    font-weight: var(--pk-font-medium);
     color: var(--sds-color-text-primary-default);
-    min-width: 3em;
-    text-align: right;
   }
 
   // ================================
@@ -140,7 +132,7 @@ const labelText = computed(() => {
   // ================================
   &--sm {
     .ae-progress__track {
-      height: 6px;
+      height: 3px;
     }
     .ae-progress__label {
       font-size: 8px;
@@ -149,13 +141,13 @@ const labelText = computed(() => {
 
   &--md {
     .ae-progress__track {
-      height: 12px;
+      height: 6px;
     }
   }
 
   &--lg {
     .ae-progress__track {
-      height: 20px;
+      height: 12px;
     }
     .ae-progress__label {
       font-size: var(--pk-text-sm);
@@ -179,11 +171,7 @@ const labelText = computed(() => {
   // ================================
   &--primary {
     .ae-progress__bar {
-      background: linear-gradient(
-        90deg,
-        var(--sds-color-background-brand-default) 0%,
-        var(--sds-color-brand-mint-green) 100%
-      );
+      background: var(--sds-color-border-brand-default);
     }
   }
 
@@ -273,7 +261,7 @@ const labelText = computed(() => {
   &--indeterminate {
     .ae-progress__bar {
       width: 40% !important;
-      animation: ae-progress-indeterminate 2.2s ease-in-out infinite;
+      animation: ae-progress-indeterminate 2s ease-in-out infinite;
     }
   }
 }

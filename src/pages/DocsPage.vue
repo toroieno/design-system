@@ -4,12 +4,14 @@ import { useRoute } from 'vue-router'
 import { 
   AeInput, AeButton, AeBadge, AeTextarea, AeSelect, AeCheckbox, AeRadio, 
   AeSwitch, AeField, AeDatepicker, AeCard, AeDialog, AeDrawer, AeDropdown,
-  AeTooltip, AeToastProvider, toast, AeProgressBar, AeAvatar, AeAvatarGroup,
+  AeTooltip, AeToastProvider, toast, AeAvatar, AeAvatarGroup,
   AeTable, AeTabs, AeNav, AeSidebar, AePagination
 } from "@/components"
 import BreadcrumbComponent from "@/examples/BreadcrumbComponent.vue";
 import CalendarComponent from "@/examples/CalendarComponent.vue";
 import EmptyComponent from "@/examples/EmptyComponent.vue";
+import ProgressBarComponent from "@/examples/ProgressBarComponent.vue";
+import LoadingComponent from "@/examples/LoadingComponent.vue";
 
 const route = useRoute()
 
@@ -45,6 +47,7 @@ const components = [
   { key: 'tooltip', name: 'Tooltip', description: 'Tooltip popup', category: 'Overlay' },
   { key: 'toast', name: 'Toast', description: 'Toast notifications', category: 'Feedback' },
   { key: 'progressbar', name: 'ProgressBar', description: 'Progress indicator', category: 'Feedback' },
+  { key: 'loading', name: 'Loading', description: 'Loading indicator', category: 'Feedback' },
   { key: 'badge', name: 'Badge', description: 'Status badge', category: 'Data Display' },
   { key: 'avatar', name: 'Avatar', description: 'User avatar', category: 'Data Display' },
   { key: 'table', name: 'Table', description: 'Data table', category: 'Data Display' },
@@ -808,11 +811,10 @@ onUnmounted(() => {
             </div>
 
             <!-- ProgressBar Preview -->
-            <div v-else-if="activeComponent === 'progressbar'" class="demo-stack">
-              <AeProgressBar :value="30" />
-              <AeProgressBar :value="60" color="success" />
-              <AeProgressBar :value="80" color="warning" show-label />
-            </div>
+            <ProgressBarComponent v-else-if="activeComponent === 'progressbar'"/>
+
+            <!-- ProgressBar Preview -->
+            <LoadingComponent v-else-if="activeComponent === 'loading'"/>
 
             <!-- Badge Preview -->
             <div v-else-if="activeComponent === 'badge'" class="demo-row">

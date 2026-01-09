@@ -113,5 +113,9 @@ export type { AeNavProps, NavItem } from './AeNav'
 export { AeEmpty } from './AeEmpty'
 export type { AeEmptyProps } from './AeEmpty'
 
+// Loading
+export { AeLoading } from './AeLoading'
+export type { AeLoadingProps } from './AeLoading'
+
 
 
