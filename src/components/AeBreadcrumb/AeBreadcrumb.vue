@@ -20,12 +20,21 @@
         </span>
 
         <!-- Breadcrumb Link/Text -->
-<!--        TODO: dropdown -->
-        <svg v-if="Array.isArray(item)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M8.00002 8.66666C8.36821 8.66666 8.66669 8.36818 8.66669 7.99999C8.66669 7.63181 8.36821 7.33333 8.00002 7.33333C7.63183 7.33333 7.33335 7.63181 7.33335 7.99999C7.33335 8.36818 7.63183 8.66666 8.00002 8.66666Z" stroke="#71717A" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12.6667 8.66666C13.0349 8.66666 13.3334 8.36818 13.3334 7.99999C13.3334 7.63181 13.0349 7.33333 12.6667 7.33333C12.2985 7.33333 12 7.63181 12 7.99999C12 8.36818 12.2985 8.66666 12.6667 8.66666Z" stroke="#71717A" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M3.33335 8.66666C3.70154 8.66666 4.00002 8.36818 4.00002 7.99999C4.00002 7.63181 3.70154 7.33333 3.33335 7.33333C2.96516 7.33333 2.66669 7.63181 2.66669 7.99999C2.66669 8.36818 2.96516 8.66666 3.33335 8.66666Z" stroke="#71717A" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <AeDropdown class="ae-breadcrumb__link" v-if="Array.isArray(item)" :items="item" trigger="hover">
+          <template #trigger>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M8.00002 8.66666C8.36821 8.66666 8.66669 8.36818 8.66669 7.99999C8.66669 7.63181 8.36821 7.33333 8.00002 7.33333C7.63183 7.33333 7.33335 7.63181 7.33335 7.99999C7.33335 8.36818 7.63183 8.66666 8.00002 8.66666Z"
+                stroke="#71717A" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              <path
+                d="M12.6667 8.66666C13.0349 8.66666 13.3334 8.36818 13.3334 7.99999C13.3334 7.63181 13.0349 7.33333 12.6667 7.33333C12.2985 7.33333 12 7.63181 12 7.99999C12 8.36818 12.2985 8.66666 12.6667 8.66666Z"
+                stroke="#71717A" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              <path
+                d="M3.33335 8.66666C3.70154 8.66666 4.00002 8.36818 4.00002 7.99999C4.00002 7.63181 3.70154 7.33333 3.33335 7.33333C2.96516 7.33333 2.66669 7.63181 2.66669 7.99999C2.66669 8.36818 2.96516 8.66666 3.33335 8.66666Z"
+                stroke="#71717A" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </template>
+        </AeDropdown>
 
         <component
           v-else
@@ -62,7 +71,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import {computed} from 'vue'
+import {AeDropdown} from "@/components";
 
 export interface BreadcrumbItem {
   label: string

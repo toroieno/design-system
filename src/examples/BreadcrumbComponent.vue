@@ -8,7 +8,7 @@ import IconHome from '@/components/icons/IconHome.vue'
     <AeBreadcrumb
       :items="[
         { label: 'Home', href: '#' },
-        [{ label: 'child-1', href: '#' }, { label: 'child-2', href: '#' }],
+        [{ label: 'Button', href: '/docs/button' }, { label: 'Dropdown', href: '/docs/dropdown' }],
         { label: 'Products', href: '#' },
         { label: 'Category', href: '#' },
         { label: 'Current Page' }
@@ -25,13 +25,3 @@ import IconHome from '@/components/icons/IconHome.vue'
     />
   </div>
 </template>
-
-<style scoped>
-.demo-stack {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sds-size-space-12);
-  width: 100%;
-  max-width: 400px;
-}
-</style>

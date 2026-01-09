@@ -757,7 +757,7 @@ onUnmounted(() => {
                   { label: 'Delete', danger: true, onClick: () => {} }
                 ]"
               >
-                <AeButton>Actions</AeButton>
+<!--                <AeButton>Actions</AeButton>-->
               </AeDropdown>
             </div>
 
@@ -1214,7 +1214,6 @@ onUnmounted(() => {
   flex-direction: column;
   gap: var(--sds-size-space-12);
   width: 100%;
-  max-width: 400px;
 }
 
 .demo-nav-wrapper {

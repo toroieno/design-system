@@ -92,6 +92,7 @@ export interface DropdownItem {
   divider?: boolean
   group?: boolean
   onClick?: () => void
+  href?: string
 }
 
 export interface AeDropdownProps {
@@ -176,9 +177,29 @@ const menuStyles = computed(() => {
   return styles
 })
 
-const selectableItems = computed(() => {
-  return props.items.filter(item => !item.divider && !item.group && !item.disabled)
-})
+const calculateInitialPosition = () => {
+  if (!triggerRef.value || !props.teleport) return { top: 0, left: 0 }
+  
+  const triggerEl = triggerRef.value
+  const rect = triggerEl.getBoundingClientRect()
+  
+  let top = 0
+  let left = 0
+  
+  if (props.placement.startsWith('bottom')) {
+    top = rect.bottom + 4
+  } else {
+    top = rect.top - 4
+  }
+  
+  if (props.placement.endsWith('start')) {
+    left = rect.left
+  } else {
+    left = rect.right
+  }
+  
+  return { top, left }
+}
 
 const updatePosition = () => {
   if (!triggerRef.value || !props.teleport) return
@@ -200,6 +221,9 @@ const updatePosition = () => {
   } else {
     left = rect.right
   }
+  
+  // Set initial position immediately to prevent transition from (0,0)
+  menuPosition.value = { top, left }
   
   // Adjust after menu renders
   nextTick(() => {
@@ -229,12 +253,16 @@ const updatePosition = () => {
     
     menuPosition.value = { top, left }
   })
-  
-  menuPosition.value = { top, left }
 }
 
 const open = () => {
   if (props.disabled) return
+  
+  // Calculate initial position BEFORE opening to prevent transition from (0,0)
+  if (props.teleport) {
+    menuPosition.value = calculateInitialPosition()
+  }
+  
   isOpen.value = true
   highlightedIndex.value = -1
   emit('update:open', true)
@@ -293,6 +321,10 @@ const handleItemClick = (item: DropdownItem) => {
   
   emit('select', item)
   item.onClick?.()
+  if (item?.href) {
+    window.location.href = item.href
+    return
+  }
   
   if (props.closeOnSelect) {
     close()
@@ -370,6 +402,12 @@ const handleClickOutside = (event: MouseEvent) => {
 
 // Sync with prop
 watch(() => props.open, (val) => {
+  if (val) {
+    // Calculate initial position BEFORE opening to prevent transition from (0,0)
+    if (props.teleport) {
+      menuPosition.value = calculateInitialPosition()
+    }
+  }
   isOpen.value = val
   if (val) nextTick(updatePosition)
 })
@@ -447,7 +485,7 @@ defineExpose({
     padding: var(--sds-size-space-4);
     background: var(--sds-color-background-surface-default);
     border: 1px solid var(--sds-color-border-default-secondary);
-    border-radius: var(--sds-size-radius-100);
+    border-radius: var(--sds-size-radius-50);
     box-shadow: var(--sds-shadow-overlay);
     outline: none;
 
