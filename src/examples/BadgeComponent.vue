@@ -337,7 +337,7 @@ const resetTags = () => {
 }
 
 .demo-info {
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
   font-size: 0.875rem;
   margin: 0;
 }
@@ -352,7 +352,7 @@ const resetTags = () => {
   display: flex;
   align-items: center;
   gap: var(--sds-size-space-8);
-  color: var(--sds-color-text-default-secondary);
+  color: var(--sds-color-text-primary-secondary);
   font-size: 0.875rem;
 }
 
@@ -364,7 +364,7 @@ const resetTags = () => {
   background: var(--sds-color-background-surface-secondary);
   border-radius: var(--sds-size-radius-100);
   font-size: 0.875rem;
-  color: var(--sds-color-text-default-secondary);
+  color: var(--sds-color-text-primary-secondary);
 }
 
 .use-case {
@@ -376,7 +376,7 @@ const resetTags = () => {
 
 .use-case__label {
   font-size: 0.875rem;
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
   min-width: 80px;
 }
 
@@ -400,7 +400,7 @@ const resetTags = () => {
 .combinations-label {
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
   min-width: 70px;
   text-transform: uppercase;
   letter-spacing: 0.05em;

@@ -177,7 +177,7 @@ const goToPage = (page: number) => {
     background: transparent;
     border: 1px solid var(--sds-color-border-default-secondary);
     border-radius: var(--sds-size-radius-50);
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     cursor: pointer;
     transition: all var(--ae-duration-150) var(--ae-ease-out);
     
@@ -212,13 +212,13 @@ const goToPage = (page: number) => {
     background: transparent;
     border: 1px solid transparent;
     border-radius: var(--sds-size-radius-50);
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     cursor: pointer;
     transition: all var(--ae-duration-150) var(--ae-ease-out);
     
     &:hover:not(:disabled):not(&--active) {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
     
     &--active {

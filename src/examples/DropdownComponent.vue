@@ -295,7 +295,7 @@ const handleSelect = (item: DropdownItem) => {
 }
 
 .demo-info {
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
   font-size: 0.875rem;
   margin: 0;
 }

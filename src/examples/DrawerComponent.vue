@@ -271,7 +271,7 @@ const handleFormSubmit = () => {
 }
 
 .demo-info {
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
   font-size: 0.875rem;
   margin: 0;
 }
@@ -301,12 +301,12 @@ const handleFormSubmit = () => {
 
 .custom-header__text h3 {
   margin: 0;
-  color: var(--sds-color-text-default-primary);
+  color: var(--sds-color-text-primary-default);
 }
 
 .custom-header__text p {
   margin: var(--sds-size-space-4) 0 0 0;
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
 }
 
 .no-header-content {
@@ -316,11 +316,11 @@ const handleFormSubmit = () => {
 
 .no-header-content h2 {
   margin: 0 0 var(--sds-size-space-16) 0;
-  color: var(--sds-color-text-default-primary);
+  color: var(--sds-color-text-primary-default);
 }
 
 .no-header-content p {
-  color: var(--sds-color-text-default-secondary);
+  color: var(--sds-color-text-primary-secondary);
   margin: 0 0 var(--sds-size-space-12) 0;
 }
 
@@ -343,7 +343,7 @@ const handleFormSubmit = () => {
   padding: 0;
   border: none;
   background: transparent;
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
   cursor: pointer;
   border-radius: var(--sds-size-radius-50);
   transition: all 0.1s ease;
@@ -351,6 +351,6 @@ const handleFormSubmit = () => {
 
 .close-btn:hover {
   background: var(--sds-color-background-default-primary-hover);
-  color: var(--sds-color-text-default-primary);
+  color: var(--sds-color-text-primary-default);
 }
 </style>

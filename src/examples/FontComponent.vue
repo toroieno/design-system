@@ -37,6 +37,6 @@
 
 <style scoped>
 .typo-container {
-  color: var(--sds-color-text-default-primary);
+  color: var(--sds-color-text-primary-default);
 }
 </style>

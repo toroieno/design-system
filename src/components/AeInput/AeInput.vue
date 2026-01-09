@@ -144,7 +144,7 @@ defineExpose({
   
   // Label
   &__label {
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
   
   &__required {
@@ -169,7 +169,7 @@ defineExpose({
     outline: none;
     padding: var(--sds-size-space-12);
     font-size: var(--ae-text-base);
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     background: transparent;
     
     &::placeholder {

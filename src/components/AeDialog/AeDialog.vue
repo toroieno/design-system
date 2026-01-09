@@ -156,7 +156,7 @@ onUnmounted(() => {
 
   &__title {
     margin: 0;
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
 
   &__close {
@@ -175,7 +175,7 @@ onUnmounted(() => {
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
 
     svg {
@@ -189,7 +189,7 @@ onUnmounted(() => {
     flex: 1;
     padding: var(--sds-size-space-20);
     overflow-y: auto;
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
 
   // Footer

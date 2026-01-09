@@ -287,7 +287,7 @@ watch(() => props.activeKey, (activeKey) => {
   }
 
   &__title {
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     white-space: nowrap;
   }
 
@@ -300,7 +300,7 @@ watch(() => props.activeKey, (activeKey) => {
     padding: 0;
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     cursor: pointer;
     border-radius: var(--sds-size-radius-50);
     transition: all var(--ae-duration-100) var(--ae-ease-out);
@@ -313,7 +313,7 @@ watch(() => props.activeKey, (activeKey) => {
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
   }
 
@@ -346,7 +346,7 @@ watch(() => props.activeKey, (activeKey) => {
     padding: var(--sds-size-space-10) var(--sds-size-space-12);
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-primary-secondary);
     text-decoration: none;
     cursor: pointer;
     border-radius: var(--sds-size-radius-100);
@@ -355,7 +355,7 @@ watch(() => props.activeKey, (activeKey) => {
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
 
     &--active {
@@ -430,7 +430,7 @@ watch(() => props.activeKey, (activeKey) => {
     padding: var(--sds-size-space-8) var(--sds-size-space-12);
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     text-decoration: none;
     cursor: pointer;
     border-radius: var(--sds-size-radius-100);
@@ -439,7 +439,7 @@ watch(() => props.activeKey, (activeKey) => {
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
 
     &--active {

@@ -164,7 +164,7 @@ const navTabs = [
   padding: var(--sds-size-space-16);
   background: var(--sds-color-background-surface-default);
   border-radius: var(--sds-size-radius-50);
-  color: var(--sds-color-text-default-primary);
+  color: var(--sds-color-text-primary-default);
 }
 
 .demo-label {

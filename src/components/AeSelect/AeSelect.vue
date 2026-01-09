@@ -334,7 +334,7 @@ watch(isOpen, (open) => {
 
   // Label
   &__label {
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
 
   &__required {
@@ -359,7 +359,7 @@ watch(isOpen, (open) => {
   // Value
   &__value {
     flex: 1;
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -373,7 +373,7 @@ watch(isOpen, (open) => {
       background: var(--sds-color-background-surface-default);
       width: fit-content;
       min-width: fit-content;
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
       &s{
         display: flex;
         gap: var(--sds-size-space-4);
@@ -590,7 +590,7 @@ watch(isOpen, (open) => {
 .ae-select__empty {
   padding: var(--sds-size-space-4);
   text-align: center;
-  color: var(--sds-color-text-default-primary);
+  color: var(--sds-color-text-primary-default);
 }
 
 // Dropdown transition

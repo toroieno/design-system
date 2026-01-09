@@ -278,7 +278,7 @@ const ImageIcon = h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'curren
   display: block;
   padding: var(--sds-size-space-8) var(--sds-size-space-12);
   background: var(--sds-color-background-surface-secondary);
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;

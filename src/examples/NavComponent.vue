@@ -338,7 +338,7 @@ const handleItemClick = (item: NavItem) => {
 }
 
 .demo-info {
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
   font-size: 0.875rem;
   margin: var(--sds-size-space-12) 0 0 0;
 }
@@ -371,7 +371,7 @@ const handleItemClick = (item: NavItem) => {
 
 .demo-info-box p {
   margin: 0 0 var(--sds-size-space-8) 0;
-  color: var(--sds-color-text-default-secondary);
+  color: var(--sds-color-text-primary-secondary);
   font-size: 0.875rem;
 }
 
@@ -419,7 +419,7 @@ const handleItemClick = (item: NavItem) => {
 
 .custom-brand__name {
   font-weight: 600;
-  color: var(--sds-color-text-default-primary);
+  color: var(--sds-color-text-primary-default);
 }
 
 .custom-brand__tag {

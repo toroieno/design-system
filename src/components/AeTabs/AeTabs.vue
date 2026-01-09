@@ -162,11 +162,11 @@ watch(() => props.tabs, () => {
     cursor: pointer;
     transition: all var(--ae-duration-200) var(--ae-ease-out);
     white-space: nowrap;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
 
     &--active,
     &:hover:not(&--disabled) {
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
     
     &--disabled {
@@ -254,7 +254,7 @@ watch(() => props.tabs, () => {
       &--active {
         background: var(--sds-color-background-surface-tertiary);
         border-radius: var(--sds-size-radius-100) var(--sds-size-radius-100) 0 0;
-        color: var(--sds-color-text-default-primary);
+        color: var(--sds-color-text-primary-default);
       }
     }
   }

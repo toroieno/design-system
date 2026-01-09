@@ -68,11 +68,11 @@ const cardClasses = computed(() => [
   }
 
   &__title {
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
 
   &__subtitle {
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
   
   // Media
@@ -146,8 +146,8 @@ const cardClasses = computed(() => [
     &.ae-card--tonal {
       //background: var(--ae-primary-50);
       
-      //.ae-card__title { color: var(--sds-color-text-default-primary); }
-      //.ae-card__subtitle { color: var(--sds-color-text-default-primary); }
+      //.ae-card__title { color: var(--sds-color-text-primary-default); }
+      //.ae-card__subtitle { color: var(--sds-color-text-primary-default); }
     }
     
     &.ae-card--outlined {

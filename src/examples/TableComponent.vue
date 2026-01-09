@@ -275,7 +275,7 @@ const paginatedUsers = computed(() => {
 }
 
 .demo-label {
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
   font-size: 0.875rem;
   margin: 0 0 var(--sds-size-space-8) 0;
 }
@@ -294,7 +294,7 @@ const paginatedUsers = computed(() => {
 
   &--inactive {
     background: var(--sds-color-background-default-secondary);
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
   }
 
   &--pending {

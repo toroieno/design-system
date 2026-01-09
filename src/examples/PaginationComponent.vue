@@ -180,7 +180,7 @@ const handlePageChange = (page: number) => {
 
 .demo-label {
   min-width: 70px;
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
   font-size: 0.875rem;
 }
 </style>

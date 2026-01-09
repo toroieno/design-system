@@ -135,7 +135,7 @@ const handleClick = (item: BreadcrumbItem, index: number, event: MouseEvent) => 
   &__separator {
     display: flex;
     align-items: center;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     user-select: none;
 
     svg {
@@ -155,12 +155,12 @@ const handleClick = (item: BreadcrumbItem, index: number, event: MouseEvent) => 
     border-bottom: 1px solid transparent;
 
     &:hover:not(&--active):not(&--disabled) {
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
       border-bottom-color: var(--sds-color-border-brand-default);
     }
 
     &--active {
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
       cursor: default;
     }
 

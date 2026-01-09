@@ -273,11 +273,11 @@ const toggleMobile = () => {
   display: flex;
   flex-direction: column;
   gap: var(--sds-size-space-12);
-  color: var(--sds-color-text-default-primary);
+  color: var(--sds-color-text-primary-default);
 }
 
 .demo-info {
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
   font-size: 0.875rem;
   margin: 0;
 }
@@ -296,7 +296,7 @@ const toggleMobile = () => {
 }
 
 .custom-header__title {
-  color: var(--sds-color-text-default-primary);
+  color: var(--sds-color-text-primary-default);
 }
 
 .custom-footer {
@@ -308,10 +308,10 @@ const toggleMobile = () => {
 .custom-footer__info {
   display: flex;
   flex-direction: column;
-  color: var(--sds-color-text-default-primary);
+  color: var(--sds-color-text-primary-default);
 }
 
 .custom-footer__info .ae-typo-note {
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
 }
 </style>

@@ -250,7 +250,7 @@ defineExpose({
 
   &__title {
     margin: 0;
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
 
   &__close {
@@ -262,7 +262,7 @@ defineExpose({
     padding: 0;
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     cursor: pointer;
     border-radius: var(--sds-size-radius-50);
     transition: all var(--ae-duration-100) var(--ae-ease-out);
@@ -275,7 +275,7 @@ defineExpose({
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
   }
 

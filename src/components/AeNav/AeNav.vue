@@ -347,7 +347,7 @@ onUnmounted(() => {
   }
 
   &__title {
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     white-space: nowrap;
   }
 
@@ -387,7 +387,7 @@ onUnmounted(() => {
       left: 0;
       width: 100%;
       height: 2px;
-      background: var(--sds-color-text-default-primary);
+      background: var(--sds-color-text-primary-default);
       border-radius: 1px;
       transition: all var(--ae-duration-200) var(--ae-ease-out);
 
@@ -482,7 +482,7 @@ onUnmounted(() => {
     padding: var(--sds-size-space-8) var(--sds-size-space-12);
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-primary-secondary);
     text-decoration: none;
     cursor: pointer;
     border-radius: var(--sds-size-radius-100);
@@ -493,7 +493,7 @@ onUnmounted(() => {
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
 
     &--active {
@@ -603,7 +603,7 @@ onUnmounted(() => {
     padding: var(--sds-size-space-10) var(--sds-size-space-12);
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-primary-secondary);
     text-decoration: none;
     cursor: pointer;
     border-radius: var(--sds-size-radius-100);
@@ -612,7 +612,7 @@ onUnmounted(() => {
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
 
     &--active {
@@ -639,7 +639,7 @@ onUnmounted(() => {
 
   &__dropdown-desc {
     font-size: 0.75rem;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
   }
 
   // ================================

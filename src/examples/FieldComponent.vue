@@ -237,7 +237,7 @@ const countryOptions = [
   display: inline-flex;
   align-items: center;
   gap: var(--sds-size-space-8);
-  color: var(--sds-color-text-default-primary);
+  color: var(--sds-color-text-primary-default);
 }
 
 .custom-label svg {

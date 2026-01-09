@@ -8,6 +8,7 @@ import {
   AeTable, AeEmpty, AeTabs, AeNav, AeSidebar, AePagination
 } from "@/components"
 import BreadcrumbComponent from "@/examples/BreadcrumbComponent.vue";
+import CalendarComponent from "@/examples/CalendarComponent.vue";
 
 const route = useRoute()
 
@@ -35,6 +36,7 @@ const components = [
   { key: 'switch', name: 'Switch', description: 'Toggle switch', category: 'Forms' },
   { key: 'field', name: 'Field', description: 'Form field wrapper', category: 'Forms' },
   { key: 'datepicker', name: 'Datepicker', description: 'Date picker input', category: 'Forms' },
+  { key: 'calendar', name: 'Calendar', description: 'Calendar with single/range date selection', category: 'Forms' },
   { key: 'card', name: 'Card', description: 'Content container', category: 'Layout' },
   { key: 'dialog', name: 'Dialog', description: 'Modal dialog', category: 'Overlay' },
   { key: 'drawer', name: 'Drawer', description: 'Slide-out panel', category: 'Overlay' },
@@ -192,6 +194,28 @@ import { ref } from 'vue'
 import { AeDatepicker } from '@ae-package/design-system'
 
 const date = ref(null)
+<\/script>`
+  },
+  calendar: {
+    template: `<template>
+  <!-- Single Date Selection -->
+  <AeCalendar
+    v-model="singleDate"
+    mode="single"
+  />
+  
+  <!-- Date Range Selection -->
+  <AeCalendar
+    v-model="dateRange"
+    mode="range"
+  />
+</template>`,
+    script: `<script setup>
+import { ref } from 'vue'
+import { AeCalendar, type DateRangeValue } from '@ae-package/design-system'
+
+const singleDate = ref<Date | null>(null)
+const dateRange = ref<DateRangeValue>({ start: null, end: null })
 <\/script>`
   },
   card: {
@@ -881,6 +905,9 @@ onUnmounted(() => {
             <!-- Breadcrumb Preview -->
             <BreadcrumbComponent v-else-if="activeComponent === 'breadcrumb'" />
 
+            <!-- Calendar Preview -->
+            <CalendarComponent v-else-if="activeComponent === 'calendar'" />
+
             <!-- Pagination Preview -->
             <div v-else-if="activeComponent === 'pagination'">
               <AePagination
@@ -999,7 +1026,7 @@ onUnmounted(() => {
     padding: 0;
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-primary-secondary);
     cursor: pointer;
     border-radius: var(--sds-size-radius-100);
 
@@ -1038,7 +1065,7 @@ onUnmounted(() => {
 
   &__title {
     font-weight: 600;
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
 
     @media (max-width: 600px) {
       display: none;
@@ -1099,7 +1126,7 @@ onUnmounted(() => {
   &__category {
     font-size: 0.6875rem;
     font-weight: 600;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin: 0 0 var(--sds-size-space-8) 0;
@@ -1118,7 +1145,7 @@ onUnmounted(() => {
     padding: var(--sds-size-space-8) var(--sds-size-space-12);
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-primary-secondary);
     font-size: 0.875rem;
     text-align: left;
     text-decoration: none;
@@ -1128,7 +1155,7 @@ onUnmounted(() => {
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
 
     &--active {
@@ -1159,12 +1186,12 @@ onUnmounted(() => {
     margin: 0 0 var(--sds-size-space-8) 0;
     font-size: 1.75rem;
     font-weight: 600;
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
 
   &__desc {
     margin: 0 0 var(--sds-size-space-12) 0;
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-primary-secondary);
   }
 }
 
@@ -1189,7 +1216,7 @@ onUnmounted(() => {
   &__label {
     font-size: 0.75rem;
     font-weight: 500;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -1231,7 +1258,7 @@ onUnmounted(() => {
 }
 
 .demo-placeholder {
-  color: var(--sds-color-text-default-tertiary);
+  color: var(--sds-color-text-primary-tertiary);
   font-style: italic;
 }
 
@@ -1261,7 +1288,7 @@ onUnmounted(() => {
   &__label {
     font-size: 0.75rem;
     font-weight: 500;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -1278,7 +1305,7 @@ onUnmounted(() => {
     }
 
     code {
-      color: var(--sds-color-text-default-secondary);
+      color: var(--sds-color-text-primary-secondary);
     }
   }
 }
@@ -1293,7 +1320,7 @@ onUnmounted(() => {
     margin: 0 0 var(--sds-size-space-12) 0;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
 }
 

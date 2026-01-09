@@ -5,34 +5,20 @@
       class="ae-datepicker__trigger"
       @click="toggleCalendar"
     >
-      <input
+      <AeInput
+        :model-value="modelValue"
         type="text"
         class="ae-datepicker__input ae-typo-body-base"
         :value="displayValue"
         :placeholder="placeholder"
         :disabled="disabled"
-        readonly
-      />
-      <span class="ae-datepicker__icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-          <line x1="16" y1="2" x2="16" y2="6" />
-          <line x1="8" y1="2" x2="8" y2="6" />
-          <line x1="3" y1="10" x2="21" y2="10" />
-        </svg>
-      </span>
-      <button
-        v-if="clearable && modelValue"
-        type="button"
-        class="ae-datepicker__clear"
-        @click.stop="clearDate"
-        aria-label="Clear date"
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="6" x2="6" y2="18" />
-          <line x1="6" y1="6" x2="18" y2="18" />
-        </svg>
-      </button>
+        <template #append>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M10.6667 1.33333V3.99999M5.33333 1.33333V3.99999M2 6.66666H14M3.33333 2.66666H12.6667C13.403 2.66666 14 3.26362 14 3.99999V13.3333C14 14.0697 13.403 14.6667 12.6667 14.6667H3.33333C2.59695 14.6667 2 14.0697 2 13.3333V3.99999C2 3.26362 2.59695 2.66666 3.33333 2.66666Z" stroke="var(--sds-color-icon-primary-default)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </template>
+      </AeInput>
     </div>
 
     <!-- Calendar Dropdown -->
@@ -179,6 +165,7 @@
 
 <script setup lang="ts">
 import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
+import {AeInput} from "@/components";
 
 export interface AeDatepickerProps {
   modelValue?: Date | null
@@ -474,17 +461,15 @@ watch(() => props.modelValue, (newVal) => {
   &__input {
     width: 100%;
     padding: var(--sds-size-space-10) var(--sds-size-space-12);
-    padding-right: var(--sds-size-space-40);
-    border: 1px solid var(--sds-color-border-default-secondary);
-    border-radius: var(--sds-size-radius-100);
+    border-radius: var(--sds-size-radius-50);
     background: var(--sds-color-background-default-primary);
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     cursor: pointer;
     outline: none;
     transition: border-color var(--ae-duration-100) var(--ae-ease-out);
 
     &::placeholder {
-      color: var(--sds-color-text-default-tertiary);
+      color: var(--sds-color-text-primary-tertiary);
     }
 
     &:hover:not(:disabled) {
@@ -506,7 +491,7 @@ watch(() => props.modelValue, (newVal) => {
     right: var(--sds-size-space-12);
     display: flex;
     align-items: center;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     pointer-events: none;
 
     svg {
@@ -524,7 +509,7 @@ watch(() => props.modelValue, (newVal) => {
     padding: var(--sds-size-space-4);
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     cursor: pointer;
     border-radius: var(--sds-size-radius-50);
     transition: all var(--ae-duration-100) var(--ae-ease-out);
@@ -536,7 +521,7 @@ watch(() => props.modelValue, (newVal) => {
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
   }
 
@@ -567,7 +552,7 @@ watch(() => props.modelValue, (newVal) => {
     padding: 0;
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-primary-secondary);
     cursor: pointer;
     border-radius: var(--sds-size-radius-50);
     transition: all var(--ae-duration-100) var(--ae-ease-out);
@@ -579,7 +564,7 @@ watch(() => props.modelValue, (newVal) => {
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
   }
 
@@ -592,7 +577,7 @@ watch(() => props.modelValue, (newVal) => {
     padding: var(--sds-size-space-4) var(--sds-size-space-8);
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     cursor: pointer;
     border-radius: var(--sds-size-radius-50);
     transition: background var(--ae-duration-100) var(--ae-ease-out);
@@ -618,7 +603,7 @@ watch(() => props.modelValue, (newVal) => {
     padding: var(--sds-size-space-8);
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-primary-secondary);
     cursor: pointer;
     border-radius: var(--sds-size-radius-50);
     font-size: 0.875rem;
@@ -626,7 +611,7 @@ watch(() => props.modelValue, (newVal) => {
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
 
     &--active {
@@ -650,7 +635,7 @@ watch(() => props.modelValue, (newVal) => {
     padding: 0;
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     cursor: pointer;
     border-radius: var(--sds-size-radius-50);
 
@@ -661,7 +646,7 @@ watch(() => props.modelValue, (newVal) => {
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
   }
 
@@ -677,7 +662,7 @@ watch(() => props.modelValue, (newVal) => {
     padding: var(--sds-size-space-4) var(--sds-size-space-8);
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-primary-secondary);
     cursor: pointer;
     border-radius: var(--sds-size-radius-50);
     font-size: 0.75rem;
@@ -685,7 +670,7 @@ watch(() => props.modelValue, (newVal) => {
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
 
     &--active {
@@ -707,7 +692,7 @@ watch(() => props.modelValue, (newVal) => {
 
   &__weekday {
     text-align: center;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     padding: var(--sds-size-space-4);
   }
 
@@ -726,7 +711,7 @@ watch(() => props.modelValue, (newVal) => {
     padding: 0;
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     cursor: pointer;
     border-radius: var(--sds-size-radius-50);
     font-size: 0.875rem;
@@ -737,7 +722,7 @@ watch(() => props.modelValue, (newVal) => {
     }
 
     &--other-month {
-      color: var(--sds-color-text-default-tertiary);
+      color: var(--sds-color-text-primary-tertiary);
     }
 
     &--today {
@@ -783,7 +768,6 @@ watch(() => props.modelValue, (newVal) => {
   &--sm {
     .ae-datepicker__input {
       padding: var(--sds-size-space-6) var(--sds-size-space-10);
-      font-size: 0.875rem;
     }
 
     .ae-datepicker__icon svg {

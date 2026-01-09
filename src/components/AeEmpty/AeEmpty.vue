@@ -158,7 +158,7 @@ const emptyClasses = computed(() => [
   &__title {
     margin: 0;
     font-weight: 600;
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-primary-secondary);
   }
 
   // ================================
@@ -166,7 +166,7 @@ const emptyClasses = computed(() => [
   // ================================
   &__description {
     margin: var(--sds-size-space-8) 0 0 0;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     max-width: 320px;
   }
 

@@ -372,11 +372,11 @@ const handlePerPageChange = (event: Event) => {
   &__cell {
     padding: var(--sds-size-space-12) var(--sds-size-space-16);
     text-align: left;
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     border-bottom: 1px solid var(--sds-color-border-default-secondary);
 
     &--header {
-      color: var(--sds-color-text-default-tertiary);
+      color: var(--sds-color-text-primary-tertiary);
       white-space: nowrap;
     }
 
@@ -385,7 +385,7 @@ const handlePerPageChange = (event: Event) => {
       user-select: none;
 
       &:hover {
-        color: var(--sds-color-text-default-primary);
+        color: var(--sds-color-text-primary-default);
       }
     }
 
@@ -502,11 +502,11 @@ const handlePerPageChange = (event: Event) => {
   }
 
   &__footer-label {
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
   }
 
   &__footer-info {
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-primary-secondary);
   }
 
   &__per-page {
@@ -514,7 +514,7 @@ const handlePerPageChange = (event: Event) => {
     border: 1px solid var(--sds-color-border-default-secondary);
     border-radius: var(--sds-size-radius-50);
     background: var(--sds-color-background-default-primary);
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     font-size: 0.875rem;
     cursor: pointer;
     outline: none;
@@ -545,7 +545,7 @@ const handlePerPageChange = (event: Event) => {
     border: 1px solid var(--sds-color-border-default-secondary);
     border-radius: var(--sds-size-radius-50);
     background: transparent;
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     cursor: pointer;
     transition: all var(--ae-duration-100) var(--ae-ease-out);
 

@@ -124,7 +124,7 @@ const handleChange = (event: Event) => {
   }
   
   &__label {
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
   
   // Sizes

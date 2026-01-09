@@ -224,7 +224,7 @@ import { AeTooltip, AeButton } from "@/components"
   cursor: help;
   
   &:hover {
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
 }
 </style>

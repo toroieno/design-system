@@ -130,7 +130,7 @@ const labelText = computed(() => {
   &__label-outside {
     font-size: var(--pk-text-sm);
     font-weight: var(--pk-font-medium);
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     min-width: 3em;
     text-align: right;
   }

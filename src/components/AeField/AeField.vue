@@ -168,7 +168,7 @@ defineExpose({
     display: inline-flex;
     align-items: baseline;
     gap: var(--sds-size-space-4);
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     cursor: pointer;
   }
 
@@ -178,13 +178,13 @@ defineExpose({
   }
 
   &__optional {
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
   }
 
   // Description
   &__description {
     margin: 0;
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-primary-secondary);
   }
 
   // Control slot
@@ -220,7 +220,7 @@ defineExpose({
   }
 
   &__hint {
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
   }
 
   &__message-icon {
@@ -235,7 +235,7 @@ defineExpose({
   }
 
   &__counter {
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     flex-shrink: 0;
     margin-left: auto;
   }
@@ -273,13 +273,13 @@ defineExpose({
 
   &--error {
     .ae-field__label {
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
   }
 
   &--success {
     .ae-field__label {
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
   }
 }

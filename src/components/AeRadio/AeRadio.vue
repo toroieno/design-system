@@ -96,7 +96,7 @@ const handleChange = () => {
   }
   
   &__label {
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
   
   // Sizes
@@ -139,7 +139,7 @@ const handleChange = () => {
   // Hover
   &:hover:not(&--disabled) {
     .ae-radio__circle {
-      border-color: var(--sds-color-text-default-primary);
+      border-color: var(--sds-color-text-primary-default);
     }
   }
   

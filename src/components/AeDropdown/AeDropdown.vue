@@ -118,6 +118,7 @@ export interface AeDropdownProps {
   teleport?: boolean
   /** Hover delay in ms */
   hoverDelay?: number
+  maxHeight?: number | string
 }
 
 const props = withDefaults(defineProps<AeDropdownProps>(), {
@@ -172,6 +173,11 @@ const menuStyles = computed(() => {
   
   if (props.minWidth) {
     styles.minWidth = typeof props.minWidth === 'number' ? `${props.minWidth}px` : props.minWidth
+  }
+
+  if (props.maxHeight) {
+    styles.maxHeight = typeof props.maxHeight === 'number' ? `${props.maxHeight}px` : props.maxHeight
+    styles.overflowY = 'auto'
   }
   
   return styles
@@ -456,7 +462,7 @@ defineExpose({
     border: 1px solid var(--sds-color-border-default-primary);
     border-radius: var(--sds-size-radius-50);
     background: var(--sds-color-background-surface-default);
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     font-size: 0.875rem;
     cursor: pointer;
     transition: all var(--ae-duration-100) var(--ae-ease-out);
@@ -524,7 +530,7 @@ defineExpose({
     border: none;
     border-radius: var(--sds-size-radius-50);
     background: transparent;
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     text-align: left;
     cursor: pointer;
     transition: all var(--ae-duration-100) var(--ae-ease-out);
@@ -569,7 +575,7 @@ defineExpose({
   }
 
   &__item-shortcut {
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     margin-left: auto;
   }
 
@@ -583,7 +589,7 @@ defineExpose({
   // Group Label
   &__group-label {
     padding: var(--sds-size-space-8) var(--sds-size-space-12) var(--sds-size-space-4);
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     font-weight: 500;
   }
 }

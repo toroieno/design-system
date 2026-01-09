@@ -110,7 +110,7 @@ const handleImageError = () => {
     flex-shrink: 0;
     overflow: hidden;
     background: var(--sds-color-background-brand-secondary);
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     user-select: none;
   }
 

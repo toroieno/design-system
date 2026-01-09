@@ -264,7 +264,7 @@ onUnmounted(() => {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   
   &__content {
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
     word-wrap: break-word;
   }
   

@@ -187,12 +187,12 @@ const toastClasses = (toast: Toast) => [
 
   &__title {
     margin: 0;
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
 
   &__message {
     margin: var(--sds-size-space-4) 0 0 0;
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-primary-secondary);
   }
 
   &__close {
@@ -206,7 +206,7 @@ const toastClasses = (toast: Toast) => [
     margin-top: 2px;
     border: none;
     background: transparent;
-    color: var(--sds-color-text-default-tertiary);
+    color: var(--sds-color-text-primary-tertiary);
     cursor: pointer;
     border-radius: var(--sds-size-radius-50);
     transition: all var(--ae-duration-100) var(--ae-ease-out);
@@ -218,7 +218,7 @@ const toastClasses = (toast: Toast) => [
 
     &:hover {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
   }
 

@@ -221,7 +221,7 @@ const badgeClasses = computed(() => [
 
     &.ae-badge--secondary {
       background: var(--sds-color-background-default-secondary);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
 
     &.ae-badge--success {
@@ -231,7 +231,7 @@ const badgeClasses = computed(() => [
 
     &.ae-badge--warning {
       background: var(--sds-color-background-warning-default);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
     }
 
     &.ae-badge--danger {
@@ -246,7 +246,7 @@ const badgeClasses = computed(() => [
 
     &.ae-badge--neutral {
       background: var(--sds-color-background-default-tertiary);
-      color: var(--sds-color-text-default-secondary);
+      color: var(--sds-color-text-primary-secondary);
     }
   }
 
@@ -264,7 +264,7 @@ const badgeClasses = computed(() => [
 
     &.ae-badge--secondary {
       border-color: var(--sds-color-border-default-secondary);
-      color: var(--sds-color-text-default-secondary);
+      color: var(--sds-color-text-primary-secondary);
     }
 
     &.ae-badge--success {
@@ -289,7 +289,7 @@ const badgeClasses = computed(() => [
 
     &.ae-badge--neutral {
       border-color: var(--sds-color-border-default-primary);
-      color: var(--sds-color-text-default-tertiary);
+      color: var(--sds-color-text-primary-tertiary);
     }
   }
 
@@ -304,7 +304,7 @@ const badgeClasses = computed(() => [
 
     &.ae-badge--secondary {
       background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-default-secondary);
+      color: var(--sds-color-text-primary-secondary);
     }
 
     &.ae-badge--success {
@@ -329,7 +329,7 @@ const badgeClasses = computed(() => [
 
     &.ae-badge--neutral {
       background: var(--sds-color-background-surface-tertiary);
-      color: var(--sds-color-text-default-tertiary);
+      color: var(--sds-color-text-primary-tertiary);
     }
   }
 }

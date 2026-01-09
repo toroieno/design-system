@@ -227,7 +227,7 @@ const handleClick = (event: MouseEvent) => {
     
     &.ae-btn--primary {
       border-color: var(--sds-color-border-default-teriary);
-      color: var(--sds-color-text-default-primary);
+      color: var(--sds-color-text-primary-default);
       
       &:hover {
         background: var(--sds-color-background-brand-secondary-hover);

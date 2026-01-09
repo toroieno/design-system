@@ -92,7 +92,7 @@ const handleChange = (event: Event) => {
   
   &__thumb {
     position: absolute;
-    background: var(--sds-color-icon-secondary-tertiary);
+    background: var(--sds-color-icon-neutral-tertiary);
     border-radius: var(--sds-size-radius-full);
     transition: transform var(--ae-duration-200) var(--ae-ease-out);
     svg {
@@ -104,7 +104,7 @@ const handleChange = (event: Event) => {
   }
   
   &__label {
-    color: var(--sds-color-text-default-primary);
+    color: var(--sds-color-text-primary-default);
   }
   
   // Sizes
