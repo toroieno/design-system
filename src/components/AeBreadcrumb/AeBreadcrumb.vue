@@ -9,22 +9,31 @@
         <!-- Separator (not on first item) -->
         <span v-if="index > 0" class="ae-breadcrumb__separator" aria-hidden="true">
           <slot name="separator">
-            <svg v-if="separator === 'chevron'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 18l6-6-6-6" />
+            <svg v-if="separator === 'chevron'" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#71717A" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span v-else-if="separator === 'slash'">/</span>
-            <span v-else-if="separator === 'arrow'">→</span>
+            <svg v-else-if="separator === 'slash'" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M12.8333 1.16667L1.16666 12.8333" stroke="#71717A" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             <span v-else>{{ separator }}</span>
           </slot>
         </span>
 
         <!-- Breadcrumb Link/Text -->
+<!--        TODO: dropdown -->
+        <svg v-if="Array.isArray(item)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M8.00002 8.66666C8.36821 8.66666 8.66669 8.36818 8.66669 7.99999C8.66669 7.63181 8.36821 7.33333 8.00002 7.33333C7.63183 7.33333 7.33335 7.63181 7.33335 7.99999C7.33335 8.36818 7.63183 8.66666 8.00002 8.66666Z" stroke="#71717A" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.6667 8.66666C13.0349 8.66666 13.3334 8.36818 13.3334 7.99999C13.3334 7.63181 13.0349 7.33333 12.6667 7.33333C12.2985 7.33333 12 7.63181 12 7.99999C12 8.36818 12.2985 8.66666 12.6667 8.66666Z" stroke="#71717A" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3.33335 8.66666C3.70154 8.66666 4.00002 8.36818 4.00002 7.99999C4.00002 7.63181 3.70154 7.33333 3.33335 7.33333C2.96516 7.33333 2.66669 7.63181 2.66669 7.99999C2.66669 8.36818 2.96516 8.66666 3.33335 8.66666Z" stroke="#71717A" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
         <component
+          v-else
           :is="isLastItem(index) || !item.href ? 'span' : 'a'"
           :href="!isLastItem(index) && item.href ? item.href : undefined"
           :class="[
             'ae-breadcrumb__link',
-            'ae-text-single-line-body-small',
+            'ae-typo-single-line-body-small-strong',
             {
               'ae-breadcrumb__link--active': isLastItem(index),
               'ae-breadcrumb__link--disabled': item.disabled
@@ -36,7 +45,7 @@
           <!-- Icon -->
           <span v-if="item.icon" class="ae-breadcrumb__icon">
             <slot :name="`icon-${index}`" :item="item">
-              <component :is="item.icon" />
+              <component :is="item.icon"></component>
             </slot>
           </span>
           
@@ -64,13 +73,13 @@ export interface BreadcrumbItem {
 }
 
 export interface AeBreadcrumbProps {
-  items: BreadcrumbItem[]
-  separator?: 'chevron' | 'slash' | 'arrow' | string
+  items: (BreadcrumbItem | BreadcrumbItem[])[]
+  separator?: 'chevron' | 'slash' | string
   size?: 'sm' | 'md' | 'lg'
 }
 
 const props = withDefaults(defineProps<AeBreadcrumbProps>(), {
-  separator: 'chevron',
+  separator: 'slash',
   size: 'md'
 })
 
@@ -129,18 +138,19 @@ const handleClick = (item: BreadcrumbItem, index: number, event: MouseEvent) => 
     display: inline-flex;
     align-items: center;
     gap: var(--sds-size-space-4);
-    color: var(--sds-color-text-default-secondary);
+    color: var(--sds-color-text-neutral-default);
     text-decoration: none;
     transition: color var(--ae-duration-100) var(--ae-ease-out);
     cursor: pointer;
+    border-bottom: 1px solid transparent;
 
     &:hover:not(&--active):not(&--disabled) {
-      color: var(--sds-color-text-brand-secondary);
+      color: var(--sds-color-text-default-primary);
+      border-bottom-color: var(--sds-color-border-brand-default);
     }
 
     &--active {
       color: var(--sds-color-text-default-primary);
-      font-weight: 500;
       cursor: default;
     }
 
