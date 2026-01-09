@@ -5,10 +5,11 @@ import {
   AeInput, AeButton, AeBadge, AeTextarea, AeSelect, AeCheckbox, AeRadio, 
   AeSwitch, AeField, AeDatepicker, AeCard, AeDialog, AeDrawer, AeDropdown,
   AeTooltip, AeToastProvider, toast, AeProgressBar, AeAvatar, AeAvatarGroup,
-  AeTable, AeEmpty, AeTabs, AeNav, AeSidebar, AePagination
+  AeTable, AeTabs, AeNav, AeSidebar, AePagination
 } from "@/components"
 import BreadcrumbComponent from "@/examples/BreadcrumbComponent.vue";
 import CalendarComponent from "@/examples/CalendarComponent.vue";
+import EmptyComponent from "@/examples/EmptyComponent.vue";
 
 const route = useRoute()
 
@@ -851,14 +852,7 @@ onUnmounted(() => {
             </div>
 
             <!-- Empty Preview -->
-            <div v-else-if="activeComponent === 'empty'">
-              <AeEmpty
-                title="No results found"
-                description="Try adjusting your search or filters."
-              >
-                <AeButton>Clear Filters</AeButton>
-              </AeEmpty>
-            </div>
+            <EmptyComponent v-else-if="activeComponent === 'empty'"/>
 
             <!-- Tabs Preview -->
             <div v-else-if="activeComponent === 'tabs'">

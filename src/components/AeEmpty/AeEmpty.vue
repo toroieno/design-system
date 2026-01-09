@@ -4,31 +4,33 @@
     <div v-if="$slots.icon || icon || !hideIcon" class="ae-empty__icon">
       <slot name="icon">
         <component v-if="icon" :is="icon" />
-        <svg v-else viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-        </svg>
+        <img v-else :src="defaultImg" alt="" />
       </slot>
     </div>
 
     <!-- Title -->
-    <h3 v-if="title || $slots.title" class="ae-empty__title">
+    <h3 v-if="title || $slots.title" class="ae-empty__title ae-typo-single-line-body-base">
       <slot name="title">{{ title }}</slot>
     </h3>
 
     <!-- Description -->
-    <p v-if="description || $slots.description" class="ae-empty__description">
+    <p v-if="description || $slots.description" class="ae-empty__description ae-typo-single-line-body-small-strong">
       <slot name="description">{{ description }}</slot>
     </p>
 
     <!-- Actions -->
-    <div v-if="$slots.default" class="ae-empty__actions">
-      <slot />
+    <div class="ae-empty__actions">
+      <slot name="default">
+        <AeButton @click="backToHome">Back to home</AeButton>
+      </slot>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import {AeButton} from "@/components";
+import NoDataImg from '@/assets/svg/no-result.svg'
 
 export interface AeEmptyProps {
   /** Title text */
@@ -41,17 +43,44 @@ export interface AeEmptyProps {
   hideIcon?: boolean
   /** Size variant */
   size?: 'sm' | 'md' | 'lg'
+  state?: 'result' | 'data' | 'connect'
+}
+
+const stateDefaultValue = {
+  'result': {
+    title: 'No Results Found',
+    description: 'Try adjusting your search terms',
+    img: NoDataImg,
+  },
+  'data': {
+    title: 'Empty Data',
+    description: 'Please upload or add new file to get started',
+    img: NoDataImg,
+  },
+  'connect': {
+    title: 'Oops! Somethings Went Wrong',
+    description: 'Please check your internet connection and try again',
+    img: NoDataImg,
+  },
 }
 
 const props = withDefaults(defineProps<AeEmptyProps>(), {
-  title: 'No data',
   size: 'md',
-  hideIcon: false
+  hideIcon: false,
+  state: 'result'
 })
 
 const emptyClasses = computed(() => [
   `ae-empty--${props.size}`
 ])
+
+const title = computed(() => props.title ?? stateDefaultValue[props.state].title)
+const description = computed(() => props.description ?? stateDefaultValue[props.state].description)
+const defaultImg = computed(() => stateDefaultValue[props.state].img)
+
+const backToHome = () => {
+  window.location.href = '/'
+}
 </script>
 
 <style lang="scss" scoped>
@@ -63,71 +92,45 @@ const emptyClasses = computed(() => [
   text-align: center;
   padding: var(--sds-size-space-32);
 
+  &__background {
+    width: 200px;
+    height: 200px;
+  }
+  &__title {
+    color: var(--sds-color-text-primary-secondary);
+  }
+  &__description {
+    color: var(--sds-color-text-primary-tertiary);
+  }
+
   // ================================
   // SIZES
   // ================================
   &--sm {
     padding: var(--sds-size-space-24);
 
-    .ae-empty__icon {
+    .ae-empty__icon:not(:has(img)) {
       width: 48px;
       height: 48px;
       margin-bottom: var(--sds-size-space-12);
     }
-
-    .ae-empty__title {
-      font-size: 0.875rem;
-    }
-
-    .ae-empty__description {
-      font-size: 0.75rem;
-    }
-
-    .ae-empty__actions {
-      margin-top: var(--sds-size-space-12);
-    }
   }
 
   &--md {
-    .ae-empty__icon {
+    .ae-empty__icon:not(:has(img)) {
       width: 64px;
       height: 64px;
       margin-bottom: var(--sds-size-space-16);
-    }
-
-    .ae-empty__title {
-      font-size: 1rem;
-    }
-
-    .ae-empty__description {
-      font-size: 0.875rem;
-    }
-
-    .ae-empty__actions {
-      margin-top: var(--sds-size-space-16);
     }
   }
 
   &--lg {
     padding: var(--sds-size-space-48);
 
-    .ae-empty__icon {
+    .ae-empty__icon:not(:has(img)) {
       width: 80px;
       height: 80px;
       margin-bottom: var(--sds-size-space-20);
-    }
-
-    .ae-empty__title {
-      font-size: 1.125rem;
-    }
-
-    .ae-empty__description {
-      font-size: 0.875rem;
-      max-width: 400px;
-    }
-
-    .ae-empty__actions {
-      margin-top: var(--sds-size-space-24);
     }
   }
 
@@ -138,7 +141,7 @@ const emptyClasses = computed(() => [
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--sds-color-text-default-quaternary);
+    color: var(--sds-color-icon-primary-default);
 
     svg {
       width: 100%;
@@ -174,10 +177,7 @@ const emptyClasses = computed(() => [
   // ACTIONS
   // ================================
   &__actions {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--sds-size-space-8);
+    margin-top: var(--sds-size-space-24);
   }
 }
 </style>

@@ -1,0 +1,61 @@
+<svg width="283" height="185" viewBox="0 0 283 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.5" clip-path="url(#clip0_6649_1220)">
+        <mask id="mask0_6649_1220" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="285" height="190">
+            <rect width="283" height="184" transform="translate(1.34619)" fill="url(#paint0_radial_6649_1220)"/>
+        </mask>
+        <g mask="url(#mask0_6649_1220)">
+            <g clip-path="url(#clip1_6649_1220)">
+                <line x1="6.3457" x2="6.3457" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="19.8936" x2="19.8936" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="33.4414" x2="33.4414" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="46.9893" x2="46.9893" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="60.5369" x2="60.5369" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="74.0847" x2="74.0847" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="87.6326" x2="87.6326" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="101.18" x2="101.18" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="114.728" x2="114.728" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="128.276" x2="128.276" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="141.824" x2="141.824" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="155.372" x2="155.372" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="168.919" x2="168.919" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="182.467" x2="182.467" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="196.015" x2="196.015" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="209.563" x2="209.563" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="223.111" x2="223.111" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="236.659" x2="236.659" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="250.207" x2="250.207" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="263.754" x2="263.754" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <line x1="277.302" x2="277.302" y2="198" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                <g clip-path="url(#clip2_6649_1220)">
+                    <line x1="-21" y1="13.2978" x2="304" y2="13.2978" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                    <line x1="-21" y1="26.8456" x2="304" y2="26.8456" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                    <line x1="-21" y1="40.3935" x2="304" y2="40.3935" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                    <line x1="-21" y1="53.9413" x2="304" y2="53.9413" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                    <line x1="-21" y1="67.4891" x2="304" y2="67.4891" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                    <line x1="-21" y1="81.037" x2="304" y2="81.037" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                    <line x1="-21" y1="94.5848" x2="304" y2="94.5848" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                    <line x1="-21" y1="108.133" x2="304" y2="108.133" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                    <line x1="-21" y1="121.68" x2="304" y2="121.68" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                    <line x1="-21" y1="135.228" x2="304" y2="135.228" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                    <line x1="-21" y1="148.776" x2="304" y2="148.776" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                    <line x1="-21" y1="162.324" x2="304" y2="162.324" stroke="white" stroke-opacity="0.4" stroke-width="0.5"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <radialGradient id="paint0_radial_6649_1220" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(141.5 92) rotate(-90) scale(89.5 137.655)">
+            <stop/>
+            <stop offset="1" stop-opacity="0"/>
+        </radialGradient>
+        <clipPath id="clip0_6649_1220">
+            <rect width="543" height="185" fill="white" transform="translate(-131)"/>
+        </clipPath>
+        <clipPath id="clip1_6649_1220">
+            <rect width="325.148" height="198" fill="white" transform="translate(-21)"/>
+        </clipPath>
+        <clipPath id="clip2_6649_1220">
+            <rect width="325" height="198" fill="white" transform="translate(-21)"/>
+        </clipPath>
+    </defs>
+</svg>
