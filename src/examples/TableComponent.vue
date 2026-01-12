@@ -175,27 +175,6 @@ const paginatedUsers = computed(() => {
         </div>
       </AeCard>
 
-      <!-- Sizes -->
-      <AeCard variant="outlined">
-        <template #header>
-          <h3 class="demo-card-title">Sizes</h3>
-        </template>
-        <div class="demo-stack demo-stack--lg">
-          <div>
-            <p class="demo-label">Small:</p>
-            <AeTable :columns="columns" :data="users.slice(0, 2)" size="sm" />
-          </div>
-          <div>
-            <p class="demo-label">Medium (default):</p>
-            <AeTable :columns="columns" :data="users.slice(0, 2)" size="md" />
-          </div>
-          <div>
-            <p class="demo-label">Large:</p>
-            <AeTable :columns="columns" :data="users.slice(0, 2)" size="lg" />
-          </div>
-        </div>
-      </AeCard>
-
       <!-- Loading State -->
       <AeCard variant="outlined">
         <template #header>

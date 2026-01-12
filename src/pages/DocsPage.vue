@@ -5,7 +5,7 @@ import {
   AeInput, AeButton, AeBadge, AeTextarea, AeSelect, AeCheckbox, AeRadio, 
   AeSwitch, AeField, AeDatepicker, AeCard, AeDialog, AeDrawer, AeDropdown,
   AeTooltip, AeToastProvider, toast, AeAvatar, AeAvatarGroup,
-  AeTable, AeTabs, AeNav, AeSidebar, AePagination
+  AeTabs, AeNav, AeSidebar, AePagination
 } from "@/components"
 import BreadcrumbComponent from "@/examples/BreadcrumbComponent.vue";
 import CalendarComponent from "@/examples/CalendarComponent.vue";
@@ -13,6 +13,7 @@ import EmptyComponent from "@/examples/EmptyComponent.vue";
 import ProgressBarComponent from "@/examples/ProgressBarComponent.vue";
 import LoadingComponent from "@/examples/LoadingComponent.vue";
 import SliderComponent from "@/examples/SliderComponent.vue";
+import TableComponent from "@/examples/TableComponent.vue";
 
 const route = useRoute()
 
@@ -870,19 +871,7 @@ onUnmounted(() => {
             </div>
 
             <!-- Table Preview -->
-            <div v-else-if="activeComponent === 'table'">
-              <AeTable
-                :columns="[
-                  { key: 'name', label: 'Name', sortable: true },
-                  { key: 'email', label: 'Email' },
-                  { key: 'role', label: 'Role' }
-                ]"
-                :data="[
-                  { name: 'John Doe', email: 'john@example.com', role: 'Admin' },
-                  { name: 'Jane Smith', email: 'jane@example.com', role: 'User' }
-                ]"
-              />
-            </div>
+            <TableComponent v-else-if="activeComponent === 'table'" />
 
             <!-- Empty Preview -->
             <EmptyComponent v-else-if="activeComponent === 'empty'"/>

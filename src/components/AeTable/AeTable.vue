@@ -22,7 +22,7 @@
             :class="[
               'ae-table__cell',
               'ae-table__cell--header',
-              'ae-typo-single-line-body-small-strong',
+              'ae-typo-note',
               {
                 'ae-table__cell--sortable': column.sortable,
                 'ae-table__cell--sorted': sortKey === column.key
@@ -74,7 +74,7 @@
             <td
               v-for="column in columns"
               :key="column.key"
-              class="ae-table__cell ae-typo-body-base"
+              class="ae-table__cell ae-typo-note"
               :style="{ textAlign: column.align }"
             >
               <slot :name="`cell-${column.key}`" :row="row" :value="row[column.key]" :index="rowIndex">
@@ -105,7 +105,7 @@
       <slot name="footer">
         <!-- Per Page Selector -->
         <div class="ae-table__footer-left">
-          <span class="ae-table__footer-label ae-typo-body-small">Rows per page:</span>
+          <span class="ae-table__footer-label ae-typo-note">Rows per page:</span>
           <select 
             class="ae-table__per-page" 
             :value="perPage"
@@ -120,7 +120,7 @@
         <!-- Info & Pagination -->
         <div class="ae-table__footer-right">
           <!-- Range Info -->
-          <span class="ae-table__footer-info ae-typo-body-small">
+          <span class="ae-table__footer-info ae-typo-note">
             {{ rangeStart }}-{{ rangeEnd }} of {{ total }}
           </span>
 
@@ -198,7 +198,6 @@ export interface AeTableProps {
   hideHeader?: boolean
   loading?: boolean
   emptyText?: string
-  size?: 'sm' | 'md' | 'lg'
   rowClickable?: boolean
   // Footer / Pagination props
   showFooter?: boolean
@@ -218,7 +217,6 @@ const props = withDefaults(defineProps<AeTableProps>(), {
   hideHeader: false,
   loading: false,
   emptyText: 'No data available',
-  size: 'md',
   rowClickable: false,
   // Footer defaults
   showFooter: false,
@@ -242,7 +240,6 @@ const sortKey = ref<string | null>(null)
 const sortOrder = ref<'asc' | 'desc'>('asc')
 
 const wrapperClasses = computed(() => [
-  `ae-table--${props.size}`,
   {
     'ae-table--striped': props.striped,
     'ae-table--bordered': props.bordered,
@@ -366,7 +363,22 @@ const handlePerPageChange = (event: Event) => {
 
   // Header
   &__head {
-    background: var(--sds-color-background-surface-default);
+    background: var(--sds-color-background-opacity-100);
+    th {
+      position: relative;
+      text-transform: uppercase;
+      color: var(--sds-color-text-primary-default);
+    }
+    th + th::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      inset-inline-start: 0;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 50%;
+      background: var(--sds-color-border-default-secondary);
+    }
   }
 
   &__cell {
@@ -602,31 +614,6 @@ const handlePerPageChange = (event: Event) => {
 
 .ae-table--loading {
   min-height: 200px;
-}
-
-// ================================
-// SIZES
-// ================================
-.ae-table--sm {
-  .ae-table__cell {
-    padding: var(--sds-size-space-8) var(--sds-size-space-12);
-  }
-
-  .ae-table__cell--checkbox {
-    padding: var(--sds-size-space-6) var(--sds-size-space-8);
-  }
-}
-
-.ae-table--md {
-  .ae-table__cell {
-    padding: var(--sds-size-space-12) var(--sds-size-space-16);
-  }
-}
-
-.ae-table--lg {
-  .ae-table__cell {
-    padding: var(--sds-size-space-16) var(--sds-size-space-20);
-  }
 }
 
 @keyframes ae-table-spin {
