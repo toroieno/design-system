@@ -14,6 +14,7 @@ import ProgressBarComponent from "@/examples/ProgressBarComponent.vue";
 import LoadingComponent from "@/examples/LoadingComponent.vue";
 import SliderComponent from "@/examples/SliderComponent.vue";
 import TableComponent from "@/examples/TableComponent.vue";
+import SidebarComponent from "@/examples/SidebarComponent.vue";
 
 const route = useRoute()
 
@@ -904,19 +905,7 @@ onUnmounted(() => {
             </div>
 
             <!-- Sidebar Preview -->
-            <div v-else-if="activeComponent === 'sidebar'" class="demo-sidebar-wrapper">
-              <AeSidebar
-                :items="[
-                  { key: 'dashboard', label: 'Dashboard' },
-                  { key: 'users', label: 'Users' },
-                  { key: 'settings', label: 'Settings' }
-                ]"
-                title="Admin"
-                active-key="dashboard"
-                :collapsible="false"
-                :width="200"
-              />
-            </div>
+            <SidebarComponent v-else-if="activeComponent === 'sidebar'" class="demo-sidebar-wrapper" />
 
             <!-- Breadcrumb Preview -->
             <BreadcrumbComponent v-else-if="activeComponent === 'breadcrumb'" />

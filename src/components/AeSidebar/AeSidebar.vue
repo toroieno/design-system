@@ -8,7 +8,7 @@
     <div v-if="$slots.header || logo" class="ae-sidebar__header">
       <slot name="header">
         <div class="ae-sidebar__logo">
-          <img v-if="logo" :src="logo" :alt="logoAlt" class="ae-sidebar__logo-img" />
+          <img v-if="logo" :src="logo === true ? aetoskyLogo : logo" :alt="logoAlt" class="ae-sidebar__logo-img"/>
           <span v-if="title && !isCollapsed" class="ae-sidebar__title ae-typo-single-line-body-base-strong">
             {{ title }}
           </span>
@@ -48,8 +48,8 @@
               :is="item.href ? 'a' : 'button'"
               :href="item.href"
               type="button"
-              class="ae-sidebar__link"
-              :class="{ 'ae-sidebar__link--active': isItemActive(item) }"
+              :class="['ae-sidebar__link', 'ae-typo-body-small',
+              { 'ae-sidebar__link--active': isItemActive(item) }]"
               @click="handleItemClick(item, $event)"
             >
               <span v-if="item.icon" class="ae-sidebar__icon">
@@ -72,6 +72,12 @@
                   <path d="M6 9l6 6 6-6" />
                 </svg>
               </span>
+              <div :class="['ae-sidebar__corners', { active: isItemActive(item) }]">
+                <div class="ae-sidebar__corner top-left"></div>
+                <div class="ae-sidebar__corner top-right"></div>
+                <div class="ae-sidebar__corner bottom-left"></div>
+                <div class="ae-sidebar__corner bottom-right"></div>
+              </div>
             </component>
 
             <!-- Sub Menu -->
@@ -89,8 +95,7 @@
                     :is="child.href ? 'a' : 'button'"
                     :href="child.href"
                     type="button"
-                    class="ae-sidebar__sublink"
-                    :class="{ 'ae-sidebar__sublink--active': isItemActive(child) }"
+                    :class="['ae-sidebar__sublink', { 'ae-sidebar__sublink--active': isItemActive(child) }]"
                     @click="handleItemClick(child, $event)"
                   >
                     <span class="ae-sidebar__sublabel ae-text-single-line-body-small">
@@ -125,7 +130,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+import {computed, ref, watch} from 'vue'
+import aetoskyLogo from '@/assets/svg/aetosky-logo.svg'
 
 export interface SidebarItem {
   key?: string
@@ -141,7 +147,7 @@ export interface SidebarItem {
 export interface AeSidebarProps {
   items?: SidebarItem[]
   activeKey?: string
-  logo?: string
+  logo?: string | boolean
   logoAlt?: string
   title?: string
   width?: number | string
@@ -156,6 +162,7 @@ export interface AeSidebarProps {
 const props = withDefaults(defineProps<AeSidebarProps>(), {
   items: () => [],
   activeKey: '',
+  logo: true,
   logoAlt: 'Logo',
   width: 260,
   collapsedWidth: 64,
@@ -275,6 +282,7 @@ watch(() => props.activeKey, (activeKey) => {
   &__logo {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--sds-size-space-12);
     overflow: hidden;
   }
@@ -320,9 +328,8 @@ watch(() => props.activeKey, (activeKey) => {
   // Navigation
   &__nav {
     flex: 1;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: var(--sds-size-space-8);
+    overflow: hidden;
+    padding-top: var(--sds-size-space-24);
   }
 
   &__menu {
@@ -331,7 +338,6 @@ watch(() => props.activeKey, (activeKey) => {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: var(--sds-size-space-4);
   }
 
   &__item {
@@ -341,29 +347,92 @@ watch(() => props.activeKey, (activeKey) => {
   &__link {
     display: flex;
     align-items: center;
+    height: 56px;
     width: 100%;
     gap: var(--sds-size-space-12);
-    padding: var(--sds-size-space-10) var(--sds-size-space-12);
+    padding: var(--sds-size-space-8) calc(var(--sds-size-space-12) + var(--sds-size-space-12));
     border: none;
     background: transparent;
-    color: var(--sds-color-text-primary-secondary);
+    color: var(--sds-color-text-primary-tertiary);
     text-decoration: none;
     cursor: pointer;
-    border-radius: var(--sds-size-radius-100);
+    border-radius: var(--sds-size-radius-50);
     transition: all var(--ae-duration-100) var(--ae-ease-out);
     text-align: left;
+    position: relative;
 
     &:hover {
-      background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-primary-default);
+      background: var(--sds-color-background-opacity-100);
+      color: var(--sds-color-icon-brand-green);
+      .ae-sidebar__corners {
+        display: block;
+      }
     }
 
     &--active {
-      background: var(--sds-color-background-brand-secondary);
-      color: var(--sds-color-text-brand-secondary);
+      background: var(--sds-color-background-opacity-100);
+      color: var(--sds-color-icon-brand-green);
 
       &:hover {
-        background: var(--sds-color-background-brand-secondary-hover);
+        background: var(--sds-color-background-opacity-100);
+      }
+    }
+  }
+
+  &__corners {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    inset-inline-start: 0;
+    &.active {
+      display: block;
+    }
+    .ae-sidebar__corner {
+      --padding-x-corner: 12px;
+      --padding-y-corner: 8px;
+      --color-corner: var(--sds-color-icon-brand-green);
+      --border-thin: 1px;
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      z-index: 1;
+      animation: blink .1s ease-in-out 3;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        height: var(--border-thin);
+        width: 100%;
+        background: var(--color-corner);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: var(--border-thin);
+        height: 100%;
+        background: var(--color-corner);
+      }
+      &.top-left {
+        top: var(--padding-y-corner);
+        left: var(--padding-x-corner);
+      }
+      &.top-right {
+        top: var(--padding-y-corner);
+        right: var(--padding-x-corner);
+        transform: rotate(90deg);
+      }
+      &.bottom-left {
+        bottom: var(--padding-y-corner);
+        left: var(--padding-x-corner);
+        transform: rotate(270deg);
+      }
+      &.bottom-right {
+        bottom: var(--padding-y-corner);
+        right: var(--padding-x-corner);
+        transform: rotate(180deg);
       }
     }
   }
@@ -433,18 +502,18 @@ watch(() => props.activeKey, (activeKey) => {
     color: var(--sds-color-text-primary-tertiary);
     text-decoration: none;
     cursor: pointer;
-    border-radius: var(--sds-size-radius-100);
+    border-radius: var(--sds-size-radius-50);
     transition: all var(--ae-duration-100) var(--ae-ease-out);
     text-align: left;
 
     &:hover {
-      background: var(--sds-color-background-default-primary-hover);
-      color: var(--sds-color-text-primary-default);
+      background: var(--sds-color-background-opacity-100);
+      color: var(--sds-color-icon-brand-green);
     }
 
     &--active {
-      color: var(--sds-color-text-brand-secondary);
-      background: var(--sds-color-background-brand-secondary);
+      background: var(--sds-color-background-opacity-100);
+      color: var(--sds-color-icon-brand-green);
     }
   }
 
@@ -467,7 +536,7 @@ watch(() => props.activeKey, (activeKey) => {
   &--collapsed {
     .ae-sidebar__header {
       justify-content: center;
-      padding: var(--sds-size-space-16) var(--sds-size-space-8);
+      padding: var(--sds-size-space-16) var(--sds-size-space-12);
     }
 
     .ae-sidebar__logo {
@@ -484,7 +553,7 @@ watch(() => props.activeKey, (activeKey) => {
     }
 
     .ae-sidebar__nav {
-      padding: var(--sds-size-space-8) var(--sds-size-space-4);
+      padding-top: var(--sds-size-space-24);
     }
 
     .ae-sidebar__footer {
@@ -545,5 +614,17 @@ watch(() => props.activeKey, (activeKey) => {
 .ae-sidebar-overlay-enter-from,
 .ae-sidebar-overlay-leave-to {
   opacity: 0;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>

@@ -89,10 +89,7 @@ const toggleMobile = () => {
 </script>
 
 <template>
-  <section class="demo-section">
-    <h2 class="demo-section__title">Sidebar</h2>
-    <p class="demo-section__desc">Navigation sidebar component with collapsible state and nested menus.</p>
-
+  <section class="demo-stack">
     <div class="demo-grid demo-grid--sidebar">
       <!-- Basic Sidebar -->
       <AeCard variant="outlined">
@@ -103,7 +100,6 @@ const toggleMobile = () => {
           <AeSidebar
             :items="basicItems"
             :active-key="activeKey"
-            title="My App"
             :collapsible="false"
             @item-click="handleItemClick"
           />
@@ -170,8 +166,8 @@ const toggleMobile = () => {
             <template #header>
               <div class="custom-header">
                 <div class="custom-header__logo">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="33" height="22" viewBox="0 0 33 22" fill="none">
+                    <path d="M22.7891 7.72852L23.1025 8.25391H23.1074V8.25293L28.7061 6.64648L32.3525 9.39844L29.959 8.75781L25.2109 11.7314L25.2129 11.7344L31.3672 21.9414H25.3115L25.1826 16.8008L23.4307 21.9414L20.4258 18.3184C21.8986 16.3758 23.9042 13.5932 25.0586 11.8291C25.0598 11.8273 25.0603 11.825 25.0615 11.8232L25.0527 11.8291L23.2773 12.9424V12.9365L25.1533 11.6719H25.1523L23.2764 12.9365L18.5801 16.1025L14.6934 18.7227L9.92676 21.9414H0L4.74219 13.9033H16.7188L14.2256 10.8994L14.2559 10.8945L13.8076 10.3535L19.1123 9.25098L12.335 8.5791L8.17578 3.57031L17.8936 6.12207L5.29883 0H18.127L22.7891 7.72852Z" fill="white"/>
                   </svg>
                 </div>
                 <span class="custom-header__title ae-typo-single-line-body-base-strong">Workspace</span>
@@ -240,6 +236,11 @@ const toggleMobile = () => {
 </template>
 
 <style scoped>
+.demo-stack {
+  overflow: auto;
+  height: 1000px !important;
+}
+
 .demo-grid--sidebar {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
