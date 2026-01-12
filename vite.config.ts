@@ -27,7 +27,7 @@ export default defineConfig(({ mode }) => {
       lib: {
         entry: resolve(__dirname, 'src/index.ts'),
         name: 'DesignSystem',
-        fileName: 'design-system',
+        fileName: 'vue-design-system',
         formats: ['es', 'umd'],
       },
       rollupOptions: {

@@ -5,7 +5,7 @@ import {
   AeInput, AeButton, AeBadge, AeTextarea, AeSelect, AeCheckbox, AeRadio, 
   AeSwitch, AeField, AeDatepicker, AeCard, AeDialog, AeDrawer, AeDropdown,
   AeTooltip, AeToastProvider, toast, AeAvatar, AeAvatarGroup,
-  AeTabs, AeNav, AeSidebar, AePagination
+  AeTabs, AeNav, AePagination
 } from "@/components"
 import BreadcrumbComponent from "@/examples/BreadcrumbComponent.vue";
 import CalendarComponent from "@/examples/CalendarComponent.vue";
@@ -33,34 +33,34 @@ const demoPage = ref(1)
 
 // Component list with metadata
 const components = [
-  { key: 'button', name: 'Button', description: 'Interactive button element', category: 'Actions' },
-  { key: 'input', name: 'Input', description: 'Text input field', category: 'Forms' },
-  { key: 'textarea', name: 'Textarea', description: 'Multi-line text input', category: 'Forms' },
-  { key: 'select', name: 'Select', description: 'Dropdown selection', category: 'Forms' },
-  { key: 'checkbox', name: 'Checkbox', description: 'Checkbox input', category: 'Forms' },
-  { key: 'radio', name: 'Radio', description: 'Radio button input', category: 'Forms' },
-  { key: 'switch', name: 'Switch', description: 'Toggle switch', category: 'Forms' },
-  { key: 'field', name: 'Field', description: 'Form field wrapper', category: 'Forms' },
-  { key: 'datepicker', name: 'Datepicker', description: 'Date picker input', category: 'Forms' },
-  { key: 'calendar', name: 'Calendar', description: 'Calendar with single/range date selection', category: 'Forms' },
-  { key: 'slider', name: 'Slider', description: 'Slider for value/range selection', category: 'Forms' },
-  { key: 'card', name: 'Card', description: 'Content container', category: 'Layout' },
-  { key: 'dialog', name: 'Dialog', description: 'Modal dialog', category: 'Overlay' },
-  { key: 'drawer', name: 'Drawer', description: 'Slide-out panel', category: 'Overlay' },
-  { key: 'dropdown', name: 'Dropdown', description: 'Dropdown menu', category: 'Overlay' },
-  { key: 'tooltip', name: 'Tooltip', description: 'Tooltip popup', category: 'Overlay' },
-  { key: 'toast', name: 'Toast', description: 'Toast notifications', category: 'Feedback' },
-  { key: 'progressbar', name: 'ProgressBar', description: 'Progress indicator', category: 'Feedback' },
-  { key: 'loading', name: 'Loading', description: 'Loading indicator', category: 'Feedback' },
-  { key: 'badge', name: 'Badge', description: 'Status badge', category: 'Data Display' },
-  { key: 'avatar', name: 'Avatar', description: 'User avatar', category: 'Data Display' },
-  { key: 'table', name: 'Table', description: 'Data table', category: 'Data Display' },
-  { key: 'empty', name: 'Empty', description: 'Empty state', category: 'Data Display' },
-  { key: 'tabs', name: 'Tabs', description: 'Tab navigation', category: 'Navigation' },
-  { key: 'nav', name: 'Nav', description: 'Navigation bar', category: 'Navigation' },
-  { key: 'sidebar', name: 'Sidebar', description: 'Side navigation', category: 'Navigation' },
-  { key: 'breadcrumb', name: 'Breadcrumb', description: 'Breadcrumb navigation', category: 'Navigation' },
-  { key: 'pagination', name: 'Pagination', description: 'Page navigation', category: 'Navigation' },
+  { key: 'avatar', name: 'Avatar', description: 'User avatar' },
+  { key: 'badge', name: 'Badge', description: 'Status badge' },
+  { key: 'breadcrumb', name: 'Breadcrumb', description: 'Breadcrumb navigation' },
+  { key: 'button', name: 'Button', description: 'Interactive button element' },
+  { key: 'calendar', name: 'Calendar', description: 'Calendar with single/range date selection' },
+  { key: 'card', name: 'Card', description: 'Content container' },
+  { key: 'checkbox', name: 'Checkbox', description: 'Checkbox input' },
+  { key: 'datepicker', name: 'Datepicker', description: 'Date picker input' },
+  { key: 'dialog', name: 'Dialog', description: 'Modal dialog' },
+  { key: 'drawer', name: 'Drawer', description: 'Slide-out panel' },
+  { key: 'dropdown', name: 'Dropdown', description: 'Dropdown menu' },
+  { key: 'empty', name: 'Empty', description: 'Empty state' },
+  { key: 'field', name: 'Field', description: 'Form field wrapper' },
+  { key: 'input', name: 'Input', description: 'Text input field' },
+  { key: 'loading', name: 'Loading', description: 'Loading indicator' },
+  { key: 'nav', name: 'Nav', description: 'Navigation bar' },
+  { key: 'pagination', name: 'Pagination', description: 'Page navigation' },
+  { key: 'progressbar', name: 'ProgressBar', description: 'Progress indicator' },
+  { key: 'radio', name: 'Radio', description: 'Radio button input' },
+  { key: 'select', name: 'Select', description: 'Dropdown selection' },
+  { key: 'sidebar', name: 'Sidebar', description: 'Side navigation' },
+  { key: 'slider', name: 'Slider', description: 'Slider for value/range selection' },
+  { key: 'switch', name: 'Switch', description: 'Toggle switch' },
+  { key: 'table', name: 'Table', description: 'Data table' },
+  { key: 'tabs', name: 'Tabs', description: 'Tab navigation' },
+  { key: 'textarea', name: 'Textarea', description: 'Multi-line text input' },
+  { key: 'toast', name: 'Toast', description: 'Toast notifications' },
+  { key: 'tooltip', name: 'Tooltip', description: 'Tooltip popup' },
 ]
 
 // Code examples for each component
@@ -541,19 +541,8 @@ const filteredComponents = computed(() => {
   const query = searchQuery.value.toLowerCase()
   return components.filter(c => 
     c.name.toLowerCase().includes(query) ||
-    c.description.toLowerCase().includes(query) ||
-    c.category.toLowerCase().includes(query)
+    c.description.toLowerCase().includes(query)
   )
-})
-
-// Group components by category
-const groupedComponents = computed(() => {
-  const groups: Record<string, typeof components> = {}
-  filteredComponents.value.forEach(c => {
-    if (!groups[c.category]) groups[c.category] = []
-    groups[c.category].push(c)
-  })
-  return groups
 })
 
 // Current component
@@ -655,21 +644,18 @@ onUnmounted(() => {
       <!-- Sidebar -->
       <aside class="docs-sidebar" :class="{ 'docs-sidebar--open': sidebarOpen }">
         <nav class="docs-nav">
-          <div v-for="(items, category) in groupedComponents" :key="category" class="docs-nav__group">
-            <h4 class="docs-nav__category">{{ category }}</h4>
-            <ul class="docs-nav__list">
-              <li v-for="item in items" :key="item.key">
-                <router-link
-                  :to="`/docs/${item.key}`"
-                  class="docs-nav__link"
-                  :class="{ 'docs-nav__link--active': activeComponent === item.key }"
-                  @click="handleNavClick"
-                >
-                  {{ item.name }}
-                </router-link>
-              </li>
-            </ul>
-          </div>
+          <ul class="docs-nav__list">
+            <li v-for="item in filteredComponents" :key="item.key">
+              <router-link
+                :to="`/docs/${item.key}`"
+                class="docs-nav__link"
+                :class="{ 'docs-nav__link--active': activeComponent === item.key }"
+                @click="handleNavClick"
+              >
+                {{ item.name }}
+              </router-link>
+            </li>
+          </ul>
         </nav>
       </aside>
 
@@ -678,7 +664,6 @@ onUnmounted(() => {
         <div class="docs-content__header">
           <h1 class="docs-content__title">{{ currentComponent?.name }}</h1>
           <p class="docs-content__desc">{{ currentComponent?.description }}</p>
-          <AeBadge variant="outlined" color="neutral" size="sm">{{ currentComponent?.category }}</AeBadge>
         </div>
 
         <!-- Live Preview -->
