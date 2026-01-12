@@ -117,5 +117,9 @@ export type { AeEmptyProps } from './AeEmpty'
 export { AeLoading } from './AeLoading'
 export type { AeLoadingProps } from './AeLoading'
 
+// Slider
+export { AeSlider } from './AeSlider'
+export type { AeSliderProps } from './AeSlider'
+
 
 

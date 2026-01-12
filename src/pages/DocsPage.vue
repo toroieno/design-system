@@ -12,6 +12,7 @@ import CalendarComponent from "@/examples/CalendarComponent.vue";
 import EmptyComponent from "@/examples/EmptyComponent.vue";
 import ProgressBarComponent from "@/examples/ProgressBarComponent.vue";
 import LoadingComponent from "@/examples/LoadingComponent.vue";
+import SliderComponent from "@/examples/SliderComponent.vue";
 
 const route = useRoute()
 
@@ -40,6 +41,7 @@ const components = [
   { key: 'field', name: 'Field', description: 'Form field wrapper', category: 'Forms' },
   { key: 'datepicker', name: 'Datepicker', description: 'Date picker input', category: 'Forms' },
   { key: 'calendar', name: 'Calendar', description: 'Calendar with single/range date selection', category: 'Forms' },
+  { key: 'slider', name: 'Slider', description: 'Slider for value/range selection', category: 'Forms' },
   { key: 'card', name: 'Card', description: 'Content container', category: 'Layout' },
   { key: 'dialog', name: 'Dialog', description: 'Modal dialog', category: 'Overlay' },
   { key: 'drawer', name: 'Drawer', description: 'Slide-out panel', category: 'Overlay' },
@@ -489,6 +491,35 @@ import { AePagination } from '@ae-package/design-system'
 
 const page = ref(1)
 <\/script>`
+  },
+  slider: {
+    template: `<template>
+  <!-- Single Value -->
+  <AeSlider v-model="value" />
+  
+  <!-- Range Selection -->
+  <AeSlider 
+    v-model="range" 
+    :range="true"
+    :show-labels="true"
+  />
+  
+  <!-- With Custom Format -->
+  <AeSlider 
+    v-model="price" 
+    :min="0"
+    :max="1000"
+    :format-tooltip="(v) => \`$\${v}\`"
+  />
+</template>`,
+    script: `<script setup>
+import { ref } from 'vue'
+import { AeSlider } from '@ae-package/design-system'
+
+const value = ref(50)
+const range = ref([20, 80])
+const price = ref(500)
+<\/script>`
   }
 }
 
@@ -903,6 +934,9 @@ onUnmounted(() => {
 
             <!-- Calendar Preview -->
             <CalendarComponent v-else-if="activeComponent === 'calendar'" />
+
+            <!-- Slider Preview -->
+            <SliderComponent v-else-if="activeComponent === 'slider'" />
 
             <!-- Pagination Preview -->
             <div v-else-if="activeComponent === 'pagination'">
